@@ -258,6 +258,12 @@
       border-color: var(--pink)
     }
 
+    .chip.on.s-lim {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff
+    }
+
     .fdiv {
       width: 1px;
       height: 20px;
@@ -487,6 +493,11 @@
 
     .b-new {
       background: var(--pink);
+      color: #fff
+    }
+
+    .b-lim {
+      background: var(--blue);
       color: #fff
     }
 
@@ -802,7 +813,9 @@
 <body>
 
   <header>
-    <div class="logo">ROWAN <span>TOYS</span></div>
+    <div class="logo">
+      <img src="https://res.cloudinary.com/dqt0ehxeb/image/upload/v1777106286/Rowan-Logo.png" alt="Rowan Toys" style="height: 36px; display: block; margin-top: 4px;">
+    </div>
     <div class="hdr-right">
       <span class="sku-badge" id="sku-ct"></span>
       <div class="search-wrap">
@@ -836,6 +849,7 @@
     <div class="fdiv"></div>
     <button class="chip s-hot" id="chip-hot" onclick="toggleHot()">🔥 Hot</button>
     <button class="chip s-new" id="chip-new" onclick="toggleNew()">✨ New Inward</button>
+    <button class="chip s-lim" id="chip-lim" onclick="toggleLim()">⏳ Limited Stock</button>
     <div class="fdiv"></div>
     <button class="chip" onclick="clearFilters()" style="border-color:var(--red);color:var(--red)">✕ Clear</button>
   </div>
@@ -876,12 +890,11 @@
     const SH1_GID = '1366558918';
     const SH2_GID = '1852033330';
     const FOLDER = '1ENz88IXOkVEcnVu59TtT2WVWkbKh0KZ6';
-    const BRANDS = ['Ralleyz', 'Youreka', 'Fuzzbuzz', 'Shooting Star', 'Smiggle', 'MGA', 'Funko', 'Prime Time', 'Zuru'];
     /* ─────────────────────────────────────────────── */
 
     let ALL = [], filtered = [];
     let selStatuses = new Set(), selBrands = new Set();
-    let showHot = false, showNew = false;
+    let showHot = false, showNew = false, showLim = false;
     const imgCache = {};
 
     /* ── INIT ── */
@@ -1058,10 +1071,11 @@
           sp: m['Selling Price'] || m['Selling Price (₹)'] || m['SP'] || '',
           gst: m['GST%'] || m['GST %'] || m['GST'] || '',
           ean: m['Barcode/EAN'] || m['EAN'] || m['EAN Code'] || m['Barcode'] || '',
-          isNew: (m['Is New Inward? (Yes/No)'] || '').toLowerCase() === 'yes',
+          isNew: (m['Is New Inward?'] || m['Is New Inward? (Yes/No)'] || '').toLowerCase() === 'yes',
+          isLimited: (m['Status'] || '').toLowerCase() === 'limited stock',
           inDate: m['Expected Inward Date'] || '',
           inQty: m['Inward Qty Planned'] || '',
-          hasImg: (m['Image Available? (Yes/No)'] || '').toLowerCase() === 'yes',
+          hasImg: (m['Image Available? (Yes/No)'] || m['Image Available?'] || '').toLowerCase() === 'yes',
           notes: m['Notes/Remarks'] || '',
           stock: s['Current Stock (Qty)'] || '—',
           status: s['Stock Status'] || '',
@@ -1075,12 +1089,18 @@
     function buildFilters() {
       const wrap = document.getElementById('brand-chips');
       wrap.innerHTML = '';
-      ['All', ...BRANDS, 'Other'].forEach(b => {
+      
+      const sheetBrands = [...new Set(ALL.map(p => p.brand).filter(Boolean))].sort();
+      ['All', ...sheetBrands].forEach(b => {
         const btn = document.createElement('button');
         btn.className = 'chip'; btn.textContent = b; btn.dataset.b = b;
         btn.onclick = () => toggleBrand(b, btn);
         wrap.appendChild(btn);
       });
+      
+      // Select "All" by default
+      const allBtn = wrap.querySelector('[data-b="All"]');
+      if (allBtn) allBtn.classList.add('on');
       const sel = document.getElementById('cat-sel');
       const cats = [...new Set(ALL.map(p => p.category).filter(Boolean))].sort();
       sel.innerHTML = '<option value="">All Categories</option>';
@@ -1093,7 +1113,8 @@
         document.querySelectorAll('#brand-chips .chip').forEach(c => c.classList.remove('on'));
         btn.classList.add('on');
       } else {
-        document.querySelector('#brand-chips [data-b="All"]').classList.remove('on');
+        const allBtn = document.querySelector('#brand-chips [data-b="All"]');
+        if (allBtn) allBtn.classList.remove('on');
         if (selBrands.has(b)) { selBrands.delete(b); btn.classList.remove('on'); }
         else { selBrands.add(b); btn.classList.add('on'); }
       }
@@ -1106,9 +1127,13 @@
     }
     function toggleHot() { showHot = !showHot; document.getElementById('chip-hot').classList.toggle('on', showHot); applyFilters(); }
     function toggleNew() { showNew = !showNew; document.getElementById('chip-new').classList.toggle('on', showNew); applyFilters(); }
+    function toggleLim() { showLim = !showLim; document.getElementById('chip-lim').classList.toggle('on', showLim); applyFilters(); }
+    
     function clearFilters() {
-      selBrands.clear(); selStatuses.clear(); showHot = false; showNew = false;
+      selBrands.clear(); selStatuses.clear(); showHot = false; showNew = false; showLim = false;
       document.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
+      const allBtn = document.querySelector('#brand-chips [data-b="All"]');
+      if (allBtn) allBtn.classList.add('on');
       document.getElementById('cat-sel').value = '';
       document.getElementById('q').value = '';
       applyFilters();
@@ -1117,13 +1142,11 @@
       const q = document.getElementById('q').value.toLowerCase();
       const cat = document.getElementById('cat-sel').value;
       filtered = ALL.filter(p => {
-        if (selBrands.size) {
-          const known = BRANDS.includes(p.brand);
-          if (!selBrands.has(p.brand) && !(selBrands.has('Other') && !known)) return false;
-        }
+        if (selBrands.size && !selBrands.has(p.brand)) return false;
         if (selStatuses.size && !selStatuses.has(p.status)) return false;
         if (showHot && !p.isHot) return false;
         if (showNew && !p.isNew) return false;
+        if (showLim && !p.isLimited) return false;
         if (cat && p.category !== cat) return false;
         if (q) {
           const hay = [p.articleNo, p.name, p.brand, p.category, p.ean].join(' ').toLowerCase();
@@ -1174,6 +1197,7 @@
       bdg.className = 'badges';
       if (p.isHot) bdg.innerHTML += '<span class="badge b-hot">🔥 Hot</span>';
       if (p.isNew) bdg.innerHTML += '<span class="badge b-new">✨ New</span>';
+      if (p.isLimited) bdg.innerHTML += '<span class="badge b-lim">⏳ Limited</span>';
       // Only show Needed badge if explicitly "No" in sheet, but we still try Cloudinary just in case
       if (p.hasImg === false && !imgCache[p.articleNo]) bdg.innerHTML += '<span class="badge b-noi">📷 Needed</span>';
       cimg.appendChild(bdg);
@@ -1292,6 +1316,7 @@
         '<span class="pill ' + pillCls(p.status) + '">' + esc(p.status || '—') + '</span>' +
         (p.isHot ? '<span class="badge b-hot">🔥 Hot Seller</span>' : '') +
         (p.isNew ? '<span class="badge b-new">✨ New Inward</span>' : '') +
+        (p.isLimited ? '<span class="badge b-lim">⏳ Limited Stock</span>' : '') +
         (!p.hasImg ? '<span class="badge b-noi">📷 Image Needed</span>' : '') +
         '</div>' +
         '<div class="mmrp">' + (p.mrp ? '₹' + fmt(p.mrp) : '—') + '</div>' +
@@ -1343,7 +1368,8 @@
     function loadDemo() {
       hide('err-panel');
       const st = ['In Stock', 'Low Stock', 'Out of Stock', 'Overstock'];
-      const br = BRANDS; const ct = ['Vehicles', 'Action Figures', 'Puzzles', 'Board Games', 'Outdoor', 'Dolls'];
+      const br = ['Ralleyz', 'Youreka', 'Fuzzbuzz', 'Shooting Star', 'Smiggle'];
+      const ct = ['Vehicles', 'Action Figures', 'Puzzles', 'Board Games', 'Outdoor', 'Dolls'];
       ALL = Array.from({ length: 48 }, (_, i) => ({
         articleNo: 'ROW' + String(i + 1).padStart(3, '0'),
         name: ['Turbo Race Car', 'Dino Explorer', 'Rainbow Puzzle', 'Space Builder', 'Jungle Kit', 'Magic Board', 'Foam Rocket', 'Chef Set', 'Block Tower', 'Ocean Kit'][i % 10] + ' ' + (i + 1),
