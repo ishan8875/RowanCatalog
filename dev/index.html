@@ -1077,6 +1077,28 @@
 
   <div id="toast"></div>
 
+  <div id="fab-cart" style="display:none" onclick="openCart()">
+    🛒
+    <div id="fab-badge">0</div>
+  </div>
+
+  <div id="cart-modal">
+    <div class="cart-content" onclick="event.stopPropagation()">
+      <div class="cart-hdr">
+        <h2>Review Order</h2>
+        <button class="mclose" onclick="closeCart()">✕</button>
+      </div>
+      <div class="cart-body" id="cart-list"></div>
+      <div class="cart-ftr">
+        <div style="display:flex; justify-content:space-between; margin-bottom:12px; font-weight:600">
+          <span>Total Qty:</span>
+          <span id="cart-total-qty">0</span>
+        </div>
+        <button class="btn-dl-order" onclick="downloadOrderCSV()">📥 Download Order (CSV)</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     /* ── CONFIG ─────────────────────────────────── */
     const RELAY = 'https://script.google.com/macros/s/AKfycbwfkBnEhWRfHk-HpX61vj8161rKFfBljQxVBdumeacyihBaE04_ptna6nzrladQIzCu/exec';
