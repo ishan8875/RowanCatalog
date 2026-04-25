@@ -1173,7 +1173,9 @@
     function makeCard(p) {
       const sc = statusClass(p.status);
       const div = document.createElement('div');
-      div.className = 'card ' + sc + (p.hasImg ? '' : ' no-img-card');
+      const isNoImg = imgCache[p.articleNo] === 'NONE' || (!imgCache[p.articleNo] && p.hasImg === false);
+      div.className = 'card ' + sc + (isNoImg ? ' no-img-card' : '');
+      div.id = 'card-' + p.articleNo;
       div.onclick = () => openModal(p);
 
       /* image area */
@@ -1198,8 +1200,7 @@
       if (p.isHot) bdg.innerHTML += '<span class="badge b-hot">🔥 Hot</span>';
       if (p.isNew) bdg.innerHTML += '<span class="badge b-new">✨ New</span>';
       if (p.isLimited) bdg.innerHTML += '<span class="badge b-lim">⏳ Limited</span>';
-      // Only show Needed badge if explicitly "No" in sheet, but we still try Cloudinary just in case
-      if (p.hasImg === false && !imgCache[p.articleNo]) bdg.innerHTML += '<span class="badge b-noi">📷 Needed</span>';
+      if (isNoImg) bdg.innerHTML += '<span class="badge b-noi">📷 Needed</span>';
       cimg.appendChild(bdg);
       div.appendChild(cimg);
 
@@ -1224,7 +1225,8 @@
 
       if (imgCache[articleNo]) {
         if (imgCache[articleNo] === 'NONE') {
-          wrap.innerHTML = '<div class="ph"><span class="ico">📷</span><span class="lbl">No Image</span></div>';
+          const ph = wrap.querySelector('.ph');
+          if (ph) ph.innerHTML = '<span class="ico">📷</span><span class="lbl">No Image</span>';
           return;
         }
         applyImg(wrap, imgCache[articleNo]);
@@ -1256,7 +1258,22 @@
       function tryNext() {
         if (tryIdx >= attempts.length) {
           imgCache[articleNo] = 'NONE';
-          wrap.innerHTML = '<div class="ph"><span class="ico">📷</span><span class="lbl">No Image</span></div>';
+          const ph = wrap.querySelector('.ph');
+          if (ph) ph.innerHTML = '<span class="ico">📷</span><span class="lbl">No Image</span>';
+          
+          const pObj = ALL.find(x => x.articleNo === articleNo);
+          if (pObj) {
+            pObj.hasImg = false;
+            try {
+              const safeId = CSS.escape(articleNo);
+              const cBdgs = document.querySelector('#card-' + safeId + ' .badges');
+              if (cBdgs && !cBdgs.querySelector('.b-noi')) cBdgs.insertAdjacentHTML('beforeend', '<span class="badge b-noi">📷 Needed</span>');
+              const mBdgs = document.querySelector('#moverlay[data-article="' + safeId + '"] .mbadges');
+              if (mBdgs && !mBdgs.querySelector('.b-noi')) mBdgs.insertAdjacentHTML('beforeend', '<span class="badge b-noi">📷 Image Needed</span>');
+              const cCard = document.querySelector('#card-' + safeId);
+              if (cCard) cCard.classList.add('no-img-card');
+            } catch(e) {}
+          }
           return;
         }
 
@@ -1268,6 +1285,20 @@
         img.onload = () => {
           imgCache[articleNo] = imgUrl;
           applyImg(wrap, imgUrl);
+          
+          const pObj = ALL.find(x => x.articleNo === articleNo);
+          if (pObj) {
+            pObj.hasImg = true;
+            try {
+              const safeId = CSS.escape(articleNo);
+              const cBnoi = document.querySelector('#card-' + safeId + ' .b-noi');
+              if (cBnoi) cBnoi.remove();
+              const mBnoi = document.querySelector('#moverlay[data-article="' + safeId + '"] .b-noi');
+              if (mBnoi) mBnoi.remove();
+              const cCard = document.querySelector('#card-' + safeId);
+              if (cCard) cCard.classList.remove('no-img-card');
+            } catch(e) {}
+          }
         };
         img.onerror = () => {
           tryNext();
@@ -1282,13 +1313,20 @@
       const img = new Image();
 
       img.onload = () => {
-        wrap.innerHTML = '';
-        img.style.cssText = 'width:100%;height:100%;object-fit:contain;padding:10px;display:block';
-        wrap.appendChild(img);
+        const ph = wrap.querySelector('.ph');
+        if (ph) ph.remove();
+        
+        const existingImg = wrap.querySelector('img');
+        if (existingImg) existingImg.remove();
+        
+        wrap.insertBefore(img, wrap.firstChild);
       };
 
       img.onerror = () => {
-        wrap.innerHTML = '<div class="ph"><span class="ico">📷</span><span class="lbl">Image Error</span></div>';
+        const ph = wrap.querySelector('.ph');
+        if (ph) {
+          ph.innerHTML = '<span class="ico">📷</span><span class="lbl">Image Error</span>';
+        }
       };
 
       img.src = src;
@@ -1302,7 +1340,9 @@
       } else {
         imgH = '<div class="ph" style="min-height:180px"><span class="ico">📷</span><span class="lbl">Image Needed</span></div>';
       }
-
+      
+      const isNoImg = imgCache[p.articleNo] === 'NONE' || (!imgCache[p.articleNo] && p.hasImg === false);
+      
       c.innerHTML =
         '<div class="mgrid">' +
         '<div class="mimg">' + imgH + '</div>' +
@@ -1317,7 +1357,7 @@
         (p.isHot ? '<span class="badge b-hot">🔥 Hot Seller</span>' : '') +
         (p.isNew ? '<span class="badge b-new">✨ New Inward</span>' : '') +
         (p.isLimited ? '<span class="badge b-lim">⏳ Limited Stock</span>' : '') +
-        (!p.hasImg ? '<span class="badge b-noi">📷 Image Needed</span>' : '') +
+        (isNoImg ? '<span class="badge b-noi">📷 Image Needed</span>' : '') +
         '</div>' +
         '<div class="mmrp">' + (p.mrp ? '₹' + fmt(p.mrp) : '—') + '</div>' +
         '<table class="mtable">' +
@@ -1336,6 +1376,7 @@
         '</div>' +
         '</div>';
 
+      document.getElementById('moverlay').setAttribute('data-article', p.articleNo);
       document.getElementById('moverlay').classList.add('open');
       document.body.style.overflow = 'hidden';
 
