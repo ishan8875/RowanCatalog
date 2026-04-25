@@ -289,6 +289,26 @@
       background-position: right 8px center;
     }
 
+    /* EXPORT BAR */
+    .export-btns {
+      display: flex;
+      gap: 8px;
+    }
+    .btn-exp {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text);
+      transition: all 0.2s;
+    }
+    .btn-exp:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
     /* STATS BAR */
     #stats-bar {
       display: none;
@@ -807,6 +827,41 @@
     #toast.err {
       border-color: var(--red)
     }
+
+    /* PRINT STYLES */
+    @media print {
+      header, #filter-bar, #stats-bar, #err-panel, #loading, #empty, #moverlay, #toast {
+        display: none !important;
+      }
+      body {
+        background: #fff !important;
+        color: #000 !important;
+      }
+      .card {
+        border-color: #ccc !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+        background: #fff !important;
+        box-shadow: none !important;
+        transform: none !important;
+      }
+      .cname, .cmrp, .cart, .cbrand, .cmeta {
+        color: #000 !important;
+      }
+      .pill, .badge {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+      .cimg {
+        background: #f8f8f8 !important;
+      }
+      #grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px !important;
+        padding: 0 !important;
+      }
+    }
   </style>
 </head>
 
@@ -860,7 +915,12 @@
     🟡 <strong id="st-low">0</strong> &nbsp;
     🔴 <strong id="st-out">0</strong> &nbsp;
     🔵 <strong id="st-over">0</strong>
-    <span id="st-date" style="margin-left:auto"></span>
+    <span id="st-date" style="margin-left:auto; margin-right: 12px;"></span>
+    <div class="export-btns">
+      <button class="btn-exp" id="btn-print" onclick="prepareAndPrint()">🖨️ PDF</button>
+      <button class="btn-exp" onclick="downloadStockCSV()">📊 Stock</button>
+      <button class="btn-exp" id="btn-admin-exp" style="display:none; background:var(--pink); color:#fff; border-color:var(--pink);" onclick="downloadAdminCSV()">🔐 Admin Links</button>
+    </div>
   </div>
 
   <div id="loading" style="display:flex">
@@ -900,6 +960,11 @@
     /* ── INIT ── */
     document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('q').addEventListener('input', applyFilters);
+      
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('admin') === 'rowan') {
+        document.getElementById('btn-admin-exp').style.display = 'block';
+      }
       
       // Setup Intersection Observer for lazy loading images
       if ('IntersectionObserver' in window) {
@@ -1459,6 +1524,84 @@
       const t = document.getElementById('toast');
       t.textContent = msg; t.className = 'show ' + (type || '');
       clearTimeout(t._t); t._t = setTimeout(() => t.className = '', 3500);
+    }
+
+    /* ── EXPORTS ── */
+    function prepareAndPrint() {
+      if (filtered.length > 200) {
+        toast('⚠️ Please filter down to 200 items or fewer to download a PDF without crashing your device.', 'err');
+        return;
+      }
+      
+      const btn = document.getElementById('btn-print');
+      const ogText = btn.innerHTML;
+      btn.innerHTML = '⏳ Prep...';
+      
+      // Force load all visible images before printing
+      const cards = document.querySelectorAll('#grid .card .cimg');
+      cards.forEach(cimg => {
+        if (cimg.dataset.article) {
+          loadImg(cimg, cimg.dataset.article);
+          cimg.removeAttribute('data-article');
+          if (window.imgObserver) window.imgObserver.unobserve(cimg);
+        }
+      });
+      
+      // Give it 1.5s to fetch images from Cloudinary before opening print dialog
+      setTimeout(() => {
+        btn.innerHTML = ogText;
+        window.print();
+      }, 1500);
+    }
+
+    function downloadStockCSV() {
+      if (!filtered || !filtered.length) return toast('No data to export', 'err');
+      
+      const headers = ['Article No', 'Product Name', 'Brand', 'Category', 'MRP', 'Current Stock', 'Stock Status'];
+      const rows = filtered.map(p => [
+        `"${p.articleNo}"`,
+        `"${p.name.replace(/"/g, '""')}"`,
+        `"${p.brand}"`,
+        `"${p.category}"`,
+        `"${p.mrp}"`,
+        `"${p.stock}"`,
+        `"${p.status}"`
+      ].join(','));
+      
+      const csvContent = headers.join(',') + '\n' + rows.join('\n');
+      downloadFile(csvContent, 'Rowan_Stock_Export.csv', 'text/csv');
+    }
+
+    function downloadAdminCSV() {
+      if (!ALL || !ALL.length) return toast('No data to export', 'err');
+      
+      const headers = ['Article No', 'Product Name', 'Image Link'];
+      const rows = ALL.map(p => {
+        let link = imgCache[p.articleNo];
+        if (!link || link === 'NONE') {
+          link = `https://res.cloudinary.com/dqt0ehxeb/image/upload/c_limit,w_600,f_auto,q_auto/${encodeURIComponent(p.articleNo)}.webp`;
+        }
+        return [
+          `"${p.articleNo}"`,
+          `"${p.name.replace(/"/g, '""')}"`,
+          `"${link}"`
+        ].join(',');
+      });
+      
+      const csvContent = headers.join(',') + '\n' + rows.join('\n');
+      downloadFile(csvContent, 'Rowan_Admin_Image_Links.csv', 'text/csv');
+    }
+
+    function downloadFile(content, fileName, mimeType) {
+      const blob = new Blob(['\ufeff' + content], { type: mimeType + ';charset=utf-8;' });
+      const link = document.createElement('a');
+      const url = URL.createObjectURL(blob);
+      link.setAttribute('href', url);
+      link.setAttribute('download', fileName);
+      link.style.visibility = 'hidden';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
   </script>
 </body>
