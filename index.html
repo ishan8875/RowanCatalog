@@ -887,6 +887,23 @@
     /* ── INIT ── */
     document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('q').addEventListener('input', applyFilters);
+      
+      // Setup Intersection Observer for lazy loading images
+      if ('IntersectionObserver' in window) {
+        window.imgObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const cimg = entry.target;
+              if (cimg.dataset.article) {
+                loadImg(cimg, cimg.dataset.article);
+                cimg.removeAttribute('data-article');
+                observer.unobserve(cimg);
+              }
+            }
+          });
+        }, { rootMargin: '200px 0px', threshold: 0.01 });
+      }
+      
       loadCatalogue();
     });
 
@@ -1140,11 +1157,16 @@
       const cimg = document.createElement('div');
       cimg.className = 'cimg';
 
-      if (p.hasImg) {
-        cimg.innerHTML = '<div class="ph"><span class="ico">◌</span></div>';
-        loadImg(cimg, p.articleNo);
+      cimg.innerHTML = '<div class="ph"><span class="ico">◌</span></div>';
+      
+      // Store articleNo on the element so observer can read it
+      cimg.dataset.article = p.articleNo;
+      
+      // Use observer if available, fallback to immediate load
+      if (window.imgObserver) {
+        window.imgObserver.observe(cimg);
       } else {
-        cimg.innerHTML = '<div class="ph"><span class="ico">📷</span><span class="lbl">Image Needed</span></div>';
+        loadImg(cimg, p.articleNo);
       }
 
       /* badges */
@@ -1152,7 +1174,8 @@
       bdg.className = 'badges';
       if (p.isHot) bdg.innerHTML += '<span class="badge b-hot">🔥 Hot</span>';
       if (p.isNew) bdg.innerHTML += '<span class="badge b-new">✨ New</span>';
-      if (!p.hasImg) bdg.innerHTML += '<span class="badge b-noi">📷 Needed</span>';
+      // Only show Needed badge if explicitly "No" in sheet, but we still try Cloudinary just in case
+      if (p.hasImg === false && !imgCache[p.articleNo]) bdg.innerHTML += '<span class="badge b-noi">📷 Needed</span>';
       cimg.appendChild(bdg);
       div.appendChild(cimg);
 
@@ -1180,62 +1203,58 @@
           wrap.innerHTML = '<div class="ph"><span class="ico">📷</span><span class="lbl">No Image</span></div>';
           return;
         }
-        applyImg(wrap, imgCache[articleNo], null);
+        applyImg(wrap, imgCache[articleNo]);
         return;
       }
 
-      const url = RELAY + '?findImage=1&folder=' + encodeURIComponent(FOLDER) + '&name=' + encodeURIComponent(articleNo);
+      // Try multiple extensions and case variations
+      const attempts = [];
+      const exts = ['webp', 'jpg', 'jpeg', 'png', 'avif'];
 
-      function handleId(id) {
-        id = (id || '').trim();
-        console.log("Image lookup:", articleNo, "→", id);
-        if (!id || id === 'NOT_FOUND' || id.startsWith('ERROR')) {
+      // We try exact case, uppercase, and lowercase versions of the articleNo
+      const variations = [
+        encodeURIComponent(articleNo),
+        encodeURIComponent(articleNo.toUpperCase()),
+        encodeURIComponent(articleNo.toLowerCase())
+      ];
+
+      // Remove duplicates from variations (e.g., if articleNo is already uppercase)
+      const uniqueVars = [...new Set(variations)];
+
+      for (const v of uniqueVars) {
+        for (const ext of exts) {
+          attempts.push(`${v}.${ext}`);
+        }
+      }
+
+      let tryIdx = 0;
+
+      function tryNext() {
+        if (tryIdx >= attempts.length) {
           imgCache[articleNo] = 'NONE';
           wrap.innerHTML = '<div class="ph"><span class="ico">📷</span><span class="lbl">No Image</span></div>';
           return;
         }
-        // Updated primary URL for Google Drive images (uc?export=view is deprecated)
-        const imgUrl = 'https://lh3.googleusercontent.com/d/' + id;
-        imgCache[articleNo] = imgUrl;
-        applyImg(wrap, imgUrl, id);
+
+        const path = attempts[tryIdx++];
+        // Using Cloudinary fetch with c_limit,w_600 for performance, f_auto,q_auto for optimal format/quality
+        const imgUrl = `https://res.cloudinary.com/dqt0ehxeb/image/upload/c_limit,w_600,f_auto,q_auto/${path}`;
+
+        const img = new Image();
+        img.onload = () => {
+          imgCache[articleNo] = imgUrl;
+          applyImg(wrap, imgUrl);
+        };
+        img.onerror = () => {
+          tryNext();
+        };
+        img.src = imgUrl;
       }
 
-      // Use fetch() — handles redirects correctly on iOS Safari
-      if (typeof fetch !== 'undefined') {
-        let opts = {};
-        let tid;
-        if (typeof AbortController !== 'undefined') {
-          const ctrl = new AbortController();
-          opts.signal = ctrl.signal;
-          tid = setTimeout(() => ctrl.abort(), 15000);
-        }
-        fetch(url, opts)
-          .then(r => { if (tid) clearTimeout(tid); return r.text(); })
-          .then(handleId)
-          .catch(() => {
-            imgCache[articleNo] = 'NONE';
-            wrap.innerHTML = '<div class="ph"><span class="ico">📷</span><span class="lbl">No Image</span></div>';
-          });
-        return;
-      }
-
-      // XHR fallback
-      const xhr = new XMLHttpRequest();
-      xhr.open('GET', url, true);
-      xhr.timeout = 15000;
-
-      xhr.onload = () => {
-        handleId(xhr.responseText);
-      };
-
-      xhr.onerror = xhr.ontimeout = () => {
-        imgCache[articleNo] = 'NONE';
-        wrap.innerHTML = '<div class="ph"><span class="ico">📷</span><span class="lbl">Image Error</span></div>';
-      };
-
-      xhr.send();
+      tryNext();
     }
-    function applyImg(wrap, src, fileId) {
+
+    function applyImg(wrap, src) {
       const img = new Image();
 
       img.onload = () => {
@@ -1245,16 +1264,9 @@
       };
 
       img.onerror = () => {
-        // Fallback 1: thumbnail URL
-        if (fileId && !img._triedThumb) {
-          img._triedThumb = true;
-          img.src = 'https://drive.google.com/thumbnail?id=' + fileId + '&sz=w400';
-          return;
-        }
         wrap.innerHTML = '<div class="ph"><span class="ico">📷</span><span class="lbl">Image Error</span></div>';
       };
 
-      // Removed img.crossOrigin = 'anonymous' to prevent CORS failures on strict iOS browsers
       img.src = src;
     }
     /* ── MODAL ── */
