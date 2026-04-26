@@ -23,7 +23,7 @@
     "Avg_Monthly_Sales": 474,
     "Months_of_Stock": 48,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -50,7 +50,7 @@
     "Avg_Monthly_Sales": 287,
     "Months_of_Stock": 40,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -77,7 +77,7 @@
     "Avg_Monthly_Sales": 297,
     "Months_of_Stock": 38,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -104,7 +104,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 1785,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -131,7 +131,7 @@
     "Avg_Monthly_Sales": 160,
     "Months_of_Stock": 50,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -158,7 +158,7 @@
     "Avg_Monthly_Sales": 809,
     "Months_of_Stock": 9,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -185,7 +185,7 @@
     "Avg_Monthly_Sales": 7,
     "Months_of_Stock": 607,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -212,7 +212,7 @@
     "Avg_Monthly_Sales": 232,
     "Months_of_Stock": 17,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -239,7 +239,7 @@
     "Avg_Monthly_Sales": 105,
     "Months_of_Stock": 33,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -266,7 +266,7 @@
     "Avg_Monthly_Sales": 22,
     "Months_of_Stock": 146,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -293,7 +293,7 @@
     "Avg_Monthly_Sales": 224,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -320,7 +320,7 @@
     "Avg_Monthly_Sales": 13,
     "Months_of_Stock": 247,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -347,7 +347,7 @@
     "Avg_Monthly_Sales": 24,
     "Months_of_Stock": 124,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -374,7 +374,7 @@
     "Avg_Monthly_Sales": 749,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -401,7 +401,7 @@
     "Avg_Monthly_Sales": 706,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -428,7 +428,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 313,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -455,7 +455,7 @@
     "Avg_Monthly_Sales": 47,
     "Months_of_Stock": 54,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -482,7 +482,7 @@
     "Avg_Monthly_Sales": 741,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -509,7 +509,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 323,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -536,7 +536,7 @@
     "Avg_Monthly_Sales": 21,
     "Months_of_Stock": 109,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -563,7 +563,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 247,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -590,7 +590,7 @@
     "Avg_Monthly_Sales": 24,
     "Months_of_Stock": 92,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -617,7 +617,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 626,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -644,7 +644,7 @@
     "Avg_Monthly_Sales": 7,
     "Months_of_Stock": 280,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -671,7 +671,7 @@
     "Avg_Monthly_Sales": 12,
     "Months_of_Stock": 143,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -698,7 +698,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -725,7 +725,7 @@
     "Avg_Monthly_Sales": 10,
     "Months_of_Stock": 160,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -752,7 +752,7 @@
     "Avg_Monthly_Sales": 10,
     "Months_of_Stock": 160,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -779,7 +779,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 177,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -806,7 +806,7 @@
     "Avg_Monthly_Sales": 14,
     "Months_of_Stock": 106,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -833,7 +833,7 @@
     "Avg_Monthly_Sales": 48,
     "Months_of_Stock": 30,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -860,7 +860,7 @@
     "Avg_Monthly_Sales": 15,
     "Months_of_Stock": 97,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -887,7 +887,7 @@
     "Avg_Monthly_Sales": 163,
     "Months_of_Stock": 8,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -914,7 +914,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 531,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -941,7 +941,7 @@
     "Avg_Monthly_Sales": 693,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -968,7 +968,7 @@
     "Avg_Monthly_Sales": 12,
     "Months_of_Stock": 112,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -995,7 +995,7 @@
     "Avg_Monthly_Sales": 17,
     "Months_of_Stock": 73,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1022,7 +1022,7 @@
     "Avg_Monthly_Sales": 14,
     "Months_of_Stock": 85,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1049,7 +1049,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 147,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1076,7 +1076,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 603,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1103,7 +1103,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 233,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1130,7 +1130,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1157,7 +1157,7 @@
     "Avg_Monthly_Sales": 13,
     "Months_of_Stock": 82,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1184,7 +1184,7 @@
     "Avg_Monthly_Sales": 16,
     "Months_of_Stock": 65,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1211,7 +1211,7 @@
     "Avg_Monthly_Sales": 14,
     "Months_of_Stock": 76,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1238,7 +1238,7 @@
     "Avg_Monthly_Sales": 11,
     "Months_of_Stock": 99,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1265,7 +1265,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1292,7 +1292,7 @@
     "Avg_Monthly_Sales": 91,
     "Months_of_Stock": 11,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1319,7 +1319,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 226,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1346,7 +1346,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 226,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1373,7 +1373,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 226,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1400,7 +1400,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 226,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1427,7 +1427,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 226,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1454,7 +1454,7 @@
     "Avg_Monthly_Sales": 87,
     "Months_of_Stock": 10,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1481,7 +1481,7 @@
     "Avg_Monthly_Sales": 23,
     "Months_of_Stock": 41,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1508,7 +1508,7 @@
     "Avg_Monthly_Sales": 64,
     "Months_of_Stock": 14,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1535,7 +1535,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 93,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1562,7 +1562,7 @@
     "Avg_Monthly_Sales": 16,
     "Months_of_Stock": 30,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1589,7 +1589,7 @@
     "Avg_Monthly_Sales": 40,
     "Months_of_Stock": 21,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1616,7 +1616,7 @@
     "Avg_Monthly_Sales": 88,
     "Months_of_Stock": 9,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1643,7 +1643,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 615,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1670,7 +1670,7 @@
     "Avg_Monthly_Sales": 585,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1697,7 +1697,7 @@
     "Avg_Monthly_Sales": 26,
     "Months_of_Stock": 31,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1724,7 +1724,7 @@
     "Avg_Monthly_Sales": 41,
     "Months_of_Stock": 19,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1751,7 +1751,7 @@
     "Avg_Monthly_Sales": 41,
     "Months_of_Stock": 20,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1778,7 +1778,7 @@
     "Avg_Monthly_Sales": 43,
     "Months_of_Stock": 19,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1805,7 +1805,7 @@
     "Avg_Monthly_Sales": 37,
     "Months_of_Stock": 22,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1832,7 +1832,7 @@
     "Avg_Monthly_Sales": 42,
     "Months_of_Stock": 19,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1859,7 +1859,7 @@
     "Avg_Monthly_Sales": 37,
     "Months_of_Stock": 21,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1886,7 +1886,7 @@
     "Avg_Monthly_Sales": 38,
     "Months_of_Stock": 20,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1913,7 +1913,7 @@
     "Avg_Monthly_Sales": 39,
     "Months_of_Stock": 20,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1940,7 +1940,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 240,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1967,7 +1967,7 @@
     "Avg_Monthly_Sales": 39,
     "Months_of_Stock": 18,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -1994,7 +1994,7 @@
     "Avg_Monthly_Sales": 35,
     "Months_of_Stock": 20,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2021,7 +2021,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2048,7 +2048,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 1362,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2075,7 +2075,7 @@
     "Avg_Monthly_Sales": 128,
     "Months_of_Stock": 5,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2102,7 +2102,7 @@
     "Avg_Monthly_Sales": 12,
     "Months_of_Stock": 52,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2129,7 +2129,7 @@
     "Avg_Monthly_Sales": 11,
     "Months_of_Stock": 55,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2156,7 +2156,7 @@
     "Avg_Monthly_Sales": 7,
     "Months_of_Stock": 87,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2183,7 +2183,7 @@
     "Avg_Monthly_Sales": 14,
     "Months_of_Stock": 44,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2210,7 +2210,7 @@
     "Avg_Monthly_Sales": 68,
     "Months_of_Stock": 9,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2237,7 +2237,7 @@
     "Avg_Monthly_Sales": 10,
     "Months_of_Stock": 63,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2264,7 +2264,7 @@
     "Avg_Monthly_Sales": 38,
     "Months_of_Stock": 16,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2291,7 +2291,7 @@
     "Avg_Monthly_Sales": 62,
     "Months_of_Stock": 9,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2318,7 +2318,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 72,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2345,7 +2345,7 @@
     "Avg_Monthly_Sales": 15,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2372,7 +2372,7 @@
     "Avg_Monthly_Sales": 38,
     "Months_of_Stock": 14,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2399,7 +2399,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 57,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2426,7 +2426,7 @@
     "Avg_Monthly_Sales": 13,
     "Months_of_Stock": 40,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2453,7 +2453,7 @@
     "Avg_Monthly_Sales": 10,
     "Months_of_Stock": 54,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2480,7 +2480,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "#N/A",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2507,7 +2507,7 @@
     "Avg_Monthly_Sales": 25,
     "Months_of_Stock": 5,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2534,7 +2534,7 @@
     "Avg_Monthly_Sales": 52,
     "Months_of_Stock": 10,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2561,7 +2561,7 @@
     "Avg_Monthly_Sales": 26,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2588,7 +2588,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2615,7 +2615,7 @@
     "Avg_Monthly_Sales": 14,
     "Months_of_Stock": 15,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2642,7 +2642,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 984,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2669,7 +2669,7 @@
     "Avg_Monthly_Sales": 25,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2696,7 +2696,7 @@
     "Avg_Monthly_Sales": 201,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2723,7 +2723,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 101,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2750,7 +2750,7 @@
     "Avg_Monthly_Sales": 18,
     "Months_of_Stock": 26,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2777,7 +2777,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2804,7 +2804,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2831,7 +2831,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2858,7 +2858,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2885,7 +2885,7 @@
     "Avg_Monthly_Sales": 12,
     "Months_of_Stock": 15,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2912,7 +2912,7 @@
     "Avg_Monthly_Sales": 14,
     "Months_of_Stock": 33,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2939,7 +2939,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 90,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2966,7 +2966,7 @@
     "Avg_Monthly_Sales": 28,
     "Months_of_Stock": 14,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -2993,7 +2993,7 @@
     "Avg_Monthly_Sales": 550,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3020,7 +3020,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 45,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3047,7 +3047,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 44,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3074,7 +3074,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 2442,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3101,7 +3101,7 @@
     "Avg_Monthly_Sales": 29,
     "Months_of_Stock": 13,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3128,7 +3128,7 @@
     "Avg_Monthly_Sales": 55,
     "Months_of_Stock": 7,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3155,7 +3155,7 @@
     "Avg_Monthly_Sales": 15,
     "Months_of_Stock": 25,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3182,7 +3182,7 @@
     "Avg_Monthly_Sales": 21,
     "Months_of_Stock": 18,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3209,7 +3209,7 @@
     "Avg_Monthly_Sales": 513,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3236,7 +3236,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 826,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3263,7 +3263,7 @@
     "Avg_Monthly_Sales": 14,
     "Months_of_Stock": 12,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3290,7 +3290,7 @@
     "Avg_Monthly_Sales": 18,
     "Months_of_Stock": 19,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3317,7 +3317,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 310,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3344,7 +3344,7 @@
     "Avg_Monthly_Sales": 106,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3371,7 +3371,7 @@
     "Avg_Monthly_Sales": 54,
     "Months_of_Stock": 6,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3398,7 +3398,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 84,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3425,7 +3425,7 @@
     "Avg_Monthly_Sales": 15,
     "Months_of_Stock": 22,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3452,7 +3452,7 @@
     "Avg_Monthly_Sales": 14,
     "Months_of_Stock": 24,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3479,7 +3479,7 @@
     "Avg_Monthly_Sales": 11,
     "Months_of_Stock": 29,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3506,7 +3506,7 @@
     "Avg_Monthly_Sales": 31,
     "Months_of_Stock": 10,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3533,7 +3533,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 132,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3560,7 +3560,7 @@
     "Avg_Monthly_Sales": 21,
     "Months_of_Stock": 16,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3587,7 +3587,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 156,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3614,7 +3614,7 @@
     "Avg_Monthly_Sales": 20,
     "Months_of_Stock": 16,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3641,7 +3641,7 @@
     "Avg_Monthly_Sales": 68,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3668,7 +3668,7 @@
     "Avg_Monthly_Sales": 12,
     "Months_of_Stock": 23,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3695,7 +3695,7 @@
     "Avg_Monthly_Sales": 28,
     "Months_of_Stock": 10,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3722,7 +3722,7 @@
     "Avg_Monthly_Sales": 21,
     "Months_of_Stock": 15,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3749,7 +3749,7 @@
     "Avg_Monthly_Sales": 12,
     "Months_of_Stock": 23,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3776,7 +3776,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 215,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3803,7 +3803,7 @@
     "Avg_Monthly_Sales": 7,
     "Months_of_Stock": 45,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3830,7 +3830,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3857,7 +3857,7 @@
     "Avg_Monthly_Sales": 124,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3884,7 +3884,7 @@
     "Avg_Monthly_Sales": 22,
     "Months_of_Stock": 12,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3911,7 +3911,7 @@
     "Avg_Monthly_Sales": 18,
     "Months_of_Stock": 12,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3938,7 +3938,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 69,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3965,7 +3965,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -3992,7 +3992,7 @@
     "Avg_Monthly_Sales": 15,
     "Months_of_Stock": 16,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4019,7 +4019,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 190,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4046,7 +4046,7 @@
     "Avg_Monthly_Sales": 43,
     "Months_of_Stock": 6,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4073,7 +4073,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 73,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4100,7 +4100,7 @@
     "Avg_Monthly_Sales": 10,
     "Months_of_Stock": 26,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4127,7 +4127,7 @@
     "Avg_Monthly_Sales": 21,
     "Months_of_Stock": 11,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4154,7 +4154,7 @@
     "Avg_Monthly_Sales": 16,
     "Months_of_Stock": 16,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4181,7 +4181,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4208,7 +4208,7 @@
     "Avg_Monthly_Sales": 69,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4235,7 +4235,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 2952,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4262,7 +4262,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 86,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4289,7 +4289,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 90,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4316,7 +4316,7 @@
     "Avg_Monthly_Sales": 84,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4343,7 +4343,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4370,7 +4370,7 @@
     "Avg_Monthly_Sales": 19,
     "Months_of_Stock": 12,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4397,7 +4397,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 97,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4424,7 +4424,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 53,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4451,7 +4451,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4478,7 +4478,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 59,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4505,7 +4505,7 @@
     "Avg_Monthly_Sales": 22,
     "Months_of_Stock": 9,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4532,7 +4532,7 @@
     "Avg_Monthly_Sales": 95,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4559,7 +4559,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 2496,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4586,7 +4586,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 303,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4613,7 +4613,7 @@
     "Avg_Monthly_Sales": 6,
     "Months_of_Stock": 31,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4640,7 +4640,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4667,7 +4667,7 @@
     "Avg_Monthly_Sales": 22,
     "Months_of_Stock": 8,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4694,7 +4694,7 @@
     "Avg_Monthly_Sales": 53,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4721,7 +4721,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 63,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4748,7 +4748,7 @@
     "Avg_Monthly_Sales": 70,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4775,7 +4775,7 @@
     "Avg_Monthly_Sales": 70,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4802,7 +4802,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 1116,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4829,7 +4829,7 @@
     "Avg_Monthly_Sales": 71,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4856,7 +4856,7 @@
     "Avg_Monthly_Sales": 70,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4883,7 +4883,7 @@
     "Avg_Monthly_Sales": 24,
     "Months_of_Stock": 7,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4910,7 +4910,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 720,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4937,7 +4937,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 20,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4964,7 +4964,7 @@
     "Avg_Monthly_Sales": 20,
     "Months_of_Stock": 8,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -4991,7 +4991,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5018,7 +5018,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 18,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5045,7 +5045,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 231,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5072,7 +5072,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 228,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5099,7 +5099,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 224,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5126,7 +5126,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 223,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5153,7 +5153,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 47,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5180,7 +5180,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 100,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5207,7 +5207,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 217,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5234,7 +5234,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5261,7 +5261,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 100,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5288,7 +5288,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 636,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5315,7 +5315,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 67,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5342,7 +5342,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 30,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5369,7 +5369,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 203,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5396,7 +5396,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5423,7 +5423,7 @@
     "Avg_Monthly_Sales": 7,
     "Months_of_Stock": 20,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5450,7 +5450,7 @@
     "Avg_Monthly_Sales": 20,
     "Months_of_Stock": 7,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5477,7 +5477,7 @@
     "Avg_Monthly_Sales": 72,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5504,7 +5504,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 5,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5531,7 +5531,7 @@
     "Avg_Monthly_Sales": 10,
     "Months_of_Stock": 13,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5558,7 +5558,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 25,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5585,7 +5585,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 40,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5612,7 +5612,7 @@
     "Avg_Monthly_Sales": 7,
     "Months_of_Stock": 18,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5639,7 +5639,7 @@
     "Avg_Monthly_Sales": 13,
     "Months_of_Stock": 36,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5666,7 +5666,7 @@
     "Avg_Monthly_Sales": 75,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5693,7 +5693,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 151,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5720,7 +5720,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5747,7 +5747,7 @@
     "Avg_Monthly_Sales": 12,
     "Months_of_Stock": 10,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5774,7 +5774,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 13,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5801,7 +5801,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 244,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5828,7 +5828,7 @@
     "Avg_Monthly_Sales": 6,
     "Months_of_Stock": 19,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5855,7 +5855,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 468,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5882,7 +5882,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 464,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5909,7 +5909,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5936,7 +5936,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 570,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5963,7 +5963,7 @@
     "Avg_Monthly_Sales": 10,
     "Months_of_Stock": 10,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -5990,7 +5990,7 @@
     "Avg_Monthly_Sales": 10,
     "Months_of_Stock": 10,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6017,7 +6017,7 @@
     "Avg_Monthly_Sales": 6,
     "Months_of_Stock": 15,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6044,7 +6044,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 21,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6071,7 +6071,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 71,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6098,7 +6098,7 @@
     "Avg_Monthly_Sales": 7,
     "Months_of_Stock": 13,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6125,7 +6125,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6152,7 +6152,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6179,7 +6179,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 18,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6206,7 +6206,7 @@
     "Avg_Monthly_Sales": 22,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6233,7 +6233,7 @@
     "Avg_Monthly_Sales": 42,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6260,7 +6260,7 @@
     "Avg_Monthly_Sales": 11,
     "Months_of_Stock": 9,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6287,7 +6287,7 @@
     "Avg_Monthly_Sales": 100,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6314,7 +6314,7 @@
     "Avg_Monthly_Sales": 14,
     "Months_of_Stock": 6,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6341,7 +6341,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6368,7 +6368,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 154,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6395,7 +6395,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 77,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6422,7 +6422,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 17,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6449,7 +6449,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6476,7 +6476,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 1056,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6503,7 +6503,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6530,7 +6530,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 426,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6557,7 +6557,7 @@
     "Avg_Monthly_Sales": 16,
     "Months_of_Stock": 5,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6584,7 +6584,7 @@
     "Avg_Monthly_Sales": 20,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6611,7 +6611,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 34,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6638,7 +6638,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 77,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6665,7 +6665,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 17,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6692,7 +6692,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6719,7 +6719,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 104,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6746,7 +6746,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 16,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6773,7 +6773,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 15,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6800,7 +6800,7 @@
     "Avg_Monthly_Sales": 30,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6827,7 +6827,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 15,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6854,7 +6854,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 732,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6881,7 +6881,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6908,7 +6908,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 14,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6935,7 +6935,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 11,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6962,7 +6962,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -6989,7 +6989,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7016,7 +7016,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7043,7 +7043,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 21,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7070,7 +7070,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7097,7 +7097,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7124,7 +7124,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7151,7 +7151,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7178,7 +7178,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 13,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7205,7 +7205,7 @@
     "Avg_Monthly_Sales": 54,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7232,7 +7232,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 98,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7259,7 +7259,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7286,7 +7286,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 7,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7313,7 +7313,7 @@
     "Avg_Monthly_Sales": 11,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7340,7 +7340,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7367,7 +7367,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 63,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7394,7 +7394,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7421,7 +7421,7 @@
     "Avg_Monthly_Sales": 6,
     "Months_of_Stock": 8,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7448,7 +7448,7 @@
     "Avg_Monthly_Sales": 6,
     "Months_of_Stock": 6,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7475,7 +7475,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 70,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7502,7 +7502,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7529,7 +7529,7 @@
     "Avg_Monthly_Sales": 6,
     "Months_of_Stock": 8,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7556,7 +7556,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 108,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7583,7 +7583,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7610,7 +7610,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 288,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7637,7 +7637,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 94,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7664,7 +7664,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 282,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7691,7 +7691,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7718,7 +7718,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7745,7 +7745,7 @@
     "Avg_Monthly_Sales": 78,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7772,7 +7772,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7799,7 +7799,7 @@
     "Avg_Monthly_Sales": 14,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7826,7 +7826,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 176,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7853,7 +7853,7 @@
     "Avg_Monthly_Sales": -2,
     "Months_of_Stock": -22,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7880,7 +7880,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7907,7 +7907,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7934,7 +7934,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 492,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7961,7 +7961,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 516,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -7988,7 +7988,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 5,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8015,7 +8015,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 492,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8042,7 +8042,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8069,7 +8069,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 9,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8096,7 +8096,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 5,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8123,7 +8123,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8150,7 +8150,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 24,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8177,7 +8177,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8204,7 +8204,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 234,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8231,7 +8231,7 @@
     "Avg_Monthly_Sales": 222,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8258,7 +8258,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 7,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8285,7 +8285,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 152,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8312,7 +8312,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 89,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8339,7 +8339,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8366,7 +8366,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 105,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8393,7 +8393,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 56,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8420,7 +8420,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8447,7 +8447,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 6,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8474,7 +8474,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 54,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8501,7 +8501,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8528,7 +8528,7 @@
     "Avg_Monthly_Sales": 10,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8555,7 +8555,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8582,7 +8582,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8609,7 +8609,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8636,7 +8636,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8663,7 +8663,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 8,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8690,7 +8690,7 @@
     "Avg_Monthly_Sales": 39,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8717,7 +8717,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 204,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8744,7 +8744,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8771,7 +8771,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8798,7 +8798,7 @@
     "Avg_Monthly_Sales": 15,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8825,7 +8825,7 @@
     "Avg_Monthly_Sales": 17,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8852,7 +8852,7 @@
     "Avg_Monthly_Sales": 11,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8879,7 +8879,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8906,7 +8906,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 192,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8933,7 +8933,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 384,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8960,7 +8960,7 @@
     "Avg_Monthly_Sales": 12,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -8987,7 +8987,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9014,7 +9014,7 @@
     "Avg_Monthly_Sales": 38,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9041,7 +9041,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 372,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9068,7 +9068,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 74,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9095,7 +9095,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9122,7 +9122,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 6,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9149,7 +9149,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9176,7 +9176,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9203,7 +9203,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 9,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9230,7 +9230,7 @@
     "Avg_Monthly_Sales": 48,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9257,7 +9257,7 @@
     "Avg_Monthly_Sales": 6,
     "Months_of_Stock": 5,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9284,7 +9284,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 24,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9311,7 +9311,7 @@
     "Avg_Monthly_Sales": 95,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9338,7 +9338,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 8,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9365,7 +9365,7 @@
     "Avg_Monthly_Sales": 7,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9392,7 +9392,7 @@
     "Avg_Monthly_Sales": 7,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9419,7 +9419,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 54,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9446,7 +9446,7 @@
     "Avg_Monthly_Sales": 285,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9473,7 +9473,7 @@
     "Avg_Monthly_Sales": 10,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9500,7 +9500,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9527,7 +9527,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 156,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9554,7 +9554,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 150,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9581,7 +9581,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 62,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9608,7 +9608,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 22,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9635,7 +9635,7 @@
     "Avg_Monthly_Sales": 17,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9662,7 +9662,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 18,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9689,7 +9689,7 @@
     "Avg_Monthly_Sales": 31,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9716,7 +9716,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 120,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9743,7 +9743,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 138,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9770,7 +9770,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 6,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9797,7 +9797,7 @@
     "Avg_Monthly_Sales": 13,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9824,7 +9824,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 33,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9851,7 +9851,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 264,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9878,7 +9878,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9905,7 +9905,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9932,7 +9932,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 66,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9959,7 +9959,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 132,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -9986,7 +9986,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 13,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10013,7 +10013,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 252,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10040,7 +10040,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10067,7 +10067,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 11,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10094,7 +10094,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": -84,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10121,7 +10121,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 6,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10148,7 +10148,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10175,7 +10175,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10202,7 +10202,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 5,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10229,7 +10229,7 @@
     "Avg_Monthly_Sales": 12,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10256,7 +10256,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 33,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10283,7 +10283,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10310,7 +10310,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 10,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10337,7 +10337,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10364,7 +10364,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 25,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10391,7 +10391,7 @@
     "Avg_Monthly_Sales": 10,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10418,7 +10418,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 16,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10445,7 +10445,7 @@
     "Avg_Monthly_Sales": 7,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10472,7 +10472,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10499,7 +10499,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 6,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10526,7 +10526,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 5,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10553,7 +10553,7 @@
     "Avg_Monthly_Sales": 31,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10580,7 +10580,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 7,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10607,7 +10607,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 34,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10634,7 +10634,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 6,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10661,7 +10661,7 @@
     "Avg_Monthly_Sales": 6,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10688,7 +10688,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10715,7 +10715,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 7,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10742,7 +10742,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 7,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10769,7 +10769,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 192,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10796,7 +10796,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 192,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10823,7 +10823,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 192,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10850,7 +10850,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 15,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10877,7 +10877,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10904,7 +10904,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10931,7 +10931,7 @@
     "Avg_Monthly_Sales": 33,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10958,7 +10958,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 90,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -10985,7 +10985,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 90,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11012,7 +11012,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 15,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11039,7 +11039,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 30,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11066,7 +11066,7 @@
     "Avg_Monthly_Sales": 35,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11093,7 +11093,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11120,7 +11120,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11147,7 +11147,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 192,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11174,7 +11174,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11201,7 +11201,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 84,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11228,7 +11228,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11255,7 +11255,7 @@
     "Avg_Monthly_Sales": 14,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11282,7 +11282,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11309,7 +11309,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 39,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11336,7 +11336,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11363,7 +11363,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 26,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11390,7 +11390,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11417,7 +11417,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 7,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11444,7 +11444,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11471,7 +11471,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 12,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11498,7 +11498,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 13,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11525,7 +11525,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 144,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11552,7 +11552,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 72,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11579,7 +11579,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 144,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11606,7 +11606,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 72,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11633,7 +11633,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11660,7 +11660,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 18,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11687,7 +11687,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 7,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11714,7 +11714,7 @@
     "Avg_Monthly_Sales": 13,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11741,7 +11741,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 66,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11768,7 +11768,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 132,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11795,7 +11795,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11822,7 +11822,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 8,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11849,7 +11849,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11876,7 +11876,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 132,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11903,7 +11903,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11930,7 +11930,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 66,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11957,7 +11957,7 @@
     "Avg_Monthly_Sales": 13,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -11984,7 +11984,7 @@
     "Avg_Monthly_Sales": 10,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12011,7 +12011,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 6,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12038,7 +12038,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12065,7 +12065,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12092,7 +12092,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 8,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12119,7 +12119,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 30,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12146,7 +12146,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 10,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12173,7 +12173,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12200,7 +12200,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 5,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12227,7 +12227,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 30,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12254,7 +12254,7 @@
     "Avg_Monthly_Sales": 276,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12281,7 +12281,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12308,7 +12308,7 @@
     "Avg_Monthly_Sales": 20,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12335,7 +12335,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 9,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12362,7 +12362,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12389,7 +12389,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12416,7 +12416,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12443,7 +12443,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 54,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12470,7 +12470,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12497,7 +12497,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 24,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12524,7 +12524,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 22,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12551,7 +12551,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 108,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12578,7 +12578,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12605,7 +12605,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12632,7 +12632,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12659,7 +12659,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12686,7 +12686,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 54,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12713,7 +12713,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12740,7 +12740,7 @@
     "Avg_Monthly_Sales": 14,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12767,7 +12767,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 54,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12794,7 +12794,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12821,7 +12821,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12848,7 +12848,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12875,7 +12875,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12902,7 +12902,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12929,7 +12929,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 96,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12956,7 +12956,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -12983,7 +12983,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13010,7 +13010,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13037,7 +13037,7 @@
     "Avg_Monthly_Sales": 12,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13064,7 +13064,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13091,7 +13091,7 @@
     "Avg_Monthly_Sales": -1,
     "Months_of_Stock": -12,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13118,7 +13118,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13145,7 +13145,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13172,7 +13172,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 21,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13199,7 +13199,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13226,7 +13226,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13253,7 +13253,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 14,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13280,7 +13280,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13307,7 +13307,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13334,7 +13334,7 @@
     "Avg_Monthly_Sales": 13,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13361,7 +13361,7 @@
     "Avg_Monthly_Sales": 50,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13388,7 +13388,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13415,7 +13415,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13442,7 +13442,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13469,7 +13469,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 36,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13496,7 +13496,7 @@
     "Avg_Monthly_Sales": -1,
     "Months_of_Stock": -6,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13523,7 +13523,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13550,7 +13550,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13577,7 +13577,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13604,7 +13604,7 @@
     "Avg_Monthly_Sales": 7,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13631,7 +13631,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": -24,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13658,7 +13658,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13685,7 +13685,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13712,7 +13712,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 12,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13739,7 +13739,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13766,7 +13766,7 @@
     "Avg_Monthly_Sales": 11,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13793,7 +13793,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13820,7 +13820,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13847,7 +13847,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13874,7 +13874,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13901,7 +13901,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13928,7 +13928,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 16,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13955,7 +13955,7 @@
     "Avg_Monthly_Sales": 12,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -13982,7 +13982,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 24,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14009,7 +14009,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 5,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14036,7 +14036,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14063,7 +14063,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14090,7 +14090,7 @@
     "Avg_Monthly_Sales": -1,
     "Months_of_Stock": -4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14117,7 +14117,7 @@
     "Avg_Monthly_Sales": 6,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14144,7 +14144,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14171,7 +14171,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14198,7 +14198,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14225,7 +14225,7 @@
     "Avg_Monthly_Sales": 20,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14252,7 +14252,7 @@
     "Avg_Monthly_Sales": 13,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14279,7 +14279,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 24,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14306,7 +14306,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14333,7 +14333,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14360,7 +14360,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 24,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14387,7 +14387,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 24,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14414,7 +14414,7 @@
     "Avg_Monthly_Sales": 16,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14441,7 +14441,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14468,7 +14468,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 7,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14495,7 +14495,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 12,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14522,7 +14522,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 18,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14549,7 +14549,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14576,7 +14576,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14603,7 +14603,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 7,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14630,7 +14630,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14657,7 +14657,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 36,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14684,7 +14684,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14711,7 +14711,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14738,7 +14738,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14765,7 +14765,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14792,7 +14792,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14819,7 +14819,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14846,7 +14846,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14873,7 +14873,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14900,7 +14900,7 @@
     "Avg_Monthly_Sales": 149,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14927,7 +14927,7 @@
     "Avg_Monthly_Sales": 7,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14954,7 +14954,7 @@
     "Avg_Monthly_Sales": 43,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -14981,7 +14981,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15008,7 +15008,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15035,7 +15035,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15062,7 +15062,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15089,7 +15089,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 12,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15116,7 +15116,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": -12,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15143,7 +15143,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 12,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15170,7 +15170,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15197,7 +15197,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15224,7 +15224,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 6,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15251,7 +15251,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": -8,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15278,7 +15278,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15305,7 +15305,7 @@
     "Avg_Monthly_Sales": 10,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15332,7 +15332,7 @@
     "Avg_Monthly_Sales": 30,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15359,7 +15359,7 @@
     "Avg_Monthly_Sales": 185,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15386,7 +15386,7 @@
     "Avg_Monthly_Sales": 12,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15413,7 +15413,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15440,7 +15440,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15467,7 +15467,7 @@
     "Avg_Monthly_Sales": 10,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15494,7 +15494,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 24,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15521,7 +15521,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 6,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15548,7 +15548,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 6,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15575,7 +15575,7 @@
     "Avg_Monthly_Sales": 22,
     "Months_of_Stock": 63,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15602,7 +15602,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15629,7 +15629,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15656,7 +15656,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15683,7 +15683,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15710,7 +15710,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15737,7 +15737,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 6,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15764,7 +15764,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15791,7 +15791,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15818,7 +15818,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15845,7 +15845,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15872,7 +15872,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 12,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15899,7 +15899,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15926,7 +15926,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15953,7 +15953,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -15980,7 +15980,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16007,7 +16007,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16034,7 +16034,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16061,7 +16061,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16088,7 +16088,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16115,7 +16115,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16142,7 +16142,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16169,7 +16169,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16196,7 +16196,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16223,7 +16223,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16250,7 +16250,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16277,7 +16277,7 @@
     "Avg_Monthly_Sales": -2,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16304,7 +16304,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16331,7 +16331,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16358,7 +16358,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16385,7 +16385,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16412,7 +16412,7 @@
     "Avg_Monthly_Sales": 10,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16439,7 +16439,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16466,7 +16466,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16493,7 +16493,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 6,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16520,7 +16520,7 @@
     "Avg_Monthly_Sales": 189,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16547,7 +16547,7 @@
     "Avg_Monthly_Sales": 13,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16574,7 +16574,7 @@
     "Avg_Monthly_Sales": 20,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16601,7 +16601,7 @@
     "Avg_Monthly_Sales": 27,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16628,7 +16628,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16655,7 +16655,7 @@
     "Avg_Monthly_Sales": 67,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16682,7 +16682,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16709,7 +16709,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16736,7 +16736,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16763,7 +16763,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16790,7 +16790,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16817,7 +16817,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16844,7 +16844,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16871,7 +16871,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16898,7 +16898,7 @@
     "Avg_Monthly_Sales": 31,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16925,7 +16925,7 @@
     "Avg_Monthly_Sales": 25,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16952,7 +16952,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -16979,7 +16979,7 @@
     "Avg_Monthly_Sales": 259,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17006,7 +17006,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17033,7 +17033,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17060,7 +17060,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17087,7 +17087,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17114,7 +17114,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17141,7 +17141,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 12,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17168,7 +17168,7 @@
     "Avg_Monthly_Sales": 6,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17195,7 +17195,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17222,7 +17222,7 @@
     "Avg_Monthly_Sales": 17,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17249,7 +17249,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17276,7 +17276,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 6,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17303,7 +17303,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17330,7 +17330,7 @@
     "Avg_Monthly_Sales": 12,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17357,7 +17357,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 2,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17384,7 +17384,7 @@
     "Avg_Monthly_Sales": 64,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17411,7 +17411,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17438,7 +17438,7 @@
     "Avg_Monthly_Sales": 15,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17465,7 +17465,7 @@
     "Avg_Monthly_Sales": 20,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17492,7 +17492,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17519,7 +17519,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17546,7 +17546,7 @@
     "Avg_Monthly_Sales": 6,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17573,7 +17573,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17600,7 +17600,7 @@
     "Avg_Monthly_Sales": 15,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17627,7 +17627,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17654,7 +17654,7 @@
     "Avg_Monthly_Sales": 16,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17681,7 +17681,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17708,7 +17708,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17735,7 +17735,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17762,7 +17762,7 @@
     "Avg_Monthly_Sales": 16,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17789,7 +17789,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17816,7 +17816,7 @@
     "Avg_Monthly_Sales": 14,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17843,7 +17843,7 @@
     "Avg_Monthly_Sales": 17,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17870,7 +17870,7 @@
     "Avg_Monthly_Sales": 56,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17897,7 +17897,7 @@
     "Avg_Monthly_Sales": 56,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17924,7 +17924,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17951,7 +17951,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -17978,7 +17978,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18005,7 +18005,7 @@
     "Avg_Monthly_Sales": 6,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18032,7 +18032,7 @@
     "Avg_Monthly_Sales": 6,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18059,7 +18059,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18086,7 +18086,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18113,7 +18113,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18140,7 +18140,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18167,7 +18167,7 @@
     "Avg_Monthly_Sales": 16,
     "Months_of_Stock": 0,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18194,7 +18194,7 @@
     "Avg_Monthly_Sales": 10,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18221,7 +18221,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18248,7 +18248,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18275,7 +18275,7 @@
     "Avg_Monthly_Sales": 14,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18302,7 +18302,7 @@
     "Avg_Monthly_Sales": 34,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18329,7 +18329,7 @@
     "Avg_Monthly_Sales": 46,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18356,7 +18356,7 @@
     "Avg_Monthly_Sales": 24,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18383,7 +18383,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18410,7 +18410,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18437,7 +18437,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18464,7 +18464,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18491,7 +18491,7 @@
     "Avg_Monthly_Sales": 59,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18518,7 +18518,7 @@
     "Avg_Monthly_Sales": 163,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18545,7 +18545,7 @@
     "Avg_Monthly_Sales": 163,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18572,7 +18572,7 @@
     "Avg_Monthly_Sales": 91,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18599,7 +18599,7 @@
     "Avg_Monthly_Sales": 87,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18626,7 +18626,7 @@
     "Avg_Monthly_Sales": 110,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18653,7 +18653,7 @@
     "Avg_Monthly_Sales": 10,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18680,7 +18680,7 @@
     "Avg_Monthly_Sales": 5,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18707,7 +18707,7 @@
     "Avg_Monthly_Sales": 6,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18734,7 +18734,7 @@
     "Avg_Monthly_Sales": 15,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18761,7 +18761,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18788,7 +18788,7 @@
     "Avg_Monthly_Sales": 19,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18815,7 +18815,7 @@
     "Avg_Monthly_Sales": 12,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18842,7 +18842,7 @@
     "Avg_Monthly_Sales": 9,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18869,7 +18869,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18896,7 +18896,7 @@
     "Avg_Monthly_Sales": 17,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18923,7 +18923,7 @@
     "Avg_Monthly_Sales": 3,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18950,7 +18950,7 @@
     "Avg_Monthly_Sales": 17,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -18977,7 +18977,7 @@
     "Avg_Monthly_Sales": 17,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19004,7 +19004,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19031,7 +19031,7 @@
     "Avg_Monthly_Sales": 23,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19058,7 +19058,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19085,7 +19085,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19112,7 +19112,7 @@
     "Avg_Monthly_Sales": 1,
     "Months_of_Stock": 3,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19139,7 +19139,7 @@
     "Avg_Monthly_Sales": 7,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19166,7 +19166,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19193,7 +19193,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 1,
     "Stock_Status": "Low Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19220,7 +19220,7 @@
     "Avg_Monthly_Sales": 4,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19247,7 +19247,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19274,7 +19274,7 @@
     "Avg_Monthly_Sales": 2,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19301,7 +19301,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 4,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19328,7 +19328,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19355,7 +19355,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19382,7 +19382,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19409,7 +19409,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19436,7 +19436,7 @@
     "Avg_Monthly_Sales": 14,
     "Months_of_Stock": 44,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19463,7 +19463,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 3888,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19490,7 +19490,7 @@
     "Avg_Monthly_Sales": 8,
     "Months_of_Stock": 90,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19517,7 +19517,7 @@
     "Avg_Monthly_Sales": 7,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19544,7 +19544,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19571,7 +19571,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "In Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19598,7 +19598,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19625,7 +19625,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19652,7 +19652,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19679,7 +19679,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19706,7 +19706,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19733,7 +19733,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19760,7 +19760,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19787,7 +19787,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19814,7 +19814,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19841,7 +19841,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19868,7 +19868,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19895,7 +19895,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19922,7 +19922,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19949,7 +19949,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -19976,7 +19976,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20003,7 +20003,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20030,7 +20030,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20057,7 +20057,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20084,7 +20084,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20111,7 +20111,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20138,7 +20138,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20165,7 +20165,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20192,7 +20192,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20219,7 +20219,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20246,7 +20246,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20273,7 +20273,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20300,7 +20300,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20327,7 +20327,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20354,7 +20354,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20381,7 +20381,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20408,7 +20408,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20435,7 +20435,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20462,7 +20462,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20489,7 +20489,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20516,7 +20516,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20543,7 +20543,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20570,7 +20570,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20597,7 +20597,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20624,7 +20624,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20651,7 +20651,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20678,7 +20678,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20705,7 +20705,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20732,7 +20732,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20759,7 +20759,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20786,7 +20786,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20813,7 +20813,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20840,7 +20840,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20867,7 +20867,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20894,7 +20894,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20921,7 +20921,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20948,7 +20948,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -20975,7 +20975,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21002,7 +21002,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21029,7 +21029,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21056,7 +21056,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21083,7 +21083,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21110,7 +21110,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21137,7 +21137,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21164,7 +21164,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21191,7 +21191,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21218,7 +21218,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21245,7 +21245,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21272,7 +21272,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21299,7 +21299,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21326,7 +21326,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21353,7 +21353,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21380,7 +21380,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21407,7 +21407,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21434,7 +21434,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21461,7 +21461,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21488,7 +21488,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21515,7 +21515,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21542,7 +21542,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21569,7 +21569,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21596,7 +21596,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21623,7 +21623,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21650,7 +21650,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21677,7 +21677,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21704,7 +21704,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21731,7 +21731,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21758,7 +21758,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21785,7 +21785,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21812,7 +21812,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21839,7 +21839,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   },
   {
@@ -21866,7 +21866,7 @@
     "Avg_Monthly_Sales": 0,
     "Months_of_Stock": 0,
     "Stock_Status": "Out of Stock",
-    "Article_Status": "Active",
+    "Active": "YES",
     "Last_Updated": "23-04-2026"
   }
 ]
