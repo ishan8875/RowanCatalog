@@ -575,6 +575,11 @@
       border-style: dashed
     }
 
+    .card.has-order {
+      border-color: var(--green);
+      box-shadow: 0 0 0 1px var(--green), 0 4px 12px rgba(34, 197, 94, 0.2);
+    }
+
     .cimg {
       position: relative;
       width: 100%;
@@ -1156,165 +1161,71 @@
     async function loadCatalogue() {
       show('loading');
       try {
-        const [r1, r2] = await Promise.all([
-          fetchSheet(SH1_ID, SH1_GID),
-          fetchSheet(SH2_ID, SH2_GID)
-        ]);
-        ALL = merge(r1, r2);
-        if (!ALL.length) throw new Error('Sheets loaded but no product rows found. Check your sheet has data.');
+        const CACHE_KEY = 'catalog_v2';
+        const CACHE_TIME = 5 * 60 * 1000; // 5 minutes
+        let data = null;
+
+        const cached = localStorage.getItem(CACHE_KEY);
+        if (cached) {
+          try {
+            const parsed = JSON.parse(cached);
+            if (Date.now() - parsed.timestamp < CACHE_TIME) {
+              data = parsed.data;
+            }
+          } catch (e) {}
+        }
+
+        if (!data) {
+          const res = await fetch('https://ishan8875.github.io/RowanCatalog/data/catalog.json');
+          if (!res.ok) throw new Error('Failed to load catalog data from server.');
+          data = await res.json();
+          try {
+            localStorage.setItem(CACHE_KEY, JSON.stringify({
+              timestamp: Date.now(),
+              data: data
+            }));
+          } catch (e) {}
+        }
+
+        ALL = data.map(m => {
+          return {
+            articleNo: (m.Article_No || m.articleNo || '').toString().trim(),
+            name: m.Product_Name || m.name || '',
+            brand: m.Brand || m.brand || '',
+            category: m.Category || m.category || '',
+            subCat: m['Sub-Category'] || m.subCat || '',
+            age: m.Age_Group || m.age || '',
+            mrp: m.MRP || m.mrp || '',
+            sp: m.Selling_Price || m.sp || '',
+            ean: m['Barcode_/_EAN'] || m.ean || '',
+            isNew: (m['Is_New_Inward?'] || m.isNew || '').toString().toLowerCase() === 'yes',
+            isLimited: (m.Status || '').toString().toLowerCase() === 'limited stock',
+            inDate: m.Expected_Inward_Date || m.inDate || '',
+            inQty: m.Inward_Qty_Planned || m.inQty || '',
+            hasImg: (m['Image_Available?'] || m.image || 'yes').toString().toLowerCase() !== 'no',
+            notes: m['Notes_/_Remarks'] || m.notes || '',
+            stock: m['Current_Stock_(Qty)'] || m.stock || '—',
+            status: m.Stock_Status || m.status || '',
+            isHot: parseFloat(m['Sales_Qty_–_30_Days'] || m.sales30 || '0') >= 20,
+            active: (m.Active || m.active || 'YES').toString().toUpperCase()
+          };
+        }).filter(p => p.active !== 'NO');
+
+        if (!ALL.length) throw new Error('Catalog loaded but no active products found.');
+        
         buildFilters();
         filtered = [...ALL];
         renderGrid();
+        
         document.getElementById('filter-bar').style.display = 'flex';
         document.getElementById('stats-bar').style.display = 'flex';
         document.getElementById('sku-ct').textContent = ALL.length + ' SKUs';
-        const dates = ALL.map(p => p.lastUpdated).filter(Boolean).sort();
-        if (dates.length) document.getElementById('st-date').textContent = 'Updated: ' + dates[dates.length - 1];
         hide('loading');
         toast('✓ Loaded ' + ALL.length + ' products', 'ok');
       } catch (e) {
         hide('loading');
         showErr(e.message);
       }
-    }
-
-    function fetchSheet(sheetId, gid) {
-      /* Three-layer fallback:
-         1. Relay (Apps Script) via fetch
-         2. Direct gviz CSV (works if CORS headers present)
-         3. Timeout fallback  */
-      const csvUrl = 'https://docs.google.com/spreadsheets/d/' + sheetId + '/gviz/tq?tqx=out:csv&gid=' + gid;
-      const via = [
-        () => fetchViaRelay(csvUrl),
-        () => fetchDirect(csvUrl),
-      ];
-      return via.reduce((p, fn) => p.catch(() => fn()), Promise.reject('start'));
-    }
-
-    function fetchViaRelay(csvUrl) {
-      return new Promise((res, rej) => {
-        const url = RELAY + '?url=' + encodeURIComponent(csvUrl);
-
-        // Try fetch() first (handles redirects better on iOS Safari)
-        if (typeof fetch !== 'undefined') {
-          let opts = {};
-          let tid;
-          if (typeof AbortController !== 'undefined') {
-            const ctrl = new AbortController();
-            opts.signal = ctrl.signal;
-            tid = setTimeout(() => ctrl.abort(), 20000);
-          }
-          fetch(url, opts)
-            .then(r => {
-              if (tid) clearTimeout(tid);
-              if (!r.ok) throw new Error('relay-http:' + r.status);
-              return r.text();
-            })
-            .then(t => {
-              if (!t || t.trim().startsWith('<')) throw new Error('relay-html');
-              res(parseCSV(t));
-            })
-            .catch(err => {
-              // Fall back to XHR if fetch fails
-              xhrRelay(url, res, rej);
-            });
-        } else {
-          xhrRelay(url, res, rej);
-        }
-      });
-    }
-
-    function xhrRelay(url, res, rej) {
-      const xhr = new XMLHttpRequest();
-      xhr.open('GET', url, true);
-      xhr.timeout = 20000;
-      xhr.onload = () => {
-        const t = xhr.responseText || '';
-        if (xhr.status >= 200 && xhr.status < 300 && t && !t.trim().startsWith('<')) {
-          res(parseCSV(t));
-        } else {
-          rej(new Error('relay-bad:' + xhr.status));
-        }
-      };
-      xhr.onerror = () => rej(new Error('relay-network'));
-      xhr.ontimeout = () => rej(new Error('relay-timeout'));
-      xhr.send();
-    }
-
-    function fetchDirect(csvUrl) {
-      return new Promise((res, rej) => {
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', csvUrl, true);
-        xhr.timeout = 15000;
-        xhr.onload = () => {
-          const t = xhr.responseText || '';
-          if (xhr.status >= 200 && xhr.status < 300 && t && !t.trim().startsWith('<')) {
-            res(parseCSV(t));
-          } else {
-            rej(new Error('direct-bad:' + xhr.status));
-          }
-        };
-        xhr.onerror = () => rej(new Error('direct-network'));
-        xhr.ontimeout = () => rej(new Error('direct-timeout'));
-        xhr.send();
-      });
-    }
-
-    /* ── CSV PARSER ── */
-    function parseCSV(txt) {
-      const lines = txt.trim().split(/\r?\n/);
-      if (lines.length < 2) return [];
-      const hdrs = splitRow(lines[0]).map(h => h.trim().replace(/^\uFEFF/, ''));
-      return lines.slice(1).map(line => {
-        const vals = splitRow(line);
-        const o = {};
-        hdrs.forEach((h, i) => { o[h] = (vals[i] || '').trim(); });
-        return o;
-      }).filter(r => hdrs[0] && r[hdrs[0]]);
-    }
-    function splitRow(row) {
-      const out = []; let cur = '', q = false;
-      for (let i = 0; i < row.length; i++) {
-        if (row[i] === '"') { q = !q; continue; }
-        if (row[i] === ',' && !q) { out.push(cur); cur = ''; continue; }
-        cur += row[i];
-      }
-      out.push(cur); return out;
-    }
-
-    /* ── MERGE ── */
-    function merge(master, stock) {
-      const sm = {};
-      stock.forEach(r => { if (r['Article No']) sm[r['Article No'].toUpperCase()] = r; });
-      const s30 = stock.map(r => parseFloat(r['Sales Qty \u2013 30 Days'] || r['Sales Qty - 30 Days'] || '0')).filter(n => n > 0).sort((a, b) => a - b);
-      const hot = s30.length ? s30[Math.floor(s30.length * .8)] : 99999;
-      return master.map(m => {
-        const key = (m['Article No'] || '').toUpperCase();
-        const s = sm[key] || {};
-        const s30v = parseFloat(s['Sales Qty \u2013 30 Days'] || s['Sales Qty - 30 Days'] || '0');
-        return {
-          articleNo: (m['Article No'] || '').toString().trim(),
-          name: m['Product Name'] || s['Product Name'] || '',
-          brand: m['Brand'] || s['Brand'] || '',
-          category: m['Category'] || '',
-          subCat: m['Sub-Category'] || '',
-          age: m['Age Group'] || '',
-          mrp: m['MRP (₹)'] || m['MRP'] || '',
-          sp: m['Selling Price'] || m['Selling Price (₹)'] || m['SP'] || '',
-          gst: m['GST%'] || m['GST %'] || m['GST'] || '',
-          ean: m['Barcode/EAN'] || m['EAN'] || m['EAN Code'] || m['Barcode'] || '',
-          isNew: (m['Is New Inward?'] || m['Is New Inward? (Yes/No)'] || '').toLowerCase() === 'yes',
-          isLimited: (m['Status'] || '').toLowerCase() === 'limited stock',
-          inDate: m['Expected Inward Date'] || '',
-          inQty: m['Inward Qty Planned'] || '',
-          hasImg: (m['Image Available? (Yes/No)'] || m['Image Available?'] || '').toLowerCase() === 'yes',
-          notes: m['Notes/Remarks'] || '',
-          stock: s['Current Stock (Qty)'] || '—',
-          status: s['Stock Status'] || '',
-          lastUpdated: s['Last Updated'] || '',
-          isHot: s30v >= hot && s30v > 0,
-        };
-      });
     }
 
     /* ── FILTERS ── */
@@ -1474,80 +1385,49 @@
         return;
       }
 
-      // Try multiple extensions and case variations
-      const attempts = [];
-      const exts = ['webp', 'jpg', 'jpeg', 'png', 'avif'];
+      const path = encodeURIComponent(articleNo);
+      // Single Cloudinary URL leveraging f_auto for optimal format delivery
+      const imgUrl = `https://res.cloudinary.com/dqt0ehxeb/image/upload/c_limit,w_400,f_auto,q_auto/${path}`;
 
-      // We try exact case, uppercase, and lowercase versions of the articleNo
-      const variations = [
-        encodeURIComponent(articleNo),
-        encodeURIComponent(articleNo.toUpperCase()),
-        encodeURIComponent(articleNo.toLowerCase())
-      ];
-
-      // Remove duplicates from variations (e.g., if articleNo is already uppercase)
-      const uniqueVars = [...new Set(variations)];
-
-      for (const v of uniqueVars) {
-        for (const ext of exts) {
-          attempts.push(`${v}.${ext}`);
+      const img = new Image();
+      img.onload = () => {
+        imgCache[articleNo] = imgUrl;
+        applyImg(wrap, imgUrl);
+        
+        const pObj = ALL.find(x => x.articleNo === articleNo);
+        if (pObj) {
+          pObj.hasImg = true;
+          try {
+            const safeId = CSS.escape(articleNo);
+            const cBnoi = document.querySelector('#card-' + safeId + ' .b-noi');
+            if (cBnoi) cBnoi.remove();
+            const mBnoi = document.querySelector('#moverlay[data-article="' + safeId + '"] .b-noi');
+            if (mBnoi) mBnoi.remove();
+            const cCard = document.querySelector('#card-' + safeId);
+            if (cCard) cCard.classList.remove('no-img-card');
+          } catch(e) {}
         }
-      }
-
-      let tryIdx = 0;
-
-      function tryNext() {
-        if (tryIdx >= attempts.length) {
-          imgCache[articleNo] = 'NONE';
-          const ph = wrap.querySelector('.ph');
-          if (ph) ph.innerHTML = '<span class="ico">📷</span><span class="lbl">No Image</span>';
-          
-          const pObj = ALL.find(x => x.articleNo === articleNo);
-          if (pObj) {
-            pObj.hasImg = false;
-            try {
-              const safeId = CSS.escape(articleNo);
-              const cBdgs = document.querySelector('#card-' + safeId + ' .badges');
-              if (cBdgs && !cBdgs.querySelector('.b-noi')) cBdgs.insertAdjacentHTML('beforeend', '<span class="badge b-noi">📷 Needed</span>');
-              const mBdgs = document.querySelector('#moverlay[data-article="' + safeId + '"] .mbadges');
-              if (mBdgs && !mBdgs.querySelector('.b-noi')) mBdgs.insertAdjacentHTML('beforeend', '<span class="badge b-noi">📷 Image Needed</span>');
-              const cCard = document.querySelector('#card-' + safeId);
-              if (cCard) cCard.classList.add('no-img-card');
-            } catch(e) {}
-          }
-          return;
+      };
+      img.onerror = () => {
+        imgCache[articleNo] = 'NONE';
+        const ph = wrap.querySelector('.ph');
+        if (ph) ph.innerHTML = '<span class="ico">📷</span><span class="lbl">No Image</span>';
+        
+        const pObj = ALL.find(x => x.articleNo === articleNo);
+        if (pObj) {
+          pObj.hasImg = false;
+          try {
+            const safeId = CSS.escape(articleNo);
+            const cBdgs = document.querySelector('#card-' + safeId + ' .badges');
+            if (cBdgs && !cBdgs.querySelector('.b-noi')) cBdgs.insertAdjacentHTML('beforeend', '<span class="badge b-noi">📷 Needed</span>');
+            const mBdgs = document.querySelector('#moverlay[data-article="' + safeId + '"] .mbadges');
+            if (mBdgs && !mBdgs.querySelector('.b-noi')) mBdgs.insertAdjacentHTML('beforeend', '<span class="badge b-noi">📷 Image Needed</span>');
+            const cCard = document.querySelector('#card-' + safeId);
+            if (cCard) cCard.classList.add('no-img-card');
+          } catch(e) {}
         }
-
-        const path = attempts[tryIdx++];
-        // Using Cloudinary fetch with c_limit,w_600 for performance, f_auto,q_auto for optimal format/quality
-        const imgUrl = `https://res.cloudinary.com/dqt0ehxeb/image/upload/c_limit,w_600,f_auto,q_auto/${path}`;
-
-        const img = new Image();
-        img.onload = () => {
-          imgCache[articleNo] = imgUrl;
-          applyImg(wrap, imgUrl);
-          
-          const pObj = ALL.find(x => x.articleNo === articleNo);
-          if (pObj) {
-            pObj.hasImg = true;
-            try {
-              const safeId = CSS.escape(articleNo);
-              const cBnoi = document.querySelector('#card-' + safeId + ' .b-noi');
-              if (cBnoi) cBnoi.remove();
-              const mBnoi = document.querySelector('#moverlay[data-article="' + safeId + '"] .b-noi');
-              if (mBnoi) mBnoi.remove();
-              const cCard = document.querySelector('#card-' + safeId);
-              if (cCard) cCard.classList.remove('no-img-card');
-            } catch(e) {}
-          }
-        };
-        img.onerror = () => {
-          tryNext();
-        };
-        img.src = imgUrl;
-      }
-
-      tryNext();
+      };
+      img.src = imgUrl;
     }
 
     function applyImg(wrap, src) {
@@ -1720,10 +1600,23 @@
       const next = Math.max(0, current + delta);
       orderCart[articleNo] = next;
       
+      if (delta > 0) {
+        const pObj = ALL.find(x => x.articleNo === articleNo);
+        if (pObj && pObj.status === 'Out of Stock') {
+          toast('⚠ Article is out of stock', 'err');
+        }
+      }
+      
       const safeId = typeof CSS !== 'undefined' && CSS.escape ? CSS.escape(articleNo) : articleNo;
       
       const cVal = document.querySelector('#card-' + safeId + ' .qty-val');
       if (cVal) cVal.textContent = next;
+      
+      const cCard = document.querySelector('#card-' + safeId);
+      if (cCard) {
+        if (next > 0) cCard.classList.add('has-order');
+        else cCard.classList.remove('has-order');
+      }
       
       const mVal = document.getElementById('modal-qty-val');
       if (mVal && document.getElementById('moverlay').getAttribute('data-article') === articleNo) {
@@ -1798,19 +1691,21 @@
       const items = ALL.filter(p => (orderCart[p.articleNo] || 0) > 0);
       if (!items.length) return toast('No items in order', 'err');
       
-      const headers = ['Article No', 'Description', 'MRP', 'Order Qty'];
+      const headers = ['Article No', 'Description', 'MRP', 'Order Qty', 'Remark'];
       const rows = items.map(p => [
         `"${p.articleNo}"`,
         `"${p.name.replace(/"/g, '""')}"`,
         `"${p.mrp}"`,
-        `"${orderCart[p.articleNo]}"`
+        `"${orderCart[p.articleNo]}"`,
+        `"${p.status === 'Out of Stock' ? 'OOS' : ''}"`
       ].join(','));
       
       const csvContent = headers.join(',') + '\n' + rows.join('\n');
       
       const d = new Date();
       const dateStr = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
-      downloadFile(csvContent, `Rowan_Order_${dateStr}.csv`, 'text/csv');
+      const timeStr = String(d.getHours()).padStart(2,'0') + '-' + String(d.getMinutes()).padStart(2,'0');
+      downloadFile(csvContent, `Rowan_Order_${dateStr}_${timeStr}.csv`, 'text/csv');
       
       toast('Order downloaded successfully!', 'ok');
       closeCart();
