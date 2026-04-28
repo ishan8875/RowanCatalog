@@ -1215,7 +1215,7 @@
         
         buildFilters();
         filtered = [...ALL];
-        renderGrid();
+        initGrid();
         
         document.getElementById('filter-bar').style.display = 'flex';
         document.getElementById('stats-bar').style.display = 'flex';
@@ -1284,6 +1284,8 @@
     function applyFilters() {
       const q = document.getElementById('q').value.toLowerCase();
       const cat = document.getElementById('cat-sel').value;
+      
+      const matching = new Set();
       filtered = ALL.filter(p => {
         if (selBrands.size && !selBrands.has(p.brand)) return false;
         if (selStatuses.size && !selStatuses.has(p.status)) return false;
@@ -1295,22 +1297,50 @@
           const hay = [p.articleNo, p.name, p.brand, p.category, p.ean].join(' ').toLowerCase();
           if (!hay.includes(q)) return false;
         }
+        matching.add(p.articleNo);
         return true;
       });
-      renderGrid();
+
+      const grid = document.getElementById('grid');
+      const cards = grid.children;
+      for (let i = 0; i < cards.length; i++) {
+        const card = cards[i];
+        // card ID is formatted as "card-ARTICLE_NO"
+        const safeId = card.id.replace('card-', '');
+        
+        // Use CSS.escape logic inverse if needed, but since safeId is exactly the CSS.escape string, we should match it
+        // Actually, CSS.escape was NOT used for the main ID assignment in makeCard. makeCard uses: div.id = 'card-' + p.articleNo;
+        if (matching.has(safeId)) {
+          card.style.display = ''; // Restore flex
+        } else {
+          card.style.display = 'none';
+        }
+      }
+
+      const empty = document.getElementById('empty');
+      if (!filtered.length) { 
+        empty.style.display = 'block'; 
+      } else {
+        empty.style.display = 'none';
+      }
+      
+      updateStats(filtered);
     }
 
     /* ── RENDER ── */
-    function renderGrid() {
+    function initGrid() {
       const grid = document.getElementById('grid');
       const empty = document.getElementById('empty');
       grid.innerHTML = '';
-      if (!filtered.length) { empty.style.display = 'block'; updateStats([]); return; }
+      if (!ALL.length) { empty.style.display = 'block'; updateStats([]); return; }
       empty.style.display = 'none';
       const frag = document.createDocumentFragment();
-      filtered.forEach(p => frag.appendChild(makeCard(p)));
+      // Render ALL cards initially
+      ALL.forEach(p => frag.appendChild(makeCard(p)));
       grid.appendChild(frag);
-      updateStats(filtered);
+      
+      // Then apply filters immediately just in case
+      applyFilters();
     }
 
     function makeCard(p) {
