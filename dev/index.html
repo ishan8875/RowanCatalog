@@ -968,6 +968,80 @@
       border-color: var(--red)
     }
 
+    /* DEALER MODAL */
+    #dealer-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 300;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    #dealer-modal.open { display: flex; }
+    .dealer-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      width: 100%;
+      max-width: 420px;
+      padding: 28px 24px;
+      animation: mIn .2s ease;
+    }
+    .dealer-box h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .dealer-box p {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .dfield { margin-bottom: 14px; }
+    .dfield label {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .dfield input {
+      width: 100%;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+      transition: border-color .15s;
+    }
+    .dfield input:focus { border-color: var(--accent); }
+    .dfield input.err-field { border-color: var(--red); }
+    .derr { font-size: 11px; color: var(--red); margin-top: 4px; display: none; }
+    .dealer-btns { display: flex; gap: 10px; margin-top: 20px; }
+    .btn-dealer-cancel {
+      flex: 1; padding: 12px; border-radius: 8px;
+      border: 1px solid var(--border); background: var(--surface2);
+      color: var(--text); font-size: 14px; font-weight: 600; cursor: pointer;
+    }
+    .btn-dealer-confirm {
+      flex: 2; padding: 12px; border-radius: 8px;
+      border: none; background: var(--green); color: #fff;
+      font-size: 14px; font-weight: 700; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+    .btn-dealer-confirm:disabled { opacity: .6; cursor: not-allowed; }
+
     /* PRINT STYLES */
     @media print {
       header, #filter-bar, #stats-bar, #err-panel, #loading, #empty, #moverlay, #toast, #fab-cart, #cart-modal, .c-actions {
@@ -1082,6 +1156,33 @@
 
   <div id="toast"></div>
 
+  <!-- DEALER DETAILS MODAL -->
+  <div id="dealer-modal">
+    <div class="dealer-box" onclick="event.stopPropagation()">
+      <h2>📋 Order Details</h2>
+      <p>Please fill in the dealer details before downloading the order.</p>
+      <div class="dfield">
+        <label>Dealer Name *</label>
+        <input type="text" id="d-dealer" placeholder="e.g. Sharma Toys" autocomplete="off">
+        <div class="derr" id="derr-dealer">Dealer name is required</div>
+      </div>
+      <div class="dfield">
+        <label>City *</label>
+        <input type="text" id="d-city" placeholder="e.g. Lucknow" autocomplete="off">
+        <div class="derr" id="derr-city">City is required</div>
+      </div>
+      <div class="dfield">
+        <label>Salesman Name *</label>
+        <input type="text" id="d-salesman" placeholder="Your name" autocomplete="off">
+        <div class="derr" id="derr-salesman">Salesman name is required</div>
+      </div>
+      <div class="dealer-btns">
+        <button class="btn-dealer-cancel" onclick="closeDealerModal()">Cancel</button>
+        <button class="btn-dealer-confirm" onclick="confirmAndDownload()">📥 Download Order</button>
+      </div>
+    </div>
+  </div>
+
   <div id="fab-cart" style="display:none" onclick="openCart()">
     🛒
     <div id="fab-badge">0</div>
@@ -1099,7 +1200,7 @@
           <span>Total Qty:</span>
           <span id="cart-total-qty">0</span>
         </div>
-        <button class="btn-dl-order" onclick="downloadOrderCSV()">📥 Download Order (CSV)</button>
+        <button class="btn-dl-order" onclick="openDealerModal()">📥 Download Order (Excel)</button>
       </div>
     </div>
   </div>
@@ -1215,7 +1316,7 @@
         
         buildFilters();
         filtered = [...ALL];
-        initGrid();
+        renderGrid();
         
         document.getElementById('filter-bar').style.display = 'flex';
         document.getElementById('stats-bar').style.display = 'flex';
@@ -1284,8 +1385,6 @@
     function applyFilters() {
       const q = document.getElementById('q').value.toLowerCase();
       const cat = document.getElementById('cat-sel').value;
-      
-      const matching = new Set();
       filtered = ALL.filter(p => {
         if (selBrands.size && !selBrands.has(p.brand)) return false;
         if (selStatuses.size && !selStatuses.has(p.status)) return false;
@@ -1297,50 +1396,22 @@
           const hay = [p.articleNo, p.name, p.brand, p.category, p.ean].join(' ').toLowerCase();
           if (!hay.includes(q)) return false;
         }
-        matching.add(p.articleNo);
         return true;
       });
-
-      const grid = document.getElementById('grid');
-      const cards = grid.children;
-      for (let i = 0; i < cards.length; i++) {
-        const card = cards[i];
-        // card ID is formatted as "card-ARTICLE_NO"
-        const safeId = card.id.replace('card-', '');
-        
-        // Use CSS.escape logic inverse if needed, but since safeId is exactly the CSS.escape string, we should match it
-        // Actually, CSS.escape was NOT used for the main ID assignment in makeCard. makeCard uses: div.id = 'card-' + p.articleNo;
-        if (matching.has(safeId)) {
-          card.style.display = ''; // Restore flex
-        } else {
-          card.style.display = 'none';
-        }
-      }
-
-      const empty = document.getElementById('empty');
-      if (!filtered.length) { 
-        empty.style.display = 'block'; 
-      } else {
-        empty.style.display = 'none';
-      }
-      
-      updateStats(filtered);
+      renderGrid();
     }
 
     /* ── RENDER ── */
-    function initGrid() {
+    function renderGrid() {
       const grid = document.getElementById('grid');
       const empty = document.getElementById('empty');
       grid.innerHTML = '';
-      if (!ALL.length) { empty.style.display = 'block'; updateStats([]); return; }
+      if (!filtered.length) { empty.style.display = 'block'; updateStats([]); return; }
       empty.style.display = 'none';
       const frag = document.createDocumentFragment();
-      // Render ALL cards initially
-      ALL.forEach(p => frag.appendChild(makeCard(p)));
+      filtered.forEach(p => frag.appendChild(makeCard(p)));
       grid.appendChild(frag);
-      
-      // Then apply filters immediately just in case
-      applyFilters();
+      updateStats(filtered);
     }
 
     function makeCard(p) {
@@ -1717,28 +1788,104 @@
       document.body.style.overflow = '';
     }
     
-    function downloadOrderCSV() {
+    const ORDER_WEBHOOK = 'https://script.google.com/macros/s/AKfycby4XavfYuNsr2xN2I6Pl8j2XtTfzUNL1VWfVntVUfM4LPrJZX2dahPi6iC0iGqhQqH2/exec';
+
+    function openDealerModal() {
       const items = ALL.filter(p => (orderCart[p.articleNo] || 0) > 0);
       if (!items.length) return toast('No items in order', 'err');
-      
+      // Clear previous values & errors
+      ['d-dealer','d-city','d-salesman'].forEach(id => {
+        const el = document.getElementById(id);
+        el.value = '';
+        el.classList.remove('err-field');
+      });
+      ['derr-dealer','derr-city','derr-salesman'].forEach(id => {
+        document.getElementById(id).style.display = 'none';
+      });
+      document.getElementById('dealer-modal').classList.add('open');
+      setTimeout(() => document.getElementById('d-dealer').focus(), 100);
+    }
+
+    function closeDealerModal() {
+      document.getElementById('dealer-modal').classList.remove('open');
+    }
+
+    function confirmAndDownload() {
+      const dealer   = document.getElementById('d-dealer').value.trim();
+      const city     = document.getElementById('d-city').value.trim();
+      const salesman = document.getElementById('d-salesman').value.trim();
+
+      // Validate — show inline errors
+      let valid = true;
+      [['d-dealer', 'derr-dealer', dealer],
+       ['d-city',   'derr-city',   city],
+       ['d-salesman','derr-salesman',salesman]
+      ].forEach(([inp, err, val]) => {
+        const inpEl = document.getElementById(inp);
+        const errEl = document.getElementById(err);
+        if (!val) {
+          inpEl.classList.add('err-field');
+          errEl.style.display = 'block';
+          valid = false;
+        } else {
+          inpEl.classList.remove('err-field');
+          errEl.style.display = 'none';
+        }
+      });
+      if (!valid) return;
+
+      const items = ALL.filter(p => (orderCart[p.articleNo] || 0) > 0);
+
+      // ── 1. BUILD CSV & DOWNLOAD ──
       const headers = ['Article No', 'Description', 'MRP', 'Order Qty', 'Remark'];
       const rows = items.map(p => [
-        `"${p.articleNo}"`,
-        `"${p.name.replace(/"/g, '""')}"`,
-        `"${p.mrp}"`,
-        `"${orderCart[p.articleNo]}"`,
-        `"${p.status === 'Out of Stock' ? 'OOS' : ''}"`
+        '"' + p.articleNo + '"',
+        '"' + p.name.replace(/"/g, '""') + '"',
+        '"' + p.mrp + '"',
+        '"' + orderCart[p.articleNo] + '"',
+        '"' + (p.status === 'Out of Stock' ? 'OOS - Confirm Availability' : '') + '"'
       ].join(','));
-      
+
       const csvContent = headers.join(',') + '\n' + rows.join('\n');
-      
+
       const d = new Date();
-      const dateStr = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
-      const timeStr = String(d.getHours()).padStart(2,'0') + '-' + String(d.getMinutes()).padStart(2,'0');
-      downloadFile(csvContent, `Rowan_Order_${dateStr}_${timeStr}.csv`, 'text/csv');
-      
-      toast('Order downloaded successfully!', 'ok');
+      const dd = String(d.getDate()).padStart(2,'0');
+      const mm = String(d.getMonth()+1).padStart(2,'0');
+      const yyyy = d.getFullYear();
+      const safeDealer   = dealer.replace(/[^a-zA-Z0-9]/g, '_');
+      const safeCity     = city.replace(/[^a-zA-Z0-9]/g, '_');
+      const fileName = 'RowanOrder_' + safeDealer + '_' + safeCity + '_' + dd + mm + yyyy + '.csv';
+
+      downloadFile(csvContent, fileName, 'text/csv');
+
+      // ── 2. SILENT SYNC TO GOOGLE SHEET (fire & forget) ──
+      const payload = {
+        dealer:   dealer,
+        city:     city,
+        salesman: salesman,
+        items: items.map(p => ({
+          articleNo: p.articleNo,
+          name:      p.name,
+          brand:     p.brand,
+          mrp:       p.mrp,
+          qty:       orderCart[p.articleNo],
+          status:    p.status || ''
+        }))
+      };
+
+      try {
+        fetch(ORDER_WEBHOOK, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        }).catch(() => {}); // silent — never alert user
+      } catch(e) {}
+
+      // ── 3. CLOSE & CONFIRM ──
+      closeDealerModal();
       closeCart();
+      toast('✓ Order downloaded!', 'ok');
     }
 
     /* ── EXPORTS ── */
