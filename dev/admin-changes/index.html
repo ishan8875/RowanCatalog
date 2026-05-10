@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Area - Rowan Toys</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e0e12;
+      --surface: #16161c;
+      --surface2: #1e1e27;
+      --border: #2a2a38;
+      --text: #e8e8f0;
+      --muted: #7070a0;
+      --accent: #ff6b35;
+      --red: #ef4444;
+      --r: 14px;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+    .login-container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 40px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      margin-bottom: 8px;
+      text-align: center;
+      color: var(--accent);
+    }
+    p {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-size: 14px;
+    }
+    .input-group {
+      margin-bottom: 16px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    input {
+      width: 100%;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      outline: none;
+      box-sizing: border-box;
+    }
+    input:focus {
+      border-color: var(--accent);
+    }
+    button {
+      width: 100%;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #e55a2b;
+    }
+    #error-msg {
+      color: var(--red);
+      font-size: 13px;
+      text-align: center;
+      margin-top: 16px;
+      display: none;
+    }
+    #admin-content {
+      display: none;
+      width: 100%;
+      max-width: 800px;
+      padding: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container" id="login-form">
+    <h1>Admin Login</h1>
+    <p>Enter credentials to access admin changes.</p>
+    <div class="input-group">
+      <label>Username</label>
+      <input type="text" id="username" placeholder="Username">
+    </div>
+    <div class="input-group">
+      <label>Password</label>
+      <input type="password" id="password" placeholder="Password">
+    </div>
+    <button onclick="login()">Login</button>
+    <div id="error-msg">Invalid credentials</div>
+  </div>
+
+  <script>
+    function login() {
+      const u = document.getElementById('username').value;
+      const p = document.getElementById('password').value;
+      const err = document.getElementById('error-msg');
+      
+      const expectedU = 'admin';
+      const expectedP = 'admin123';
+      
+      if (u === expectedU && p === expectedP) {
+        sessionStorage.setItem('isAdmin', 'true');
+        window.location.href = 'dashboard.html';
+      } else {
+        err.textContent = 'Invalid credentials';
+        err.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>

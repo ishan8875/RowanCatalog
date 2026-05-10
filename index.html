@@ -869,7 +869,7 @@
 
   <header>
     <div class="logo">
-      <img src="https://res.cloudinary.com/dqt0ehxeb/image/upload/v1777106286/Rowan-Logo.png" alt="Rowan Toys" style="height: 36px; display: block; margin-top: 4px;">
+      <img src="images/logo.png" alt="Rowan Toys" style="height: 36px; display: block; margin-top: 4px;">
     </div>
     <div class="hdr-right">
       <span class="sku-badge" id="sku-ct"></span>
@@ -1343,8 +1343,7 @@
         }
 
         const path = attempts[tryIdx++];
-        // Using Cloudinary fetch with c_limit,w_600 for performance, f_auto,q_auto for optimal format/quality
-        const imgUrl = `https://res.cloudinary.com/dqt0ehxeb/image/upload/c_limit,w_600,f_auto,q_auto/${path}`;
+        const imgUrl = `images/${path}`;
 
         const img = new Image();
         img.onload = () => {
@@ -1579,7 +1578,7 @@
       const rows = ALL.map(p => {
         let link = imgCache[p.articleNo];
         if (!link || link === 'NONE') {
-          link = `https://res.cloudinary.com/dqt0ehxeb/image/upload/c_limit,w_600,f_auto,q_auto/${encodeURIComponent(p.articleNo)}.webp`;
+          link = `images/${encodeURIComponent(p.articleNo)}.webp`;
         }
         return [
           `"${p.articleNo}"`,
