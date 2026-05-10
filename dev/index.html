@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <title>Rowan Toys — Catalogue</title>
+  <title>Rowan Toys &mdash; Catalogue</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
       --bg: #0e0e12;
@@ -774,8 +775,8 @@
     }
 
     .p-low {
-      background: var(--amber-bg);
-      color: var(--amber)
+      background: #facc15;
+      color: #000;
     }
 
     .p-out {
@@ -1135,6 +1136,14 @@
 
     /* PRINT STYLES */
     @media print {
+      body {
+        background: #cbd5e1 !important;
+        color: #0f172a !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        margin: 0;
+        padding: 5mm;
+      }
 
       header,
       #filter-bar,
@@ -1146,48 +1155,166 @@
       #toast,
       #fab-cart,
       #cart-modal,
-      .c-actions {
+      #pdf-modal,
+      #dealer-modal,
+      .c-actions,
+      #print-header {
         display: none !important;
-      }
-
-      body {
-        background: #fff !important;
-        color: #000 !important;
-      }
-
-      .card {
-        border-color: #ccc !important;
-        break-inside: avoid !important;
-        page-break-inside: avoid !important;
-        background: #fff !important;
-        box-shadow: none !important;
-        transform: none !important;
-      }
-
-      .cname,
-      .cmrp,
-      .cart,
-      .cbrand,
-      .cmeta {
-        color: #000 !important;
-      }
-
-      .pill,
-      .badge {
-        print-color-adjust: exact;
-        -webkit-print-color-adjust: exact;
-      }
-
-      .cimg {
-        background: #f8f8f8 !important;
       }
 
       #grid {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
-        gap: 10px !important;
+        gap: 12px !important;
         padding: 0 !important;
       }
+
+      .card {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+        background: #ffffff !important;
+        border: 1px solid #94a3b8 !important;
+        border-radius: 6px !important;
+        display: flex;
+        flex-direction: column !important;
+        overflow: hidden !important;
+        height: 88mm !important; /* Fixed height to ensure 3 rows fit on A4 */
+      }
+
+      /* Content Toggles for PDF */
+      .pill,
+      .qty-ctrl {
+        display: none !important;
+      }
+
+      .cart {
+        display: block !important;
+        font-size: 11px !important;
+        color: #64748b !important;
+      }
+
+      .cart span.age-sep,
+      .cart span.age-val {
+        display: none !important;
+      }
+
+      .cimg {
+        background: #f1f5f9 !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+        height: 48mm !important; /* Fixed image area */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .cimg img {
+        max-height: 100% !important;
+        width: auto !important;
+        object-fit: contain !important;
+      }
+
+      .cbody {
+        padding: 6px 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2px !important;
+        flex: 1 !important;
+      }
+
+      .cbrand {
+        font-size: 12px !important;
+        color: #ff6b35 !important;
+        font-weight: 700 !important;
+        display: block !important;
+      }
+
+      .cbrand::before {
+        content: "Brand: ";
+        font-weight: 400;
+        color: #64748b;
+      }
+
+      .cname {
+        font-size: 13px !important;
+        color: #000 !important;
+        font-weight: 600 !important;
+        display: block !important;
+        min-height: 0 !important;
+      }
+
+      .cname::before {
+        content: "Product: ";
+        font-weight: 400;
+        color: #64748b;
+      }
+
+      .cart {
+        font-size: 11px !important;
+        color: #64748b !important;
+        display: block !important;
+        margin-bottom: 5px !important;
+      }
+
+      .cart::before {
+        content: "Article No: ";
+      }
+
+      .cmeta {
+        display: block !important;
+        margin-top: 5px !important;
+        border-top: 1px solid #e2e8f0 !important;
+        padding-top: 5px !important;
+      }
+
+      .cmrp {
+        font-size: 12px !important;
+        color: #334155 !important;
+        display: block !important;
+      }
+
+      .cmrp::before {
+        content: "MRP: ";
+      }
+
+      .csp {
+        font-size: 13px !important;
+        color: #166534 !important;
+        font-weight: 700 !important;
+        display: block !important;
+      }
+
+      .csp::before {
+        content: "";
+      }
+
+      .page-break {
+        page-break-after: always;
+        break-after: page;
+        grid-column: 1 / -1;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        visibility: hidden !important;
+      }
+
+      .pdf-header {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding-bottom: 20px;
+      }
+      .pdf-header img { height: 80px; }
+    }
+
+    .cimg {
+      background: #1e1e27 !important;
+      border-bottom: 1px solid #2a2a38 !important;
+    }
+
+    .cbody {
+      padding: 12px !important;
+    }
+
+
     }
   </style>
 </head>
@@ -1196,40 +1323,42 @@
 
   <header>
     <a class="logo" href="#">
-      <img src="https://res.cloudinary.com/dqt0ehxeb/image/upload/v1777106286/Rowan-Logo.png" alt="Rowan Toys"
-        style="height: 36px; display: block; margin-top: 4px;">
+      <img src="images/logo.png" alt="Rowan Toys" style="height: 52px; display: block; margin-top: 4px;">
     </a>
     <div class="hdr-right">
       <span class="sku-badge" id="sku-ct"></span>
       <div class="search-wrap">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="q" placeholder="Search…" autocomplete="off" autocorrect="off" spellcheck="false">
+        <span class="search-icon"><i class="fa fa-search"></i></span>
+        <input type="text" id="q" placeholder="Search..." autocomplete="off" autocorrect="off" spellcheck="false">
       </div>
     </div>
   </header>
 
   <div id="err-panel">
-    <h3>⚠ Could Not Load Data</h3>
-    <p id="err-txt">Checking…</p>
-    <button class="btn-retry" onclick="location.reload()">↺ Retry</button>
+    <h3><i class="fa fa-exclamation-triangle"></i> Could Not Load Data</h3>
+    <p id="err-txt">Checking...</p>
+    <button class="btn-retry" onclick="location.reload()"><i class="fa fa-refresh"></i> Retry</button>
     <button class="btn-demo" onclick="loadDemo()">Preview Demo</button>
   </div>
 
   <div id="filter-bar" style="display:none; flex-direction:column; align-items:flex-start;">
     <div style="display:flex; width:100%; align-items:center; gap:8px; flex-wrap:wrap;">
       <button class="chip" onclick="toggleAdvFilters()" id="btn-adv-filters"
-        style="background:var(--surface2); color:var(--text); font-weight:600;">⚙️ Filters 🔽</button>
+        style="background:var(--surface2); color:var(--text); font-weight:600;"><i class="fa fa-cog"></i> Filters <i
+          class="fa fa-chevron-down"></i></button>
       <div class="fdiv"></div>
       <span class="fl">Category</span>
       <select class="fsel" id="cat-sel" onchange="applyFilters()">
         <option value="">All</option>
       </select>
       <div class="fdiv"></div>
-      <button class="chip s-hot" id="chip-hot" onclick="toggleHot()">🔥 Hot</button>
-      <button class="chip s-new" id="chip-new" onclick="toggleNew()">✨ New Inward</button>
-      <button class="chip s-lim" id="chip-lim" onclick="toggleLim()">⏳ Limited Stock</button>
+      <button class="chip s-hot" id="chip-hot" onclick="toggleHot()"><i class="fa fa-fire"></i> Hot</button>
+      <button class="chip s-new" id="chip-new" onclick="toggleNew()"><i class="fa fa-star"></i> New Inward</button>
+      <button class="chip s-lim" id="chip-lim" onclick="toggleLim()"><i class="fa fa-hourglass-half"></i> Limited
+        Stock</button>
       <div class="fdiv" style="margin-left:auto;"></div>
-      <button class="chip" onclick="clearFilters()" style="border-color:var(--red);color:var(--red)">✕ Clear</button>
+      <button class="chip" onclick="clearFilters()" style="border-color:var(--red);color:var(--red)"><i
+          class="fa fa-times"></i> Clear</button>
     </div>
     <div id="adv-filters"
       style="display:none; flex-wrap:wrap; gap:8px; align-items:center; margin-top:12px; padding-top:12px; border-top:1px dashed var(--border); width: 100%;">
@@ -1237,32 +1366,35 @@
       <div id="brand-chips" style="display:flex;flex-wrap:wrap;gap:6px"></div>
       <div class="fdiv"></div>
       <span class="fl">Stock</span>
-      <button class="chip s-in" onclick="toggleStatus('In Stock',this)">● In Stock</button>
-      <button class="chip s-low" onclick="toggleStatus('Low Stock',this)">● Low Stock</button>
-      <button class="chip s-out" onclick="toggleStatus('Out of Stock',this)">● Out of Stock</button>
-      <button class="chip s-over" onclick="toggleStatus('Overstock',this)">● Overstock</button>
+      <button class="chip s-in" onclick="toggleStatus('In Stock',this)"><i class="fa fa-circle"></i> In Stock</button>
+      <button class="chip s-low" onclick="toggleStatus('Low Stock',this)"><i class="fa fa-circle"></i> Low
+        Stock</button>
+      <button class="chip s-out" onclick="toggleStatus('Out of Stock',this)"><i class="fa fa-circle"></i> Out of
+        Stock</button>
+      <button class="chip s-over" onclick="toggleStatus('Overstock',this)"><i class="fa fa-circle"></i>
+        Overstock</button>
     </div>
   </div>
 
   <div id="stats-bar" style="display:none">
     Showing <strong id="st-shown">0</strong> &nbsp;|&nbsp;
-    🟢 <strong id="st-in">0</strong> &nbsp;
-    🟡 <strong id="st-low">0</strong> &nbsp;
-    🔴 <strong id="st-out">0</strong> &nbsp;
-    🔵 <strong id="st-over">0</strong>
+    <i class="fa fa-circle" style="color:var(--green)"></i> <strong id="st-in">0</strong> &nbsp;
+    <i class="fa fa-circle" style="color:var(--amber)"></i> <strong id="st-low">0</strong> &nbsp;
+    <i class="fa fa-circle" style="color:var(--red)"></i> <strong id="st-out">0</strong> &nbsp;
+    <i class="fa fa-circle" style="color:var(--blue)"></i> <strong id="st-over">0</strong>
     <span id="st-date" style="margin-left:auto; margin-right: 12px;"></span>
     <div class="export-btns">
-      <button class="btn-exp" id="btn-print" onclick="prepareAndPrint()">🖨️ PDF</button>
-      <button class="btn-exp" onclick="downloadStockCSV()">📊 Stock</button>
+      <button class="btn-exp" id="btn-print" onclick="prepareAndPrint()"><i class="fa fa-print"></i> PDF</button>
+      <button class="btn-exp" onclick="downloadStockCSV()"><i class="fa fa-bar-chart"></i> Stock</button>
       <button class="btn-exp" id="btn-admin-exp"
         style="display:none; background:var(--pink); color:#fff; border-color:var(--pink);"
-        onclick="downloadAdminCSV()">🔐 Admin Links</button>
+        onclick="downloadAdminCSV()"><i class="fa fa-lock"></i> Admin Links</button>
     </div>
   </div>
 
   <div id="loading" style="display:flex">
     <div class="spinner"></div>
-    <span>Loading catalogue…</span>
+    <span>Loading catalogue...</span>
   </div>
 
   <div id="grid"></div>
@@ -1284,7 +1416,8 @@
     style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:300; align-items:center; justify-content:center; padding:16px;">
     <div class="dealer-box" onclick="event.stopPropagation()"
       style="display:flex; flex-direction:column; max-height:85vh; padding: 24px 20px;">
-      <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1px; margin-bottom: 6px;">🖨️
+      <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1px; margin-bottom: 6px;"><i
+          class="fa fa-print"></i>
         Export Preview</h2>
       <p style="font-size: 12px; color: var(--muted); margin-bottom: 12px;">Uncheck products to EXCLUDE them from the
         final PDF.</p>
@@ -1311,7 +1444,7 @@
   <!-- DEALER DETAILS MODAL -->
   <div id="dealer-modal">
     <div class="dealer-box" onclick="event.stopPropagation()">
-      <h2>📋 Order Details</h2>
+      <h2><i class="fa fa-clipboard"></i> Order Details</h2>
       <p>Please fill in the dealer details before downloading the order.</p>
       <div class="dfield">
         <label>Dealer Name *</label>
@@ -1330,13 +1463,14 @@
       </div>
       <div class="dealer-btns">
         <button class="btn-dealer-cancel" onclick="closeDealerModal()">Cancel</button>
-        <button class="btn-dealer-confirm" onclick="confirmAndDownload()">📥 Download Order</button>
+        <button class="btn-dealer-confirm" onclick="confirmAndDownload()"><i class="fa fa-download"></i> Download
+          Order</button>
       </div>
     </div>
   </div>
 
   <div id="fab-cart" style="display:none" onclick="openCart()">
-    🛒
+    <i class="fa fa-shopping-cart"></i>
     <div id="fab-badge">0</div>
   </div>
 
@@ -1344,7 +1478,7 @@
     <div class="cart-content" onclick="event.stopPropagation()">
       <div class="cart-hdr">
         <h2>Review Order</h2>
-        <button class="mclose" onclick="closeCart()">✕</button>
+        <button class="mclose" onclick="closeCart()"><i class="fa fa-times"></i></button>
       </div>
       <div class="cart-body" id="cart-list"></div>
       <div class="cart-ftr">
@@ -1352,7 +1486,8 @@
           <span>Total Qty:</span>
           <span id="cart-total-qty">0</span>
         </div>
-        <button class="btn-dl-order" onclick="openDealerModal()">📥 Download Order (Excel)</button>
+        <button class="btn-dl-order" onclick="openDealerModal()"><i class="fa fa-download"></i> Download Order
+          (Excel)</button>
       </div>
     </div>
   </div>
@@ -1365,6 +1500,7 @@
     const SH1_GID = '1366558918';
     const SH2_GID = '1852033330';
     const FOLDER = '1ENz88IXOkVEcnVu59TtT2WVWkbKh0KZ6';
+    const STOCK_SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vStCgiAjmXO2wpSoTArtiliGsjpG_8JJgjaV2raZ5hEhYZ65-rsrOBi2HaLEn74ixX01-qqWos80MXC/pub?gid=1983665464&single=true&output=csv';
     /* ─────────────────────────────────────────────── */
 
     let ALL = [], filtered = [];
@@ -1378,10 +1514,10 @@
       const btn = document.getElementById('btn-adv-filters');
       if (el.style.display === 'none') {
         el.style.display = 'flex';
-        btn.innerHTML = '⚙️ Filters 🔼';
+        btn.innerHTML = '<i class="fa fa-cog"></i> Filters <i class="fa fa-chevron-up"></i>';
       } else {
         el.style.display = 'none';
-        btn.innerHTML = '⚙️ Filters 🔽';
+        btn.innerHTML = '<i class="fa fa-cog"></i> Filters <i class="fa fa-chevron-down"></i>';
       }
     }
     const imgCache = {};
@@ -1456,9 +1592,9 @@
 
         ALL = data.map(m => {
           return {
-            articleNo: (m.Article_No || m.articleNo || '').toString().trim(),
-            name: m.Product_Name || m.name || '',
-            brand: m.Brand || m.brand || '',
+            articleNo: (m.Article_No || m.articleNo || m.ArticleNo || '').toString().trim(),
+            name: (m.Product_Name || m.ProductName || m.productName || m.name || '').toString().trim(),
+            brand: (m.Brand || m.brand || '').toString().trim(),
             category: m.Category || m.category || '',
             subCat: m['Sub-Category'] || m.subCat || '',
             age: m.Age_Group || m.age || '',
@@ -1471,7 +1607,7 @@
             inQty: m.Inward_Qty_Planned || m.inQty || '',
             hasImg: (m['Image_Available?'] || m.image || 'yes').toString().toLowerCase() !== 'no',
             notes: m['Notes_/_Remarks'] || m.notes || '',
-            stock: m['Current_Stock_(Qty)'] || m.stock || '—',
+            stock: m['Current_Stock_(Qty)'] || m.stock || '&mdash;',
             status: m.Stock_Status || m.status || '',
             isHot: parseFloat(m['Sales_Qty_–_30_Days'] || m.sales30 || '0') >= 20,
             active: (m.Active || m.active || 'YES').toString().toUpperCase()
@@ -1488,11 +1624,105 @@
         document.getElementById('stats-bar').style.display = 'flex';
         document.getElementById('sku-ct').textContent = ALL.length + ' SKUs';
         hide('loading');
-        toast('✓ Loaded ' + ALL.length + ' products', 'ok');
+        toast('<i class="fa fa-check"></i> Loaded ' + ALL.length + ' products', 'ok');
+
+        fetchLiveStock(); // Sync live stock data asynchronously
       } catch (e) {
         hide('loading');
         showErr(e.message);
       }
+    }
+
+    /* ── LIVE STOCK SYNC ── */
+    async function fetchLiveStock() {
+      try {
+        const cb = '?t=' + Date.now();
+        const res = await fetch(STOCK_SHEET_URL + (STOCK_SHEET_URL.includes('?') ? '&' : '?') + 't=' + Date.now());
+        if (!res.ok) throw new Error('Live stock fetch failed: ' + res.status);
+        const csvText = await res.text();
+        const data = parseCSV(csvText);
+
+        if (!data || !data.length) {
+          console.warn('No data parsed from live stock CSV');
+          return;
+        }
+
+        const stockMap = {};
+        data.forEach(row => {
+          // Normalize keys to remove potential hidden characters or spaces
+          const cleanRow = {};
+          for (let key in row) { cleanRow[key.trim()] = row[key]; }
+
+          const art = (cleanRow['Article_No'] || cleanRow['articleNo'] || '').toString().trim();
+          if (art) stockMap[art] = cleanRow;
+        });
+
+        let updatedCount = 0;
+        ALL.forEach(p => {
+          const live = stockMap[p.articleNo];
+          if (live) {
+            // Update stock with robustness
+            const liveStock = live['Current_Stock_(Qty)'] || live['Stock'];
+            if (liveStock !== undefined && liveStock !== '') {
+              p.stock = liveStock;
+              updatedCount++;
+
+              const q = parseInt(p.stock.toString().replace(/,/g, '')) || 0;
+              const liveStatus = (live['Stock_Status'] || live['Status'] || '').trim();
+
+              if (q <= 0) {
+                p.status = 'Out of Stock';
+              } else if (q < 20) {
+                p.status = 'Low Stock';
+              } else {
+                p.status = liveStatus || 'In Stock';
+              }
+
+              p.isLimited = p.status.toLowerCase().includes('limited') || p.status === 'Low Stock';
+            }
+
+            if (live['Is_New_Inward?']) p.isNew = live['Is_New_Inward?'].toString().toLowerCase() === 'yes';
+            if (live['Expected_Inward_Date']) p.inDate = live['Expected_Inward_Date'];
+            if (live['Inward_Qty_Planned']) p.inQty = live['Inward_Qty_Planned'];
+            if (live['Notes_/_Remarks']) p.notes = live['Notes_/_Remarks'];
+
+            // Update Hot Seller status
+            const s30 = live['Sales_Qty_–_30_Days'] || live['Sales_Qty_-_30_Days'];
+            if (s30 !== undefined) p.isHot = parseFloat(s30) >= 20;
+
+            if (live['Active']) p.active = live['Active'].toString().toUpperCase();
+          }
+        });
+
+        // Refresh the UI
+        ALL = ALL.filter(p => p.active !== 'NO');
+        initGrid();
+        toast('<i class="fa fa-sync"></i> Stock data synced (' + updatedCount + ')', 'ok');
+      } catch (err) {
+        console.warn('Stock sync error:', err);
+      }
+    }
+
+    function parseCSV(str) {
+      const rows = [];
+      const lines = str.split(/\r?\n/);
+      if (lines.length < 2) return [];
+      const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+      for (let i = 1; i < lines.length; i++) {
+        if (!lines[i].trim()) continue;
+        const values = [];
+        let cur = '', inQuote = false;
+        for (let char of lines[i]) {
+          if (char === '"') inQuote = !inQuote;
+          else if (char === ',' && !inQuote) { values.push(cur.trim().replace(/^"|"$/g, '')); cur = ''; }
+          else cur += char;
+        }
+        values.push(cur.trim().replace(/^"|"$/g, ''));
+        const obj = {};
+        headers.forEach((h, idx) => obj[h] = values[idx]);
+        rows.push(obj);
+      }
+      return rows;
     }
 
     /* ── FILTERS ── */
@@ -1616,7 +1846,7 @@
       const cimg = document.createElement('div');
       cimg.className = 'cimg';
 
-      cimg.innerHTML = '<div class="ph"><span class="ico">◌</span></div>';
+      cimg.innerHTML = '<div class="ph"><span class="ico"><i class="fa fa-image"></i></span></div>';
 
       // Store articleNo on the element so observer can read it
       cimg.dataset.article = p.articleNo;
@@ -1631,10 +1861,10 @@
       /* badges */
       const bdg = document.createElement('div');
       bdg.className = 'badges';
-      if (p.isHot) bdg.innerHTML += '<span class="badge b-hot">🔥 Hot</span>';
-      if (p.isNew) bdg.innerHTML += '<span class="badge b-new">✨ New</span>';
-      if (p.isLimited) bdg.innerHTML += '<span class="badge b-lim">⏳ Limited</span>';
-      if (isNoImg) bdg.innerHTML += '<span class="badge b-noi">📷 Needed</span>';
+      if (p.isHot) bdg.innerHTML += '<span class="badge b-hot"><i class="fa fa-fire"></i> Hot</span>';
+      if (p.isNew) bdg.innerHTML += '<span class="badge b-new"><i class="fa fa-star"></i> New</span>';
+      if (p.isLimited) bdg.innerHTML += '<span class="badge b-lim"><i class="fa fa-hourglass-half"></i> Limited</span>';
+      if (isNoImg) bdg.innerHTML += '<span class="badge b-noi"><i class="fa fa-camera"></i> Needed</span>';
       cimg.appendChild(bdg);
       div.appendChild(cimg);
 
@@ -1645,10 +1875,10 @@
       body.innerHTML =
         '<div class="cbrand">' + esc(p.brand) + '</div>' +
         '<div class="cname">' + esc(p.name) + '</div>' +
-        '<div class="cart">' + esc(p.articleNo) + (p.age ? ' · ' + esc(p.age) : '') + '</div>' +
+        '<div class="cart">' + esc(p.articleNo) + (p.age ? '<span class="age-sep"> &middot; </span><span class="age-val">' + esc(p.age) + '</span>' : '') + '</div>' +
         '<div class="cmeta">' +
-        '<div><div class="cmrp">' + (p.mrp ? '₹' + fmt(p.mrp) : '—') + '</div>' + (p.sp ? '<div class="csp">SP ₹' + fmt(p.sp) + '</div>' : '') + '</div>' +
-        '<span class="pill ' + pillCls(p.status) + '">' + esc(p.status || '—') + '</span>' +
+        '<div><div class="cmrp">' + (p.mrp ? '&#8377;' + fmt(p.mrp) : '&mdash;') + '</div>' + (p.sp ? '<div class="csp">SP &#8377;' + fmt(p.sp) + '</div>' : '') + '</div>' +
+        '<span class="pill ' + pillCls(p.status) + '">' + esc(p.status || '&mdash;') + '</span>' +
         '</div>' +
         '<div class="c-actions">' +
         '<div style="font-size:11px;color:var(--muted);font-weight:600">ORDER QTY</div>' +
@@ -1669,7 +1899,7 @@
       if (imgCache[articleNo]) {
         if (imgCache[articleNo] === 'NONE') {
           const ph = wrap.querySelector('.ph');
-          if (ph) ph.innerHTML = '<span class="ico">📷</span><span class="lbl">No Image</span>';
+          if (ph) ph.innerHTML = '<span class="ico"><i class="fa fa-camera"></i></span><span class="lbl">No Image</span>';
           return;
         }
         applyImg(wrap, imgCache[articleNo]);
@@ -1702,7 +1932,7 @@
       img.onerror = () => {
         imgCache[articleNo] = 'NONE';
         const ph = wrap.querySelector('.ph');
-        if (ph) ph.innerHTML = '<span class="ico">📷</span><span class="lbl">No Image</span>';
+        if (ph) ph.innerHTML = '<span class="ico"><i class="fa fa-camera"></i></span><span class="lbl">No Image</span>';
 
         const pObj = ALL.find(x => x.articleNo === articleNo);
         if (pObj) {
@@ -1710,9 +1940,9 @@
           try {
             const safeId = CSS.escape(articleNo);
             const cBdgs = document.querySelector('#card-' + safeId + ' .badges');
-            if (cBdgs && !cBdgs.querySelector('.b-noi')) cBdgs.insertAdjacentHTML('beforeend', '<span class="badge b-noi">📷 Needed</span>');
+            if (cBdgs && !cBdgs.querySelector('.b-noi')) cBdgs.insertAdjacentHTML('beforeend', '<span class="badge b-noi"><i class="fa fa-camera"></i> Needed</span>');
             const mBdgs = document.querySelector('#moverlay[data-article="' + safeId + '"] .mbadges');
-            if (mBdgs && !mBdgs.querySelector('.b-noi')) mBdgs.insertAdjacentHTML('beforeend', '<span class="badge b-noi">📷 Image Needed</span>');
+            if (mBdgs && !mBdgs.querySelector('.b-noi')) mBdgs.insertAdjacentHTML('beforeend', '<span class="badge b-noi"><i class="fa fa-camera"></i> Image Needed</span>');
             const cCard = document.querySelector('#card-' + safeId);
             if (cCard) cCard.classList.add('no-img-card');
           } catch (e) { }
@@ -1737,7 +1967,7 @@
       img.onerror = () => {
         const ph = wrap.querySelector('.ph');
         if (ph) {
-          ph.innerHTML = '<span class="ico">📷</span><span class="lbl">Image Error</span>';
+          ph.innerHTML = '<span class="ico"><i class="fa fa-exclamation-triangle"></i></span><span class="lbl">Image Error</span>';
         }
       };
 
@@ -1748,9 +1978,9 @@
       const c = document.getElementById('mcontent');
       let imgH;
       if (p.hasImg) {
-        imgH = '<div id="mimg-wrap" style="width:100%;min-height:180px;display:flex;align-items:center;justify-content:center"><div class="ph"><span class="ico" style="font-size:28px">◌</span></div></div>';
+        imgH = '<div id="mimg-wrap" style="width:100%;min-height:180px;display:flex;align-items:center;justify-content:center"><div class="ph"><span class="ico" style="font-size:28px"><i class="fa fa-image"></i></span></div></div>';
       } else {
-        imgH = '<div class="ph" style="min-height:180px"><span class="ico">📷</span><span class="lbl">Image Needed</span></div>';
+        imgH = '<div class="ph" style="min-height:180px"><span class="ico"><i class="fa fa-camera"></i></span><span class="lbl">Image Needed</span></div>';
       }
 
       const isNoImg = imgCache[p.articleNo] === 'NONE' || (!imgCache[p.articleNo] && p.hasImg === false);
@@ -1762,28 +1992,28 @@
         '<div class="minfo">' +
         '<div class="mhdr">' +
         '<div class="mbrand">' + esc(p.brand) + '</div>' +
-        '<button class="mclose" onclick="closeModal()">✕</button>' +
+        '<button class="mclose" onclick="closeModal()"><i class="fa fa-times"></i></button>' +
         '</div>' +
         '<div class="mname">' + esc(p.name) + '</div>' +
         '<div class="mbadges">' +
-        '<span class="pill ' + pillCls(p.status) + '">' + esc(p.status || '—') + '</span>' +
-        (p.isHot ? '<span class="badge b-hot">🔥 Hot Seller</span>' : '') +
-        (p.isNew ? '<span class="badge b-new">✨ New Inward</span>' : '') +
-        (p.isLimited ? '<span class="badge b-lim">⏳ Limited Stock</span>' : '') +
-        (isNoImg ? '<span class="badge b-noi">📷 Image Needed</span>' : '') +
+        '<span class="pill ' + pillCls(p.status) + '">' + esc(p.status || '&mdash;') + '</span>' +
+        (p.isHot ? '<span class="badge b-hot"><i class="fa fa-fire"></i> Hot Seller</span>' : '') +
+        (p.isNew ? '<span class="badge b-new"><i class="fa fa-star"></i> New Inward</span>' : '') +
+        (p.isLimited ? '<span class="badge b-lim"><i class="fa fa-hourglass-half"></i> Limited Stock</span>' : '') +
+        (isNoImg ? '<span class="badge b-noi"><i class="fa fa-camera"></i> Image Needed</span>' : '') +
         '</div>' +
-        '<div class="mmrp">' + (p.mrp ? '₹' + fmt(p.mrp) : '—') + '</div>' +
+        '<div class="mmrp">' + (p.mrp ? '&#8377;' + fmt(p.mrp) : '&mdash;') + '</div>' +
         '<table class="mtable">' +
         '<tr><td>Article #</td><td>' + esc(p.articleNo) + '</td></tr>' +
         '<tr><td>Brand</td><td>' + esc(p.brand) + '</td></tr>' +
         '<tr><td>Category</td><td>' + esc(p.category) + (p.subCat ? ' › ' + esc(p.subCat) : '') + '</td></tr>' +
-        '<tr><td>Age Group</td><td>' + (esc(p.age) || '—') + '</td></tr>' +
-        '<tr><td>MRP</td><td>' + (p.mrp ? '₹' + fmt(p.mrp) : '—') + '</td></tr>' +
-        '<tr><td>Selling Price</td><td>' + (p.sp ? '₹' + fmt(p.sp) : '—') + '</td></tr>' +
-        '<tr><td>GST %</td><td>' + (esc(p.gst) || '—') + '</td></tr>' +
-        '<tr><td>EAN Code</td><td>' + (esc(p.ean) || '—') + '</td></tr>' +
+        '<tr><td>Age Group</td><td>' + (esc(p.age) || '&mdash;') + '</td></tr>' +
+        '<tr><td>MRP</td><td>' + (p.mrp ? '&#8377;' + fmt(p.mrp) : '&mdash;') + '</td></tr>' +
+        '<tr><td>Selling Price</td><td>' + (p.sp ? '&#8377;' + fmt(p.sp) : '&mdash;') + '</td></tr>' +
+        '<tr><td>GST %</td><td>' + (esc(p.gst) || '&mdash;') + '</td></tr>' +
+        '<tr><td>EAN Code</td><td>' + (esc(p.ean) || '&mdash;') + '</td></tr>' +
         '<tr><td>Stock</td><td>' + esc(p.stock) + '</td></tr>' +
-        (p.isNew ? '<tr><td>New Inward</td><td>' + esc(p.inDate) + (p.inQty ? ' · Qty ' + esc(p.inQty) : '') + '</td></tr>' : '') +
+        (p.isNew ? '<tr><td>New Inward</td><td>' + esc(p.inDate) + (p.inQty ? ' &middot; Qty ' + esc(p.inQty) : '') + '</td></tr>' : '') +
         (p.notes ? '<tr><td>Notes</td><td>' + esc(p.notes) + '</td></tr>' : '') +
         '</table>' +
         '<div class="c-actions" style="margin-top:20px; padding-top:16px">' +
@@ -1846,7 +2076,7 @@
       document.getElementById('filter-bar').style.display = 'flex';
       document.getElementById('stats-bar').style.display = 'flex';
       document.getElementById('sku-ct').textContent = ALL.length + ' SKUs';
-      toast('Demo mode — sample data only', 'ok');
+      toast('Demo mode &mdash; sample data only', 'ok');
     }
 
     /* ── HELPERS ── */
@@ -1894,7 +2124,7 @@
       if (delta > 0) {
         const pObj = ALL.find(x => x.articleNo === articleNo);
         if (pObj && pObj.status === 'Out of Stock') {
-          toast('⚠ Article is out of stock', 'err');
+          toast('<i class="fa fa-exclamation-triangle"></i> Article is out of stock', 'err');
         }
       }
 
@@ -2005,7 +2235,7 @@
       const city = document.getElementById('d-city').value.trim();
       const salesman = document.getElementById('d-salesman').value.trim();
 
-      // Validate — show inline errors
+      // Validate &mdash; show inline errors
       let valid = true;
       [['d-dealer', 'derr-dealer', dealer],
       ['d-city', 'derr-city', city],
@@ -2069,21 +2299,33 @@
           mode: 'no-cors',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
-        }).catch(() => { }); // silent — never alert user
+        }).catch(() => { }); // silent &mdash; never alert user
       } catch (e) { }
 
       // ── 3. CLOSE & CONFIRM ──
       closeDealerModal();
       closeCart();
-      toast('✓ Order downloaded!', 'ok');
+      toast('<i class="fa fa-check"></i> Order downloaded!', 'ok');
     }
 
     /* ── EXPORTS ── */
     function prepareAndPrint() {
-      if (filtered.length > 200) {
-        toast('⚠️ Please filter down to 200 items or fewer to download a PDF without crashing your device.', 'err');
+      applyFilters(); // Ensure filtered array and grid state are absolute latest
+
+      const q = document.getElementById('q').value.trim();
+      const cat = document.getElementById('cat-sel').value;
+      const hasFilter = selStatuses.size > 0 || selBrands.size > 0 || showHot || showNew || showLim || q !== '' || cat !== '';
+
+      if (!hasFilter) {
+        toast('<i class="fa fa-filter"></i> Please apply at least one filter to generate a PDF.', 'err');
         return;
       }
+
+      if (filtered.length > 200) {
+        toast('<i class="fa fa-exclamation-triangle"></i> Unable to generate PDF of more than 200 products.', 'err');
+        return;
+      }
+
       if (!filtered.length) return toast('No items to print', 'err');
 
       const list = document.getElementById('pdf-exclude-list');
@@ -2128,7 +2370,7 @@
 
       const btn = document.getElementById('btn-print');
       const ogText = btn.innerHTML;
-      btn.innerHTML = '⏳ Prep...';
+      btn.innerHTML = '<i class="fa fa-hourglass-half"></i> Prep...';
 
       // Force load all visible images before printing
       const visCards = document.querySelectorAll('#grid .card .cimg');
@@ -2141,9 +2383,34 @@
       });
 
       setTimeout(() => {
+        // Inject page breaks
+        let vIdx = 0;
+        const grid = document.getElementById('grid');
+        grid.querySelectorAll('.page-break').forEach(b => b.remove());
+
+        Array.from(grid.children).forEach(card => {
+          if (card.style.display !== 'none') {
+            vIdx++;
+            if (vIdx === 6 || (vIdx > 6 && (vIdx - 6) % 9 === 0)) {
+              const b = document.createElement('div');
+              b.className = 'page-break';
+              // Subsequent page breaks don't need the logo
+              card.after(b);
+            }
+          }
+        });
+
+        // Also add one at the very top for page 1
+        const topLogo = document.createElement('div');
+        topLogo.className = 'pdf-header';
+        topLogo.innerHTML = '<img src="images/logo.png" alt="Logo" style="display:block; margin:0 auto 20px auto; height:80px;">';
+        grid.prepend(topLogo);
+
         btn.innerHTML = ogText;
         window.print();
+
         hiddenBackup.forEach(c => c.style.display = '');
+        grid.querySelectorAll('.page-break').forEach(b => b.remove());
       }, 1500);
     }
 
