@@ -1145,7 +1145,20 @@
         padding: 5mm;
       }
 
-      header, #filter-bar, #stats-bar, #err-panel, #loading, #empty, #moverlay, #toast, #fab-cart, #cart-modal, #pdf-modal, #dealer-modal, .c-actions, #print-header {
+      header,
+      #filter-bar,
+      #stats-bar,
+      #err-panel,
+      #loading,
+      #empty,
+      #moverlay,
+      #toast,
+      #fab-cart,
+      #cart-modal,
+      #pdf-modal,
+      #dealer-modal,
+      .c-actions,
+      #print-header {
         display: none !important;
       }
 
@@ -1165,59 +1178,143 @@
         display: flex;
         flex-direction: column !important;
         overflow: hidden !important;
+        height: 88mm !important; /* Fixed height to ensure 3 rows fit on A4 */
       }
 
       /* Content Toggles for PDF */
-      .pill, .qty-ctrl { display: none !important; }
-      .cart { display: none !important; } /* Hide article no as well to simplify */
-      .cart span.age-sep, .cart span.age-val { display: none !important; }
+      .pill,
+      .qty-ctrl {
+        display: none !important;
+      }
+
+      .cart {
+        display: block !important;
+        font-size: 11px !important;
+        color: #64748b !important;
+      }
+
+      .cart span.age-sep,
+      .cart span.age-val {
+        display: none !important;
+      }
 
       .cimg {
         background: #f1f5f9 !important;
         border-bottom: 1px solid #e2e8f0 !important;
+        height: 48mm !important; /* Fixed image area */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .cimg img {
+        max-height: 100% !important;
+        width: auto !important;
+        object-fit: contain !important;
       }
 
-      .cbody { padding: 10px !important; display: flex; flex-direction: column; gap: 4px; }
-      .cbrand { font-size: 13px !important; color: #ff6b35 !important; font-weight: 800; }
-      .cname { font-size: 13px !important; color: #000 !important; font-weight: 500; min-height: 2.4em; }
-      .cmeta { display: block !important; margin-top: 5px; border-top: 1px solid #eee; padding-top: 5px; }
-      .cmrp { font-size: 12px !important; color: #444 !important; }
-      .csp { font-size: 12px !important; color: #166534 !important; font-weight: 700; }
+      .cbody {
+        padding: 6px 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2px !important;
+        flex: 1 !important;
+      }
+
+      .cbrand {
+        font-size: 12px !important;
+        color: #ff6b35 !important;
+        font-weight: 700 !important;
+        display: block !important;
+      }
+
+      .cbrand::before {
+        content: "Brand: ";
+        font-weight: 400;
+        color: #64748b;
+      }
+
+      .cname {
+        font-size: 13px !important;
+        color: #000 !important;
+        font-weight: 600 !important;
+        display: block !important;
+        min-height: 0 !important;
+      }
+
+      .cname::before {
+        content: "Product: ";
+        font-weight: 400;
+        color: #64748b;
+      }
+
+      .cart {
+        font-size: 11px !important;
+        color: #64748b !important;
+        display: block !important;
+        margin-bottom: 5px !important;
+      }
+
+      .cart::before {
+        content: "Article No: ";
+      }
+
+      .cmeta {
+        display: block !important;
+        margin-top: 5px !important;
+        border-top: 1px solid #e2e8f0 !important;
+        padding-top: 5px !important;
+      }
+
+      .cmrp {
+        font-size: 12px !important;
+        color: #334155 !important;
+        display: block !important;
+      }
+
+      .cmrp::before {
+        content: "MRP: ";
+      }
+
+      .csp {
+        font-size: 13px !important;
+        color: #166534 !important;
+        font-weight: 700 !important;
+        display: block !important;
+      }
+
+      .csp::before {
+        content: "";
+      }
 
       .page-break {
         page-break-after: always;
         break-after: page;
         grid-column: 1 / -1;
-        text-align: center;
-        padding: 20px 0;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        visibility: hidden !important;
       }
-      .page-break img { height: 50px; }
+
+      .pdf-header {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding-bottom: 20px;
+      }
+      .pdf-header img { height: 80px; }
     }
 
-      .cimg {
-        background: #1e1e27 !important;
-        border-bottom: 1px solid #2a2a38 !important;
-      }
+    .cimg {
+      background: #1e1e27 !important;
+      border-bottom: 1px solid #2a2a38 !important;
+    }
 
-      .cbody { padding: 12px !important; }
+    .cbody {
+      padding: 12px !important;
+    }
 
-      .cname, .cmrp, .cart, .cbrand, .cmeta, .csp { color: inherit !important; }
 
-      .cname {
-        font-size: 14px !important;
-        color: #fff !important;
-      }
-
-      .cmrp {
-        font-size: 16px !important;
-        font-weight: 700 !important;
-      }
-
-      .pill, .badge {
-        print-color-adjust: exact;
-        -webkit-print-color-adjust: exact;
-        border: 1px solid currentColor !important;
-      }
     }
   </style>
 </head>
@@ -1495,9 +1592,9 @@
 
         ALL = data.map(m => {
           return {
-            articleNo: (m.Article_No || m.articleNo || '').toString().trim(),
-            name: m.Product_Name || m.name || '',
-            brand: m.Brand || m.brand || '',
+            articleNo: (m.Article_No || m.articleNo || m.ArticleNo || '').toString().trim(),
+            name: (m.Product_Name || m.ProductName || m.productName || m.name || '').toString().trim(),
+            brand: (m.Brand || m.brand || '').toString().trim(),
             category: m.Category || m.category || '',
             subCat: m['Sub-Category'] || m.subCat || '',
             age: m.Age_Group || m.age || '',
@@ -1555,7 +1652,7 @@
           // Normalize keys to remove potential hidden characters or spaces
           const cleanRow = {};
           for (let key in row) { cleanRow[key.trim()] = row[key]; }
-          
+
           const art = (cleanRow['Article_No'] || cleanRow['articleNo'] || '').toString().trim();
           if (art) stockMap[art] = cleanRow;
         });
@@ -1572,7 +1669,7 @@
 
               const q = parseInt(p.stock.toString().replace(/,/g, '')) || 0;
               const liveStatus = (live['Stock_Status'] || live['Status'] || '').trim();
-              
+
               if (q <= 0) {
                 p.status = 'Out of Stock';
               } else if (q < 20) {
@@ -1580,26 +1677,26 @@
               } else {
                 p.status = liveStatus || 'In Stock';
               }
-              
+
               p.isLimited = p.status.toLowerCase().includes('limited') || p.status === 'Low Stock';
             }
-            
+
             if (live['Is_New_Inward?']) p.isNew = live['Is_New_Inward?'].toString().toLowerCase() === 'yes';
             if (live['Expected_Inward_Date']) p.inDate = live['Expected_Inward_Date'];
             if (live['Inward_Qty_Planned']) p.inQty = live['Inward_Qty_Planned'];
             if (live['Notes_/_Remarks']) p.notes = live['Notes_/_Remarks'];
-            
+
             // Update Hot Seller status
             const s30 = live['Sales_Qty_–_30_Days'] || live['Sales_Qty_-_30_Days'];
             if (s30 !== undefined) p.isHot = parseFloat(s30) >= 20;
-            
+
             if (live['Active']) p.active = live['Active'].toString().toUpperCase();
           }
         });
 
         // Refresh the UI
         ALL = ALL.filter(p => p.active !== 'NO');
-        initGrid(); 
+        initGrid();
         toast('<i class="fa fa-sync"></i> Stock data synced (' + updatedCount + ')', 'ok');
       } catch (err) {
         console.warn('Stock sync error:', err);
@@ -2214,7 +2311,7 @@
     /* ── EXPORTS ── */
     function prepareAndPrint() {
       applyFilters(); // Ensure filtered array and grid state are absolute latest
-      
+
       const q = document.getElementById('q').value.trim();
       const cat = document.getElementById('cat-sel').value;
       const hasFilter = selStatuses.size > 0 || selBrands.size > 0 || showHot || showNew || showLim || q !== '' || cat !== '';
@@ -2290,14 +2387,14 @@
         let vIdx = 0;
         const grid = document.getElementById('grid');
         grid.querySelectorAll('.page-break').forEach(b => b.remove());
-        
+
         Array.from(grid.children).forEach(card => {
           if (card.style.display !== 'none') {
             vIdx++;
             if (vIdx === 6 || (vIdx > 6 && (vIdx - 6) % 9 === 0)) {
               const b = document.createElement('div');
               b.className = 'page-break';
-              b.innerHTML = '<img src="images/logo.png" alt="Logo" style="display:block; margin:0 auto 20px auto;">';
+              // Subsequent page breaks don't need the logo
               card.after(b);
             }
           }
@@ -2305,15 +2402,13 @@
 
         // Also add one at the very top for page 1
         const topLogo = document.createElement('div');
-        topLogo.className = 'page-break';
-        topLogo.style.pageBreakAfter = 'avoid';
-        topLogo.style.breakAfter = 'avoid';
-        topLogo.innerHTML = '<img src="images/logo.png" alt="Logo" style="display:block; margin:0 auto 20px auto;">';
+        topLogo.className = 'pdf-header';
+        topLogo.innerHTML = '<img src="images/logo.png" alt="Logo" style="display:block; margin:0 auto 20px auto; height:80px;">';
         grid.prepend(topLogo);
 
         btn.innerHTML = ogText;
         window.print();
-        
+
         hiddenBackup.forEach(c => c.style.display = '');
         grid.querySelectorAll('.page-break').forEach(b => b.remove());
       }, 1500);
