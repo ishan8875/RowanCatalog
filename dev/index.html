@@ -298,6 +298,7 @@
       padding-top: 10px;
       border-top: 1px dashed var(--border);
     }
+
     .qty-ctrl {
       display: flex;
       align-items: center;
@@ -306,6 +307,7 @@
       overflow: hidden;
       border: 1px solid var(--border);
     }
+
     .qty-btn {
       width: 28px;
       height: 28px;
@@ -318,7 +320,11 @@
       font-size: 16px;
       cursor: pointer;
     }
-    .qty-btn:active { background: var(--border); }
+
+    .qty-btn:active {
+      background: var(--border);
+    }
+
     .qty-val {
       width: 32px;
       text-align: center;
@@ -340,12 +346,16 @@
       align-items: center;
       justify-content: center;
       font-size: 24px;
-      box-shadow: 0 4px 12px rgba(255,107,53,0.4);
+      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
       cursor: pointer;
       z-index: 90;
       transition: transform 0.2s;
     }
-    #fab-cart:active { transform: scale(0.95); }
+
+    #fab-cart:active {
+      transform: scale(0.95);
+    }
+
     #fab-badge {
       position: absolute;
       top: -4px;
@@ -363,16 +373,21 @@
       padding: 0 4px;
       border: 2px solid var(--bg);
     }
+
     #cart-modal {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.8);
+      background: rgba(0, 0, 0, 0.8);
       z-index: 100;
       align-items: flex-end;
       justify-content: center;
     }
-    #cart-modal.open { display: flex; }
+
+    #cart-modal.open {
+      display: flex;
+    }
+
     .cart-content {
       background: var(--surface);
       width: 100%;
@@ -383,6 +398,7 @@
       flex-direction: column;
       animation: slideUp 0.3s ease-out;
     }
+
     .cart-hdr {
       padding: 16px 20px;
       border-bottom: 1px solid var(--border);
@@ -390,12 +406,18 @@
       justify-content: space-between;
       align-items: center;
     }
-    .cart-hdr h2 { font-size: 18px; font-weight: 600; }
+
+    .cart-hdr h2 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
     .cart-body {
       padding: 16px 20px;
       overflow-y: auto;
       flex: 1;
     }
+
     .cart-item {
       display: flex;
       justify-content: space-between;
@@ -403,15 +425,33 @@
       padding: 12px 0;
       border-bottom: 1px solid var(--border);
     }
-    .cart-item:last-child { border-bottom: none; }
-    .ci-info { flex: 1; padding-right: 10px; }
-    .ci-name { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
-    .ci-meta { font-size: 11px; color: var(--muted); }
+
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+
+    .ci-info {
+      flex: 1;
+      padding-right: 10px;
+    }
+
+    .ci-name {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .ci-meta {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
     .cart-ftr {
       padding: 16px 20px;
       border-top: 1px solid var(--border);
       background: var(--surface2);
     }
+
     .btn-dl-order {
       width: 100%;
       padding: 14px;
@@ -429,6 +469,7 @@
       display: flex;
       gap: 8px;
     }
+
     .btn-exp {
       font-size: 11px;
       font-weight: 600;
@@ -439,6 +480,7 @@
       color: var(--text);
       transition: all 0.2s;
     }
+
     .btn-exp:hover {
       border-color: var(--accent);
       color: var(--accent);
@@ -973,13 +1015,17 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.85);
+      background: rgba(0, 0, 0, 0.85);
       z-index: 300;
       align-items: center;
       justify-content: center;
       padding: 16px;
     }
-    #dealer-modal.open { display: flex; }
+
+    #dealer-modal.open {
+      display: flex;
+    }
+
     .dealer-box {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -989,19 +1035,25 @@
       padding: 28px 24px;
       animation: mIn .2s ease;
     }
+
     .dealer-box h2 {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 22px;
       letter-spacing: 1px;
       margin-bottom: 6px;
     }
+
     .dealer-box p {
       font-size: 12px;
       color: var(--muted);
       margin-bottom: 20px;
       line-height: 1.5;
     }
-    .dfield { margin-bottom: 14px; }
+
+    .dfield {
+      margin-bottom: 14px;
+    }
+
     .dfield label {
       display: block;
       font-size: 11px;
@@ -1011,6 +1063,7 @@
       color: var(--muted);
       margin-bottom: 6px;
     }
+
     .dfield input {
       width: 100%;
       background: var(--surface2);
@@ -1025,32 +1078,83 @@
       appearance: none;
       transition: border-color .15s;
     }
-    .dfield input:focus { border-color: var(--accent); }
-    .dfield input.err-field { border-color: var(--red); }
-    .derr { font-size: 11px; color: var(--red); margin-top: 4px; display: none; }
-    .dealer-btns { display: flex; gap: 10px; margin-top: 20px; }
+
+    .dfield input:focus {
+      border-color: var(--accent);
+    }
+
+    .dfield input.err-field {
+      border-color: var(--red);
+    }
+
+    .derr {
+      font-size: 11px;
+      color: var(--red);
+      margin-top: 4px;
+      display: none;
+    }
+
+    .dealer-btns {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
     .btn-dealer-cancel {
-      flex: 1; padding: 12px; border-radius: 8px;
-      border: 1px solid var(--border); background: var(--surface2);
-      color: var(--text); font-size: 14px; font-weight: 600; cursor: pointer;
+      flex: 1;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
     }
+
     .btn-dealer-confirm {
-      flex: 2; padding: 12px; border-radius: 8px;
-      border: none; background: var(--green); color: #fff;
-      font-size: 14px; font-weight: 700; cursor: pointer;
-      display: flex; align-items: center; justify-content: center; gap: 6px;
+      flex: 2;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background: var(--green);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
     }
-    .btn-dealer-confirm:disabled { opacity: .6; cursor: not-allowed; }
+
+    .btn-dealer-confirm:disabled {
+      opacity: .6;
+      cursor: not-allowed;
+    }
 
     /* PRINT STYLES */
     @media print {
-      header, #filter-bar, #stats-bar, #err-panel, #loading, #empty, #moverlay, #toast, #fab-cart, #cart-modal, .c-actions {
+
+      header,
+      #filter-bar,
+      #stats-bar,
+      #err-panel,
+      #loading,
+      #empty,
+      #moverlay,
+      #toast,
+      #fab-cart,
+      #cart-modal,
+      .c-actions {
         display: none !important;
       }
+
       body {
         background: #fff !important;
         color: #000 !important;
       }
+
       .card {
         border-color: #ccc !important;
         break-inside: avoid !important;
@@ -1059,16 +1163,25 @@
         box-shadow: none !important;
         transform: none !important;
       }
-      .cname, .cmrp, .cart, .cbrand, .cmeta {
+
+      .cname,
+      .cmrp,
+      .cart,
+      .cbrand,
+      .cmeta {
         color: #000 !important;
       }
-      .pill, .badge {
+
+      .pill,
+      .badge {
         print-color-adjust: exact;
         -webkit-print-color-adjust: exact;
       }
+
       .cimg {
         background: #f8f8f8 !important;
       }
+
       #grid {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
@@ -1082,9 +1195,10 @@
 <body>
 
   <header>
-    <div class="logo">
-      <img src="https://res.cloudinary.com/dqt0ehxeb/image/upload/v1777106286/Rowan-Logo.png" alt="Rowan Toys" style="height: 36px; display: block; margin-top: 4px;">
-    </div>
+    <a class="logo" href="#">
+      <img src="https://res.cloudinary.com/dqt0ehxeb/image/upload/v1777106286/Rowan-Logo.png" alt="Rowan Toys"
+        style="height: 36px; display: block; margin-top: 4px;">
+    </a>
     <div class="hdr-right">
       <span class="sku-badge" id="sku-ct"></span>
       <div class="search-wrap">
@@ -1101,26 +1215,33 @@
     <button class="btn-demo" onclick="loadDemo()">Preview Demo</button>
   </div>
 
-  <div id="filter-bar" style="display:none">
-    <span class="fl">Brand</span>
-    <div id="brand-chips" style="display:flex;flex-wrap:wrap;gap:6px"></div>
-    <div class="fdiv"></div>
-    <span class="fl">Category</span>
-    <select class="fsel" id="cat-sel" onchange="applyFilters()">
-      <option value="">All</option>
-    </select>
-    <div class="fdiv"></div>
-    <span class="fl">Stock</span>
-    <button class="chip s-in" onclick="toggleStatus('In Stock',this)">● In Stock</button>
-    <button class="chip s-low" onclick="toggleStatus('Low Stock',this)">● Low Stock</button>
-    <button class="chip s-out" onclick="toggleStatus('Out of Stock',this)">● Out of Stock</button>
-    <button class="chip s-over" onclick="toggleStatus('Overstock',this)">● Overstock</button>
-    <div class="fdiv"></div>
-    <button class="chip s-hot" id="chip-hot" onclick="toggleHot()">🔥 Hot</button>
-    <button class="chip s-new" id="chip-new" onclick="toggleNew()">✨ New Inward</button>
-    <button class="chip s-lim" id="chip-lim" onclick="toggleLim()">⏳ Limited Stock</button>
-    <div class="fdiv"></div>
-    <button class="chip" onclick="clearFilters()" style="border-color:var(--red);color:var(--red)">✕ Clear</button>
+  <div id="filter-bar" style="display:none; flex-direction:column; align-items:flex-start;">
+    <div style="display:flex; width:100%; align-items:center; gap:8px; flex-wrap:wrap;">
+      <button class="chip" onclick="toggleAdvFilters()" id="btn-adv-filters"
+        style="background:var(--surface2); color:var(--text); font-weight:600;">⚙️ Filters 🔽</button>
+      <div class="fdiv"></div>
+      <span class="fl">Category</span>
+      <select class="fsel" id="cat-sel" onchange="applyFilters()">
+        <option value="">All</option>
+      </select>
+      <div class="fdiv"></div>
+      <button class="chip s-hot" id="chip-hot" onclick="toggleHot()">🔥 Hot</button>
+      <button class="chip s-new" id="chip-new" onclick="toggleNew()">✨ New Inward</button>
+      <button class="chip s-lim" id="chip-lim" onclick="toggleLim()">⏳ Limited Stock</button>
+      <div class="fdiv" style="margin-left:auto;"></div>
+      <button class="chip" onclick="clearFilters()" style="border-color:var(--red);color:var(--red)">✕ Clear</button>
+    </div>
+    <div id="adv-filters"
+      style="display:none; flex-wrap:wrap; gap:8px; align-items:center; margin-top:12px; padding-top:12px; border-top:1px dashed var(--border); width: 100%;">
+      <span class="fl">Brand</span>
+      <div id="brand-chips" style="display:flex;flex-wrap:wrap;gap:6px"></div>
+      <div class="fdiv"></div>
+      <span class="fl">Stock</span>
+      <button class="chip s-in" onclick="toggleStatus('In Stock',this)">● In Stock</button>
+      <button class="chip s-low" onclick="toggleStatus('Low Stock',this)">● Low Stock</button>
+      <button class="chip s-out" onclick="toggleStatus('Out of Stock',this)">● Out of Stock</button>
+      <button class="chip s-over" onclick="toggleStatus('Overstock',this)">● Overstock</button>
+    </div>
   </div>
 
   <div id="stats-bar" style="display:none">
@@ -1133,7 +1254,9 @@
     <div class="export-btns">
       <button class="btn-exp" id="btn-print" onclick="prepareAndPrint()">🖨️ PDF</button>
       <button class="btn-exp" onclick="downloadStockCSV()">📊 Stock</button>
-      <button class="btn-exp" id="btn-admin-exp" style="display:none; background:var(--pink); color:#fff; border-color:var(--pink);" onclick="downloadAdminCSV()">🔐 Admin Links</button>
+      <button class="btn-exp" id="btn-admin-exp"
+        style="display:none; background:var(--pink); color:#fff; border-color:var(--pink);"
+        onclick="downloadAdminCSV()">🔐 Admin Links</button>
     </div>
   </div>
 
@@ -1155,6 +1278,35 @@
   </div>
 
   <div id="toast"></div>
+
+  <!-- PDF EXPORT MODAL -->
+  <div id="pdf-modal"
+    style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:300; align-items:center; justify-content:center; padding:16px;">
+    <div class="dealer-box" onclick="event.stopPropagation()"
+      style="display:flex; flex-direction:column; max-height:85vh; padding: 24px 20px;">
+      <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1px; margin-bottom: 6px;">🖨️
+        Export Preview</h2>
+      <p style="font-size: 12px; color: var(--muted); margin-bottom: 12px;">Uncheck products to EXCLUDE them from the
+        final PDF.</p>
+
+      <!-- Select All/None controls -->
+      <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+        <button style="font-size:11px; color:var(--accent); font-weight:600;" onclick="toggleAllPdf(true)">Select
+          All</button>
+        <button style="font-size:11px; color:var(--accent); font-weight:600;" onclick="toggleAllPdf(false)">Deselect
+          All</button>
+      </div>
+
+      <div id="pdf-exclude-list"
+        style="overflow-y:auto; flex:1; border:1px solid var(--border); border-radius:8px; padding:4px; margin-bottom: 16px;">
+        <!-- Checkboxes injected via JS -->
+      </div>
+      <div class="dealer-btns" style="margin-top:auto;">
+        <button class="btn-dealer-cancel" onclick="closePdfExclusion()">Cancel</button>
+        <button class="btn-dealer-confirm" onclick="confirmPdfPrint()">Generate PDF</button>
+      </div>
+    </div>
+  </div>
 
   <!-- DEALER DETAILS MODAL -->
   <div id="dealer-modal">
@@ -1217,14 +1369,28 @@
 
     let ALL = [], filtered = [];
     let selStatuses = new Set(), selBrands = new Set();
-    let showHot = false, showNew = false, showLim = false;
+    let showHot = false;
+    let showNew = false;
+    let showLim = false;
+
+    function toggleAdvFilters() {
+      const el = document.getElementById('adv-filters');
+      const btn = document.getElementById('btn-adv-filters');
+      if (el.style.display === 'none') {
+        el.style.display = 'flex';
+        btn.innerHTML = '⚙️ Filters 🔼';
+      } else {
+        el.style.display = 'none';
+        btn.innerHTML = '⚙️ Filters 🔽';
+      }
+    }
     const imgCache = {};
 
     /* ── INIT ── */
     function initCatalog() {
       document.getElementById('q').addEventListener('input', applyFilters);
-      
-      document.getElementById('cart-modal').addEventListener('click', function(e) {
+
+      document.getElementById('cart-modal').addEventListener('click', function (e) {
         if (e.target === this) closeCart();
       });
 
@@ -1232,7 +1398,7 @@
       if (urlParams.get('admin') === 'rowan') {
         document.getElementById('btn-admin-exp').style.display = 'block';
       }
-      
+
       // Setup Intersection Observer for lazy loading images
       if ('IntersectionObserver' in window) {
         window.imgObserver = new IntersectionObserver((entries, observer) => {
@@ -1248,7 +1414,7 @@
           });
         }, { rootMargin: '200px 0px', threshold: 0.01 });
       }
-      
+
       loadCatalogue();
     }
 
@@ -1273,7 +1439,7 @@
             if (Date.now() - parsed.timestamp < CACHE_TIME) {
               data = parsed.data;
             }
-          } catch (e) {}
+          } catch (e) { }
         }
 
         if (!data) {
@@ -1285,7 +1451,7 @@
               timestamp: Date.now(),
               data: data
             }));
-          } catch (e) {}
+          } catch (e) { }
         }
 
         ALL = data.map(m => {
@@ -1313,11 +1479,11 @@
         }).filter(p => p.active !== 'NO');
 
         if (!ALL.length) throw new Error('Catalog loaded but no active products found.');
-        
+
         buildFilters();
         filtered = [...ALL];
-        renderGrid();
-        
+        initGrid();
+
         document.getElementById('filter-bar').style.display = 'flex';
         document.getElementById('stats-bar').style.display = 'flex';
         document.getElementById('sku-ct').textContent = ALL.length + ' SKUs';
@@ -1333,7 +1499,7 @@
     function buildFilters() {
       const wrap = document.getElementById('brand-chips');
       wrap.innerHTML = '';
-      
+
       const sheetBrands = [...new Set(ALL.map(p => p.brand).filter(Boolean))].sort();
       ['All', ...sheetBrands].forEach(b => {
         const btn = document.createElement('button');
@@ -1341,7 +1507,7 @@
         btn.onclick = () => toggleBrand(b, btn);
         wrap.appendChild(btn);
       });
-      
+
       // Select "All" by default
       const allBtn = wrap.querySelector('[data-b="All"]');
       if (allBtn) allBtn.classList.add('on');
@@ -1372,7 +1538,7 @@
     function toggleHot() { showHot = !showHot; document.getElementById('chip-hot').classList.toggle('on', showHot); applyFilters(); }
     function toggleNew() { showNew = !showNew; document.getElementById('chip-new').classList.toggle('on', showNew); applyFilters(); }
     function toggleLim() { showLim = !showLim; document.getElementById('chip-lim').classList.toggle('on', showLim); applyFilters(); }
-    
+
     function clearFilters() {
       selBrands.clear(); selStatuses.clear(); showHot = false; showNew = false; showLim = false;
       document.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
@@ -1385,6 +1551,8 @@
     function applyFilters() {
       const q = document.getElementById('q').value.toLowerCase();
       const cat = document.getElementById('cat-sel').value;
+
+      const matching = new Set();
       filtered = ALL.filter(p => {
         if (selBrands.size && !selBrands.has(p.brand)) return false;
         if (selStatuses.size && !selStatuses.has(p.status)) return false;
@@ -1396,22 +1564,44 @@
           const hay = [p.articleNo, p.name, p.brand, p.category, p.ean].join(' ').toLowerCase();
           if (!hay.includes(q)) return false;
         }
+        matching.add(p.articleNo);
         return true;
       });
-      renderGrid();
+
+      const grid = document.getElementById('grid');
+      const cards = grid.children;
+      for (let i = 0; i < cards.length; i++) {
+        const card = cards[i];
+        const safeId = card.id.replace('card-', '');
+        if (matching.has(safeId)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      }
+
+      const empty = document.getElementById('empty');
+      if (!filtered.length) {
+        empty.style.display = 'block';
+      } else {
+        empty.style.display = 'none';
+      }
+
+      updateStats(filtered);
     }
 
     /* ── RENDER ── */
-    function renderGrid() {
+    function initGrid() {
       const grid = document.getElementById('grid');
       const empty = document.getElementById('empty');
       grid.innerHTML = '';
-      if (!filtered.length) { empty.style.display = 'block'; updateStats([]); return; }
+      if (!ALL.length) { empty.style.display = 'block'; updateStats([]); return; }
       empty.style.display = 'none';
       const frag = document.createDocumentFragment();
-      filtered.forEach(p => frag.appendChild(makeCard(p)));
+      ALL.forEach(p => frag.appendChild(makeCard(p)));
       grid.appendChild(frag);
-      updateStats(filtered);
+
+      applyFilters();
     }
 
     function makeCard(p) {
@@ -1427,10 +1617,10 @@
       cimg.className = 'cimg';
 
       cimg.innerHTML = '<div class="ph"><span class="ico">◌</span></div>';
-      
+
       // Store articleNo on the element so observer can read it
       cimg.dataset.article = p.articleNo;
-      
+
       // Use observer if available, fallback to immediate load
       if (window.imgObserver) {
         window.imgObserver.observe(cimg);
@@ -1461,12 +1651,12 @@
         '<span class="pill ' + pillCls(p.status) + '">' + esc(p.status || '—') + '</span>' +
         '</div>' +
         '<div class="c-actions">' +
-          '<div style="font-size:11px;color:var(--muted);font-weight:600">ORDER QTY</div>' +
-          '<div class="qty-ctrl" onclick="event.stopPropagation()">' +
-            '<button class="qty-btn" onclick="updateQty(event, \'' + esc(p.articleNo) + '\', -1)">-</button>' +
-            '<div class="qty-val">' + curQty + '</div>' +
-            '<button class="qty-btn" onclick="updateQty(event, \'' + esc(p.articleNo) + '\', 1)">+</button>' +
-          '</div>' +
+        '<div style="font-size:11px;color:var(--muted);font-weight:600">ORDER QTY</div>' +
+        '<div class="qty-ctrl" onclick="event.stopPropagation()">' +
+        '<button class="qty-btn" onclick="updateQty(event, \'' + esc(p.articleNo) + '\', -1)">-</button>' +
+        '<div class="qty-val">' + curQty + '</div>' +
+        '<button class="qty-btn" onclick="updateQty(event, \'' + esc(p.articleNo) + '\', 1)">+</button>' +
+        '</div>' +
         '</div>';
       div.appendChild(body);
       return div;
@@ -1494,7 +1684,7 @@
       img.onload = () => {
         imgCache[articleNo] = imgUrl;
         applyImg(wrap, imgUrl);
-        
+
         const pObj = ALL.find(x => x.articleNo === articleNo);
         if (pObj) {
           pObj.hasImg = true;
@@ -1506,14 +1696,14 @@
             if (mBnoi) mBnoi.remove();
             const cCard = document.querySelector('#card-' + safeId);
             if (cCard) cCard.classList.remove('no-img-card');
-          } catch(e) {}
+          } catch (e) { }
         }
       };
       img.onerror = () => {
         imgCache[articleNo] = 'NONE';
         const ph = wrap.querySelector('.ph');
         if (ph) ph.innerHTML = '<span class="ico">📷</span><span class="lbl">No Image</span>';
-        
+
         const pObj = ALL.find(x => x.articleNo === articleNo);
         if (pObj) {
           pObj.hasImg = false;
@@ -1525,7 +1715,7 @@
             if (mBdgs && !mBdgs.querySelector('.b-noi')) mBdgs.insertAdjacentHTML('beforeend', '<span class="badge b-noi">📷 Image Needed</span>');
             const cCard = document.querySelector('#card-' + safeId);
             if (cCard) cCard.classList.add('no-img-card');
-          } catch(e) {}
+          } catch (e) { }
         }
       };
       img.src = imgUrl;
@@ -1537,10 +1727,10 @@
       img.onload = () => {
         const ph = wrap.querySelector('.ph');
         if (ph) ph.remove();
-        
+
         const existingImg = wrap.querySelector('img');
         if (existingImg) existingImg.remove();
-        
+
         wrap.insertBefore(img, wrap.firstChild);
       };
 
@@ -1562,10 +1752,10 @@
       } else {
         imgH = '<div class="ph" style="min-height:180px"><span class="ico">📷</span><span class="lbl">Image Needed</span></div>';
       }
-      
+
       const isNoImg = imgCache[p.articleNo] === 'NONE' || (!imgCache[p.articleNo] && p.hasImg === false);
       const curQty = orderCart[p.articleNo] || 0;
-      
+
       c.innerHTML =
         '<div class="mgrid">' +
         '<div class="mimg">' + imgH + '</div>' +
@@ -1597,12 +1787,12 @@
         (p.notes ? '<tr><td>Notes</td><td>' + esc(p.notes) + '</td></tr>' : '') +
         '</table>' +
         '<div class="c-actions" style="margin-top:20px; padding-top:16px">' +
-          '<div style="font-size:13px;font-weight:600">Order Quantity</div>' +
-          '<div class="qty-ctrl" style="transform:scale(1.2); transform-origin:right">' +
-            '<button class="qty-btn" onclick="updateQty(event, \'' + esc(p.articleNo) + '\', -1)">-</button>' +
-            '<div class="qty-val" id="modal-qty-val">' + curQty + '</div>' +
-            '<button class="qty-btn" onclick="updateQty(event, \'' + esc(p.articleNo) + '\', 1)">+</button>' +
-          '</div>' +
+        '<div style="font-size:13px;font-weight:600">Order Quantity</div>' +
+        '<div class="qty-ctrl" style="transform:scale(1.2); transform-origin:right">' +
+        '<button class="qty-btn" onclick="updateQty(event, \'' + esc(p.articleNo) + '\', -1)">-</button>' +
+        '<div class="qty-val" id="modal-qty-val">' + curQty + '</div>' +
+        '<button class="qty-btn" onclick="updateQty(event, \'' + esc(p.articleNo) + '\', 1)">+</button>' +
+        '</div>' +
         '</div>' +
         '</div>' +
         '</div>';
@@ -1693,40 +1883,40 @@
     }
 
     /* ── CART LOGIC ── */
-    let orderCart = {}; 
+    let orderCart = {};
 
     function updateQty(e, articleNo, delta) {
       if (e) e.stopPropagation();
       const current = orderCart[articleNo] || 0;
       const next = Math.max(0, current + delta);
       orderCart[articleNo] = next;
-      
+
       if (delta > 0) {
         const pObj = ALL.find(x => x.articleNo === articleNo);
         if (pObj && pObj.status === 'Out of Stock') {
           toast('⚠ Article is out of stock', 'err');
         }
       }
-      
+
       const safeId = typeof CSS !== 'undefined' && CSS.escape ? CSS.escape(articleNo) : articleNo;
-      
+
       const cVal = document.querySelector('#card-' + safeId + ' .qty-val');
       if (cVal) cVal.textContent = next;
-      
+
       const cCard = document.querySelector('#card-' + safeId);
       if (cCard) {
         if (next > 0) cCard.classList.add('has-order');
         else cCard.classList.remove('has-order');
       }
-      
+
       const mVal = document.getElementById('modal-qty-val');
       if (mVal && document.getElementById('moverlay').getAttribute('data-article') === articleNo) {
         mVal.textContent = next;
       }
-      
+
       const clVal = document.querySelector('#ci-' + safeId + ' .qty-val');
       if (clVal) clVal.textContent = next;
-      
+
       updateCartBadge();
     }
 
@@ -1743,13 +1933,13 @@
       } else {
         fab.style.display = 'none';
         if (document.getElementById('cart-modal').classList.contains('open')) {
-          closeCart(); 
+          closeCart();
         }
       }
-      
+
       const cTotal = document.getElementById('cart-total-qty');
       if (cTotal) {
-        const sum = Object.values(orderCart).reduce((a,b)=>a+b, 0);
+        const sum = Object.values(orderCart).reduce((a, b) => a + b, 0);
         cTotal.textContent = sum;
       }
     }
@@ -1763,43 +1953,43 @@
         if (q > 0) {
           hasItems = true;
           const safeId = typeof CSS !== 'undefined' && CSS.escape ? CSS.escape(p.articleNo) : p.articleNo;
-          list.innerHTML += 
+          list.innerHTML +=
             '<div class="cart-item" id="ci-' + safeId + '">' +
-              '<div class="ci-info">' +
-                '<div class="ci-name">' + esc(p.name) + '</div>' +
-                '<div class="ci-meta">' + esc(p.articleNo) + ' · ₹' + fmt(p.mrp) + '</div>' +
-              '</div>' +
-              '<div class="qty-ctrl">' +
-                '<button class="qty-btn" onclick="updateQty(event, \'' + esc(p.articleNo) + '\', -1)">-</button>' +
-                '<div class="qty-val">' + q + '</div>' +
-                '<button class="qty-btn" onclick="updateQty(event, \'' + esc(p.articleNo) + '\', 1)">+</button>' +
-              '</div>' +
+            '<div class="ci-info">' +
+            '<div class="ci-name">' + esc(p.name) + '</div>' +
+            '<div class="ci-meta">' + esc(p.articleNo) + ' · ₹' + fmt(p.mrp) + '</div>' +
+            '</div>' +
+            '<div class="qty-ctrl">' +
+            '<button class="qty-btn" onclick="updateQty(event, \'' + esc(p.articleNo) + '\', -1)">-</button>' +
+            '<div class="qty-val">' + q + '</div>' +
+            '<button class="qty-btn" onclick="updateQty(event, \'' + esc(p.articleNo) + '\', 1)">+</button>' +
+            '</div>' +
             '</div>';
         }
       });
       if (!hasItems) return toast('Cart is empty', 'err');
-      
+
       document.getElementById('cart-modal').classList.add('open');
       document.body.style.overflow = 'hidden';
     }
-    
+
     function closeCart() {
       document.getElementById('cart-modal').classList.remove('open');
       document.body.style.overflow = '';
     }
-    
+
     const ORDER_WEBHOOK = 'https://script.google.com/macros/s/AKfycby4XavfYuNsr2xN2I6Pl8j2XtTfzUNL1VWfVntVUfM4LPrJZX2dahPi6iC0iGqhQqH2/exec';
 
     function openDealerModal() {
       const items = ALL.filter(p => (orderCart[p.articleNo] || 0) > 0);
       if (!items.length) return toast('No items in order', 'err');
       // Clear previous values & errors
-      ['d-dealer','d-city','d-salesman'].forEach(id => {
+      ['d-dealer', 'd-city', 'd-salesman'].forEach(id => {
         const el = document.getElementById(id);
         el.value = '';
         el.classList.remove('err-field');
       });
-      ['derr-dealer','derr-city','derr-salesman'].forEach(id => {
+      ['derr-dealer', 'derr-city', 'derr-salesman'].forEach(id => {
         document.getElementById(id).style.display = 'none';
       });
       document.getElementById('dealer-modal').classList.add('open');
@@ -1811,15 +2001,15 @@
     }
 
     function confirmAndDownload() {
-      const dealer   = document.getElementById('d-dealer').value.trim();
-      const city     = document.getElementById('d-city').value.trim();
+      const dealer = document.getElementById('d-dealer').value.trim();
+      const city = document.getElementById('d-city').value.trim();
       const salesman = document.getElementById('d-salesman').value.trim();
 
       // Validate — show inline errors
       let valid = true;
       [['d-dealer', 'derr-dealer', dealer],
-       ['d-city',   'derr-city',   city],
-       ['d-salesman','derr-salesman',salesman]
+      ['d-city', 'derr-city', city],
+      ['d-salesman', 'derr-salesman', salesman]
       ].forEach(([inp, err, val]) => {
         const inpEl = document.getElementById(inp);
         const errEl = document.getElementById(err);
@@ -1849,27 +2039,27 @@
       const csvContent = headers.join(',') + '\n' + rows.join('\n');
 
       const d = new Date();
-      const dd = String(d.getDate()).padStart(2,'0');
-      const mm = String(d.getMonth()+1).padStart(2,'0');
+      const dd = String(d.getDate()).padStart(2, '0');
+      const mm = String(d.getMonth() + 1).padStart(2, '0');
       const yyyy = d.getFullYear();
-      const safeDealer   = dealer.replace(/[^a-zA-Z0-9]/g, '_');
-      const safeCity     = city.replace(/[^a-zA-Z0-9]/g, '_');
+      const safeDealer = dealer.replace(/[^a-zA-Z0-9]/g, '_');
+      const safeCity = city.replace(/[^a-zA-Z0-9]/g, '_');
       const fileName = 'RowanOrder_' + safeDealer + '_' + safeCity + '_' + dd + mm + yyyy + '.csv';
 
       downloadFile(csvContent, fileName, 'text/csv');
 
       // ── 2. SILENT SYNC TO GOOGLE SHEET (fire & forget) ──
       const payload = {
-        dealer:   dealer,
-        city:     city,
+        dealer: dealer,
+        city: city,
         salesman: salesman,
         items: items.map(p => ({
           articleNo: p.articleNo,
-          name:      p.name,
-          brand:     p.brand,
-          mrp:       p.mrp,
-          qty:       orderCart[p.articleNo],
-          status:    p.status || ''
+          name: p.name,
+          brand: p.brand,
+          mrp: p.mrp,
+          qty: orderCart[p.articleNo],
+          status: p.status || ''
         }))
       };
 
@@ -1879,8 +2069,8 @@
           mode: 'no-cors',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
-        }).catch(() => {}); // silent — never alert user
-      } catch(e) {}
+        }).catch(() => { }); // silent — never alert user
+      } catch (e) { }
 
       // ── 3. CLOSE & CONFIRM ──
       closeDealerModal();
@@ -1894,31 +2084,72 @@
         toast('⚠️ Please filter down to 200 items or fewer to download a PDF without crashing your device.', 'err');
         return;
       }
-      
+      if (!filtered.length) return toast('No items to print', 'err');
+
+      const list = document.getElementById('pdf-exclude-list');
+      list.innerHTML = '';
+      filtered.forEach(p => {
+        list.innerHTML += `
+          <label style="display:flex; align-items:center; gap:10px; padding:8px; border-bottom:1px solid var(--border); cursor:pointer;">
+            <input type="checkbox" checked value="${p.articleNo}" class="pdf-chk">
+            <span style="font-size:12px;">${p.articleNo} - ${p.name}</span>
+          </label>`;
+      });
+      document.getElementById('pdf-modal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function toggleAllPdf(check) {
+      document.querySelectorAll('.pdf-chk').forEach(c => c.checked = check);
+    }
+
+    function closePdfExclusion() {
+      document.getElementById('pdf-modal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    function confirmPdfPrint() {
+      closePdfExclusion();
+
+      const excluded = new Set();
+      document.querySelectorAll('.pdf-chk').forEach(c => {
+        if (!c.checked) excluded.add(c.value);
+      });
+
+      const cards = document.getElementById('grid').children;
+      const hiddenBackup = [];
+      for (let i = 0; i < cards.length; i++) {
+        const id = cards[i].id.replace('card-', '');
+        if (excluded.has(id) && cards[i].style.display !== 'none') {
+          hiddenBackup.push(cards[i]);
+          cards[i].style.display = 'none';
+        }
+      }
+
       const btn = document.getElementById('btn-print');
       const ogText = btn.innerHTML;
       btn.innerHTML = '⏳ Prep...';
-      
+
       // Force load all visible images before printing
-      const cards = document.querySelectorAll('#grid .card .cimg');
-      cards.forEach(cimg => {
-        if (cimg.dataset.article) {
+      const visCards = document.querySelectorAll('#grid .card .cimg');
+      visCards.forEach(cimg => {
+        if (cimg.parentElement.style.display !== 'none' && cimg.dataset.article) {
           loadImg(cimg, cimg.dataset.article);
           cimg.removeAttribute('data-article');
           if (window.imgObserver) window.imgObserver.unobserve(cimg);
         }
       });
-      
-      // Give it 1.5s to fetch images from Cloudinary before opening print dialog
+
       setTimeout(() => {
         btn.innerHTML = ogText;
         window.print();
+        hiddenBackup.forEach(c => c.style.display = '');
       }, 1500);
     }
 
     function downloadStockCSV() {
       if (!filtered || !filtered.length) return toast('No data to export', 'err');
-      
+
       const headers = ['Article No', 'Product Name', 'Brand', 'Category', 'MRP', 'Current Stock', 'Stock Status'];
       const rows = filtered.map(p => [
         `"${p.articleNo}"`,
@@ -1929,14 +2160,14 @@
         `"${p.stock}"`,
         `"${p.status}"`
       ].join(','));
-      
+
       const csvContent = headers.join(',') + '\n' + rows.join('\n');
       downloadFile(csvContent, 'Rowan_Stock_Export.csv', 'text/csv');
     }
 
     function downloadAdminCSV() {
       if (!ALL || !ALL.length) return toast('No data to export', 'err');
-      
+
       const headers = ['Article No', 'Product Name', 'Image Link'];
       const rows = ALL.map(p => {
         let link = imgCache[p.articleNo];
@@ -1949,7 +2180,7 @@
           `"${link}"`
         ].join(',');
       });
-      
+
       const csvContent = headers.join(',') + '\n' + rows.join('\n');
       downloadFile(csvContent, 'Rowan_Admin_Image_Links.csv', 'text/csv');
     }
