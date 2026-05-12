@@ -2226,9 +2226,21 @@
         document.body.appendChild(printContainer);
 
         btn.innerHTML = ogText;
-        window.print();
-
-        document.body.removeChild(printContainer);
+        
+        setTimeout(() => {
+          window.print();
+          
+          const cleanup = () => {
+            if (printContainer.parentNode) {
+              printContainer.parentNode.removeChild(printContainer);
+            }
+            window.removeEventListener('afterprint', cleanup);
+          };
+          
+          window.addEventListener('afterprint', cleanup);
+          // Fallback cleanup in case afterprint is not supported or missed
+          setTimeout(cleanup, 60000);
+        }, 100);
       }, 1500);
     }
 
