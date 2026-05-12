@@ -1213,9 +1213,11 @@
       transform: none !important;
       border: 1.5px solid #ccc !important;
       border-radius: 8px !important;
-      display: flex;
-      flex-direction: column;
+      display: flex !important;
+      flex-direction: column !important;
       overflow: hidden !important;
+      visibility: visible !important;
+      opacity: 1 !important;
     }
 
     .print-grid .cbody {
@@ -1746,6 +1748,7 @@
       const imgUrl = `https://res.cloudinary.com/dqt0ehxeb/image/upload/c_limit,w_400,f_auto,q_auto/${path}`;
 
       const img = new Image();
+      img.crossOrigin = "anonymous";
       img.onload = () => {
         imgCache[articleNo] = imgUrl;
         applyImg(wrap, imgUrl);
@@ -1788,6 +1791,7 @@
 
     function applyImg(wrap, src) {
       const img = new Image();
+      img.crossOrigin = "anonymous";
 
       img.onload = () => {
         const ph = wrap.querySelector('.ph');
@@ -2206,12 +2210,19 @@
         
         const cards = Array.from(document.getElementById('grid').children);
         const printCards = cards.filter(c => c.style.display !== 'none' && !excluded.has(c.id.replace('card-', '')));
+        
+        if (printCards.length === 0) {
+          btn.innerHTML = ogText;
+          return toast('No products selected to print', 'err');
+        }
+        toast('Preparing ' + printCards.length + ' products...', 'ok');
 
         for (let i = 0; i < printCards.length; i += 9) {
           const page = document.createElement('div');
           page.className = 'print-page';
           
           const logo = document.createElement('img');
+          logo.crossOrigin = "anonymous";
           logo.src = logoUrl;
           logo.className = 'print-logo';
           page.appendChild(logo);
@@ -2249,7 +2260,9 @@
               logging: false,
               scrollX: 0,
               scrollY: 0,
-              windowWidth: 1200
+              windowWidth: 800,
+              x: 0,
+              y: 0
             },
             jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
           };
