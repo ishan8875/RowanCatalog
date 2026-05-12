@@ -2234,13 +2234,34 @@
         const doc = new jsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait' });
 
         const logoUrl = 'https://res.cloudinary.com/dqt0ehxeb/image/upload/v1778554295/Rowan-Logo_90c4db.png';
-        setProgress(5, 'Loading logo...');
+        setProgress(2, 'Loading logo...');
         const logoData = await loadImageAsPngDataURL(logoUrl);
 
+        // ── Phase 1: Pre-load ALL product images before drawing any page ──
+        // Build a map: articleNo -> { data, w, h }
+        const allImgData = {};
+        for (let i = 0; i < products.length; i++) {
+          const prod = products[i];
+          setProgress(
+            Math.round(5 + (i / products.length) * 60),
+            `Loading image ${i + 1} of ${products.length}...`
+          );
+          const src = prod.imgCached && prod.imgCached !== 'NONE' ? prod.imgCached : prod.imgSrc;
+          if (src) {
+            allImgData[prod.articleNo] = await loadImageAsDataURL(src);
+          }
+        }
+
+        // ── Phase 2: Draw all PDF pages using pre-loaded images ──
         const totalPages = Math.ceil(products.length / cardsPerPage);
 
         for (let page = 0; page < totalPages; page++) {
           if (page > 0) doc.addPage();
+
+          setProgress(
+            Math.round(65 + (page / totalPages) * 30),
+            `Drawing page ${page + 1} of ${totalPages}...`
+          );
 
           // White background
           doc.setFillColor(255, 255, 255);
@@ -2257,15 +2278,7 @@
           }
 
           const chunk = products.slice(page * cardsPerPage, (page + 1) * cardsPerPage);
-
-          const pct = Math.round(((page + 1) / totalPages) * 90);
-          setProgress(pct, `Page ${page + 1} of ${totalPages} (loading images)...`);
-
-          const imgDataArr = await Promise.all(chunk.map(async (prod) => {
-            const src = prod.imgCached && prod.imgCached !== 'NONE' ? prod.imgCached : prod.imgSrc;
-            if (!src) return null;
-            return loadImageAsDataURL(src); // returns {data, w, h} or null
-          }));
+          const imgDataArr = chunk.map(prod => allImgData[prod.articleNo] || null);
 
           chunk.forEach((prod, idx) => {
             const col = idx % cols;
