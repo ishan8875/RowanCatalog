@@ -1166,100 +1166,34 @@
       }
     }
 
-    /* PDF EXPORT STYLES (Used by html2pdf.js) */
-    #print-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 210mm; /* Fixed A4 width for rendering */
-      z-index: -1000; /* Hide behind everything */
-      background: #fff;
-      color: #000;
-      pointer-events: none;
-    }
-
-    .print-page {
-      box-sizing: border-box;
-      padding: 10mm;
-      width: 100%;
-      height: 297mm; /* Fixed A4 height to prevent arbitrary scaling */
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      background: #fff;
-    }
-
-    .print-logo {
-      display: block;
-      height: 35px;
-      object-fit: contain;
-      margin: 0 auto 10px auto;
-      flex-shrink: 0;
-    }
-
-    .print-grid {
-      display: grid !important;
-      grid-template-columns: repeat(3, 1fr) !important;
-      grid-auto-rows: max-content !important;
-      gap: 12px !important;
-      flex: 1;
-      min-height: 0;
-    }
-
-    .print-grid .card {
-      border-color: #ccc !important;
-      background: #fff !important;
-      box-shadow: none !important;
-      transform: none !important;
-      border: 1.5px solid #ccc !important;
-      border-radius: 8px !important;
-      display: flex !important;
-      flex-direction: column !important;
-      overflow: hidden !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-    }
-
-    .print-grid .cbody {
-      padding: 8px 10px !important;
-      gap: 2px !important;
-    }
-
-    #print-container .cname,
-    #print-container .cmrp,
-    #print-container .cart,
-    #print-container .cbrand,
-    #print-container .cmeta {
-      color: #000 !important;
-    }
-
-    #print-container .pill,
-    #print-container .badge {
-      print-color-adjust: exact;
-      -webkit-print-color-adjust: exact;
-    }
-
-    .print-grid .cimg {
-      padding-top: 0 !important;
-      height: 160px !important;
-      background: #f8f8f8 !important;
-      position: relative !important;
-    }
-    
-    .print-grid .cimg img {
-      position: absolute !important;
-      top: 0 !important;
-      left: 0 !important;
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: contain !important;
-      padding: 6px !important;
-    }
   </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 
 <body>
+
+  <!-- PDF PREVIEW MODAL -->
+  <div id="pdf-preview-modal" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#1a1a1f;z-index:20000;display:none;flex-direction:column;">
+    <div style="padding:15px 20px;background:#25252b;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #333;">
+      <h3 style="margin:0;color:#fff;">📄 PDF Preview</h3>
+      <button onclick="closePdfPreview()" style="padding:10px 20px;background:#555;color:#fff;border:none;border-radius:8px;font-size:14px;cursor:pointer;">✕ Close</button>
+    </div>
+    <div style="flex:1;background:#444;overflow:hidden;">
+      <iframe id="preview-frame" style="width:100%;height:100%;border:none;"></iframe>
+    </div>
+    <div style="padding:20px;background:#25252b;border-top:1px solid #333;">
+      <button id="btn-final-download" style="width:100%;padding:15px;background:#22c55e;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;">⬇ Download PDF</button>
+    </div>
+  </div>
+
+  <!-- PDF LOADING OVERLAY -->
+  <div id="pdf-loading-overlay" style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:19000;display:none;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-family:sans-serif;">
+    <div id="pdf-progress-text" style="font-size:16px;margin-bottom:10px;">Preparing catalog...</div>
+    <div style="width:200px;height:6px;background:rgba(255,255,255,0.2);border-radius:3px;">
+      <div id="pdf-progress-bar" style="width:0%;height:100%;background:#22c55e;border-radius:3px;transition:width 0.2s;"></div>
+    </div>
+  </div>
+  <style>@keyframes pdf-spin { to { transform: rotate(360deg); } }</style>
 
   <header>
     <a class="logo" href="#">
@@ -2159,7 +2093,7 @@
       list.innerHTML = '';
       filtered.forEach(p => {
         list.innerHTML += `
-          <label style="display:flex; align-items:center; gap:10px; padding:8px; border-bottom:1px solid var(--border); cursor:pointer;">
+          <label style="display:flex; align-items:center; gap:10px; padding:8px; border-bottom:1px solid var(--border); cursor:pointer; color:var(--text);">
             <input type="checkbox" checked value="${p.articleNo}" class="pdf-chk">
             <span style="font-size:12px;">${p.articleNo} - ${p.name}</span>
           </label>`;
@@ -2177,7 +2111,64 @@
       document.body.style.overflow = '';
     }
 
-    function confirmPdfPrint() {
+    function closePdfPreview() {
+      document.getElementById('pdf-preview-modal').style.display = 'none';
+      if (window.currentPdfUrl) {
+        URL.revokeObjectURL(window.currentPdfUrl);
+        window.currentPdfUrl = null;
+      }
+    }
+
+    function setProgress(pct, msg) {
+      document.getElementById('pdf-progress-bar').style.width = pct + '%';
+      document.getElementById('pdf-progress-text').textContent = msg;
+    }
+
+    // Loads image as JPEG data URL + natural dimensions (for aspect-ratio-correct drawing)
+    function loadImageAsDataURL(src) {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.onload = () => {
+          try {
+            const canvas = document.createElement('canvas');
+            canvas.width = img.naturalWidth || img.width;
+            canvas.height = img.naturalHeight || img.height;
+            canvas.getContext('2d').drawImage(img, 0, 0);
+            resolve({ data: canvas.toDataURL('image/jpeg', 0.85), w: canvas.width, h: canvas.height });
+          } catch (e) {
+            resolve(null);
+          }
+        };
+        img.onerror = () => resolve(null);
+        img.src = src;
+      });
+    }
+
+    // Loads image as PNG data URL (preserves transparency for logo)
+    function loadImageAsPngDataURL(src) {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.onload = () => {
+          try {
+            const canvas = document.createElement('canvas');
+            canvas.width = img.naturalWidth || img.width;
+            canvas.height = img.naturalHeight || img.height;
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(img, 0, 0);
+            resolve(canvas.toDataURL('image/png'));
+          } catch (e) {
+            resolve(null);
+          }
+        };
+        img.onerror = () => resolve(null);
+        img.src = src;
+      });
+    }
+
+    async function confirmPdfPrint() {
       closePdfExclusion();
 
       const excluded = new Set();
@@ -2187,100 +2178,215 @@
 
       const btn = document.getElementById('btn-print');
       const ogText = btn.innerHTML;
-      btn.innerHTML = '⏳ Prep...';
 
-      // Force load all visible images before printing
-      const visCards = document.querySelectorAll('#grid .card .cimg');
-      visCards.forEach(cimg => {
-        if (cimg.parentElement.style.display !== 'none' && !excluded.has(cimg.parentElement.id.replace('card-', '')) && cimg.dataset.article) {
-          loadImg(cimg, cimg.dataset.article);
-          cimg.removeAttribute('data-article');
-          if (window.imgObserver) window.imgObserver.unobserve(cimg);
-        }
+      const cards = Array.from(document.getElementById('grid').children);
+      const printCards = cards.filter(c => c.style.display !== 'none' && !excluded.has(c.id.replace('card-', '')));
+
+      if (printCards.length === 0) {
+        return toast('No products selected to print', 'err');
+      }
+
+      // Collect product data from the DOM cards
+      const products = printCards.map(card => {
+        const articleNo = card.id.replace('card-', '');
+        const p = ALL.find(x => x.articleNo === articleNo) || {};
+        const imgEl = card.querySelector('.cimg img');
+        const imgSrc = imgEl ? imgEl.src : null;
+        return {
+          articleNo,
+          name: p.name || card.querySelector('.cname')?.textContent?.trim() || articleNo,
+          mrp: p.mrp ? 'MRP: Rs.' + p.mrp : (card.querySelector('.cmrp')?.textContent?.trim() || ''),
+          sp:  p.sp  ? 'SP: Rs.' + p.sp  : '',
+          brand: p.brand || card.querySelector('.cbrand')?.textContent?.trim() || '',
+          category: p.category || '',
+          imgSrc: (imgSrc && !imgSrc.endsWith('.html')) ? imgSrc : null,
+          imgCached: imgCache[articleNo]
+        };
       });
 
-      // Preload the logo so it's ready for print
-      const logoUrl = 'https://res.cloudinary.com/dqt0ehxeb/image/upload/v1778554295/Rowan-Logo_90c4db.png';
-      const preloadLogo = new Image();
-      preloadLogo.src = logoUrl;
+      const overlay = document.getElementById('pdf-loading-overlay');
+      overlay.style.display = 'flex';
+      btn.innerHTML = '⏳ Generating...';
+      btn.disabled = true;
 
-      setTimeout(() => {
-        const printContainer = document.createElement('div');
-        printContainer.id = 'print-container';
-        
-        const cards = Array.from(document.getElementById('grid').children);
-        const printCards = cards.filter(c => c.style.display !== 'none' && !excluded.has(c.id.replace('card-', '')));
-        
-        if (printCards.length === 0) {
-          btn.innerHTML = ogText;
-          return toast('No products selected to print', 'err');
-        }
-        toast('Preparing ' + printCards.length + ' products...', 'ok');
+      try {
+        const { jsPDF } = window.jspdf;
+        if (!jsPDF) throw new Error('jsPDF not loaded');
 
-        for (let i = 0; i < printCards.length; i += 9) {
-          const page = document.createElement('div');
-          page.className = 'print-page';
-          
-          const logo = document.createElement('img');
-          logo.crossOrigin = "anonymous";
-          logo.src = logoUrl;
-          logo.className = 'print-logo';
-          page.appendChild(logo);
+        // A4 page dimensions in mm
+        const pageW = 210, pageH = 297;
+        const margin = 10;
+        const logoH = 9;  // logo height mm
+        const logoGap = 3;
+        const cols = 3;
+        const rows = 4;   // 3x4 = 12 per page
+        const cardsPerPage = cols * rows;
+        const gapX = 3, gapY = 3; // gap between cards
+        const cardW = (pageW - margin * 2 - (cols - 1) * gapX) / cols; // ~58mm
 
-          const pageGrid = document.createElement('div');
-          pageGrid.className = 'print-grid';
-          
-          const chunk = printCards.slice(i, i + 9);
-          chunk.forEach(card => {
-            const clone = card.cloneNode(true);
-            const age = clone.querySelector('.p-age');
-            if (age) age.remove();
-            const pill = clone.querySelector('.p-status');
-            if (pill) pill.remove();
-            
-            pageGrid.appendChild(clone);
+        // Fixed text section height (brand + name×2 + article + mrp + sp + padding)
+        const textH = 27; // mm
+        // Total available height for card rows
+        const availH = pageH - margin * 2 - logoH - logoGap - 8; // 8mm for page num
+        const cardH = (availH - (rows - 1) * gapY) / rows; // ~60mm
+        const imgH = cardH - textH; // image takes the rest (~33mm)
+
+        const doc = new jsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait' });
+
+        const logoUrl = 'https://res.cloudinary.com/dqt0ehxeb/image/upload/v1778554295/Rowan-Logo_90c4db.png';
+        setProgress(5, 'Loading logo...');
+        const logoData = await loadImageAsPngDataURL(logoUrl);
+
+        const totalPages = Math.ceil(products.length / cardsPerPage);
+
+        for (let page = 0; page < totalPages; page++) {
+          if (page > 0) doc.addPage();
+
+          // White background
+          doc.setFillColor(255, 255, 255);
+          doc.rect(0, 0, pageW, pageH, 'F');
+
+          // Logo (PNG to preserve transparency)
+          if (logoData) {
+            const logoW = 40;
+            doc.addImage(logoData, 'PNG', (pageW - logoW) / 2, margin, logoW, logoH);
+          } else {
+            doc.setFontSize(14);
+            doc.setTextColor(100);
+            doc.text('Rowan Toys', pageW / 2, margin + 7, { align: 'center' });
+          }
+
+          const chunk = products.slice(page * cardsPerPage, (page + 1) * cardsPerPage);
+
+          const pct = Math.round(((page + 1) / totalPages) * 90);
+          setProgress(pct, `Page ${page + 1} of ${totalPages} (loading images)...`);
+
+          const imgDataArr = await Promise.all(chunk.map(async (prod) => {
+            const src = prod.imgCached && prod.imgCached !== 'NONE' ? prod.imgCached : prod.imgSrc;
+            if (!src) return null;
+            return loadImageAsDataURL(src); // returns {data, w, h} or null
+          }));
+
+          chunk.forEach((prod, idx) => {
+            const col = idx % cols;
+            const row = Math.floor(idx / cols);
+            const x = margin + col * (cardW + gapX);
+            const y = margin + logoH + logoGap + row * (cardH + gapY);
+
+            // Card background + border
+            doc.setFillColor(255, 255, 255);
+            doc.setDrawColor(200, 200, 200);
+            doc.setLineWidth(0.3);
+            doc.roundedRect(x, y, cardW, cardH, 2, 2, 'FD');
+
+            // Image area background
+            doc.setFillColor(248, 248, 248);
+            doc.rect(x, y, cardW, imgH, 'F');
+
+            // Product image — drawn with correct aspect ratio, centered
+            const imgObj = imgDataArr[idx];
+            if (imgObj && imgObj.data) {
+              try {
+                const pad = 2;
+                const slotW = cardW - pad * 2;
+                const slotH = imgH - pad * 2;
+                const natAspect = imgObj.w / imgObj.h;
+                let drawW = slotW;
+                let drawH = slotW / natAspect;
+                if (drawH > slotH) {
+                  drawH = slotH;
+                  drawW = slotH * natAspect;
+                }
+                const imgX = x + pad + (slotW - drawW) / 2;
+                const imgY = y + pad + (slotH - drawH) / 2;
+                doc.addImage(imgObj.data, 'JPEG', imgX, imgY, drawW, drawH, undefined, 'FAST');
+              } catch (e) { /* skip */ }
+            } else {
+              doc.setFontSize(7);
+              doc.setTextColor(180, 180, 180);
+              doc.text('No Image', x + cardW / 2, y + imgH / 2, { align: 'center', baseline: 'middle' });
+            }
+
+            // Divider line
+            doc.setDrawColor(230, 230, 230);
+            doc.setLineWidth(0.2);
+            doc.line(x, y + imgH, x + cardW, y + imgH);
+
+            // Text area
+            const tx = x + 2.5;
+            let ty = y + imgH + 4.5;
+            const textW = cardW - 5;
+
+            // Brand (small, gray)
+            if (prod.brand) {
+              doc.setFontSize(5.5);
+              doc.setTextColor(120, 120, 120);
+              doc.text(prod.brand.toUpperCase(), tx, ty);
+              ty += 3;
+            }
+
+            // Product name (max 2 lines)
+            doc.setFontSize(6.5);
+            doc.setTextColor(20, 20, 20);
+            const nameLines = doc.splitTextToSize(prod.name, textW);
+            doc.text(nameLines.slice(0, 2), tx, ty);
+            ty += nameLines.slice(0, 2).length * 3.2 + 1;
+
+            // Article No
+            doc.setFontSize(5.5);
+            doc.setTextColor(130, 130, 130);
+            doc.text(prod.articleNo, tx, ty);
+            ty += 3.5;
+
+            // MRP on its own line
+            if (prod.mrp) {
+              doc.setFontSize(6.5);
+              doc.setTextColor(100, 100, 100);
+              doc.setFont(undefined, 'normal');
+              doc.text(prod.mrp, tx, ty);
+              ty += 3.8;
+            }
+            // SP on next line in green bold
+            if (prod.sp) {
+              doc.setFontSize(7);
+              doc.setTextColor(22, 160, 80);
+              doc.setFont(undefined, 'bold');
+              doc.text(prod.sp, tx, ty);
+              doc.setFont(undefined, 'normal');
+              doc.setTextColor(20, 20, 20);
+            }
           });
 
-          page.appendChild(pageGrid);
-          printContainer.appendChild(page);
+          // Page number
+          doc.setFontSize(7);
+          doc.setTextColor(160, 160, 160);
+          doc.text(`Page ${page + 1} / ${totalPages}`, pageW / 2, pageH - 5, { align: 'center' });
         }
 
-        document.body.appendChild(printContainer);
+        setProgress(98, 'Finalising PDF...');
 
-        btn.innerHTML = '⏳ Gen PDF...';
-        
-        setTimeout(() => {
-          const opt = {
-            margin:       0,
-            filename:     'Rowan-Catalog.pdf',
-            image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { 
-              scale: 2, 
-              useCORS: true, 
-              logging: false,
-              scrollX: 0,
-              scrollY: 0,
-              windowWidth: 800,
-              x: 0,
-              y: 0
-            },
-            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-          };
+        const blob = doc.output('blob');
+        const url = URL.createObjectURL(blob);
+        window.currentPdfUrl = url;
 
-          html2pdf().set(opt).from(printContainer).save().then(() => {
-            if (printContainer.parentNode) {
-              printContainer.parentNode.removeChild(printContainer);
-            }
-            btn.innerHTML = ogText;
-          }).catch(e => {
-            if (printContainer.parentNode) {
-              printContainer.parentNode.removeChild(printContainer);
-            }
-            btn.innerHTML = ogText;
-            toast('Error generating PDF', 'err');
-          });
-        }, 100);
-      }, 1500);
+        document.getElementById('preview-frame').src = url;
+        document.getElementById('pdf-preview-modal').style.display = 'flex';
+        document.getElementById('btn-final-download').onclick = () => {
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = 'Rowan-Catalog.pdf';
+          link.click();
+        };
+
+        setProgress(100, 'Done!');
+      } catch (err) {
+        console.error('PDF generation error:', err);
+        toast('PDF error: ' + err.message, 'err');
+      } finally {
+        overlay.style.display = 'none';
+        btn.innerHTML = ogText;
+        btn.disabled = false;
+      }
     }
 
     function downloadStockCSV() {
