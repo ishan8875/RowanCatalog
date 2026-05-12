@@ -2243,27 +2243,19 @@
         setProgress(2, 'Loading logo...');
         const logoData = await loadImageAsPngDataURL(logoUrl);
 
-        // ── Phase 1: Eagerly pre-load ALL product images in parallel ──
-        setProgress(5, `Fetching all ${products.length} images in parallel...`);
-
-        let loadedCount = 0;
+        // ── Phase 1: Load ALL product images sequentially ──
+        // Sequential loading is more reliable on mobile where simultaneous
+        // connections get throttled and many fail/timeout silently.
         const allImgData = {};
-
-        await Promise.all(products.map(prod => {
-          const src = prod.imgCached && prod.imgCached !== 'NONE' ? prod.imgCached : prod.imgSrc;
-          if (!src) {
-            loadedCount++;
-            return Promise.resolve();
-          }
-          return loadImageAsDataURL(src).then(result => {
-            allImgData[prod.articleNo] = result;
-            loadedCount++;
-            setProgress(
-              Math.round(5 + (loadedCount / products.length) * 60),
-              `Loading images... ${loadedCount} / ${products.length}`
-            );
-          });
-        }));
+        for (let i = 0; i < products.length; i++) {
+          const prod = products[i];
+          setProgress(
+            Math.round(5 + (i / products.length) * 60),
+            `Loading image ${i + 1} of ${products.length}...`
+          );
+          // Always uses direct Cloudinary URL \u2014 not dependent on lazy-load state
+          allImgData[prod.articleNo] = await loadImageAsDataURL(prod.imgUrl);
+        }
 
         // ── Phase 2: Draw all PDF pages using pre-loaded images ──
         const totalPages = Math.ceil(products.length / cardsPerPage);
