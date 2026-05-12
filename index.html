@@ -5,53 +5,1285 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <title>Rowan Toys &mdash; Catalogue</title>
+  <title>Rowan Toys — Catalogue</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <style>
+    :root {
+      --bg: #0e0e12;
+      --surface: #16161c;
+      --surface2: #1e1e27;
+      --border: #2a2a38;
+      --text: #e8e8f0;
+      --muted: #7070a0;
+      --accent: #ff6b35;
+      --green: #22c55e;
+      --amber: #f59e0b;
+      --red: #ef4444;
+      --blue: #3b82f6;
+      --purple: #a855f7;
+      --pink: #ec4899;
+      --green-bg: rgba(34, 197, 94, .12);
+      --amber-bg: rgba(245, 158, 11, .12);
+      --red-bg: rgba(239, 68, 68, .12);
+      --blue-bg: rgba(59, 130, 246, .12);
+      --r: 14px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: inherit;
+      color: inherit;
+      -webkit-tap-highlight-color: transparent
+    }
+
+    /* HEADER */
+    header {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(14, 14, 18, .95);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 16px;
+      height: 56px;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 26px;
+      letter-spacing: 2px;
+      white-space: nowrap
+    }
+
+    .logo span {
+      color: var(--accent)
+    }
+
+    .hdr-right {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .sku-badge {
+      font-size: 11px;
+      color: var(--muted);
+      white-space: nowrap
+    }
+
+    .search-wrap {
+      position: relative
+    }
+
+    .search-wrap input {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 7px 12px 7px 32px;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      width: 180px;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .search-wrap input:focus {
+      border-color: var(--accent)
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 9px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 13px;
+      pointer-events: none;
+      opacity: .5
+    }
+
+    /* ERROR PANEL */
+    #err-panel {
+      display: none;
+      margin: 20px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 24px;
+    }
+
+    #err-panel h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      color: var(--accent);
+      margin-bottom: 10px
+    }
+
+    #err-panel p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 16px
+    }
+
+    .btn-retry {
+      background: var(--accent);
+      color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 16px;
+      letter-spacing: 1px;
+      padding: 9px 24px;
+      border-radius: 8px
+    }
+
+    .btn-demo {
+      background: var(--surface2);
+      color: var(--text);
+      font-size: 13px;
+      padding: 9px 18px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      margin-left: 10px
+    }
+
+    /* FILTER BAR */
+    #filter-bar {
+      display: none;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+      gap: 8px;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .fl {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      white-space: nowrap
+    }
+
+    .chip {
+      font-size: 12px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      white-space: nowrap;
+      transition: all .15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .chip:hover,
+    .chip:active {
+      border-color: var(--accent);
+      color: var(--text)
+    }
+
+    .chip.on {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      font-weight: 600
+    }
+
+    .chip.on.s-in {
+      background: var(--green);
+      border-color: var(--green)
+    }
+
+    .chip.on.s-low {
+      background: var(--amber);
+      border-color: var(--amber);
+      color: #000
+    }
+
+    .chip.on.s-out {
+      background: var(--red);
+      border-color: var(--red)
+    }
+
+    .chip.on.s-over {
+      background: var(--blue);
+      border-color: var(--blue)
+    }
+
+    .chip.on.s-hot {
+      background: var(--purple);
+      border-color: var(--purple)
+    }
+
+    .chip.on.s-new {
+      background: var(--pink);
+      border-color: var(--pink)
+    }
+
+    .chip.on.s-lim {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff
+    }
+
+    .fdiv {
+      width: 1px;
+      height: 20px;
+      background: var(--border);
+      flex-shrink: 0
+    }
+
+    select.fsel {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 5px 10px;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      outline: none;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      padding-right: 24px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%237070a0'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 8px center;
+    }
+
+    /* ORDER CONTROLS */
+    .c-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border);
+    }
+
+    .qty-ctrl {
+      display: flex;
+      align-items: center;
+      background: var(--surface);
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .qty-btn {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface2);
+      border: none;
+      color: var(--text);
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .qty-btn:active {
+      background: var(--border);
+    }
+
+    .qty-val {
+      width: 32px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* FLOATING CART BUTTON & MODAL */
+    #fab-cart {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+      cursor: pointer;
+      z-index: 90;
+      transition: transform 0.2s;
+    }
+
+    #fab-cart:active {
+      transform: scale(0.95);
+    }
+
+    #fab-badge {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      background: var(--red);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      min-width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 4px;
+      border: 2px solid var(--bg);
+    }
+
+    #cart-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 100;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    #cart-modal.open {
+      display: flex;
+    }
+
+    .cart-content {
+      background: var(--surface);
+      width: 100%;
+      max-width: 500px;
+      max-height: 85vh;
+      border-radius: 20px 20px 0 0;
+      display: flex;
+      flex-direction: column;
+      animation: slideUp 0.3s ease-out;
+    }
+
+    .cart-hdr {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cart-hdr h2 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .cart-body {
+      padding: 16px 20px;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+
+    .ci-info {
+      flex: 1;
+      padding-right: 10px;
+    }
+
+    .ci-name {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .ci-meta {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .cart-ftr {
+      padding: 16px 20px;
+      border-top: 1px solid var(--border);
+      background: var(--surface2);
+    }
+
+    .btn-dl-order {
+      width: 100%;
+      padding: 14px;
+      background: var(--green);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* EXPORT BAR */
+    .export-btns {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn-exp {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text);
+      transition: all 0.2s;
+    }
+
+    .btn-exp:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* STATS BAR */
+    #stats-bar {
+      display: none;
+      padding: 8px 16px;
+      border-bottom: 1px solid var(--border);
+      font-size: 11px;
+      color: var(--muted);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      white-space: nowrap;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    #stats-bar strong {
+      color: var(--text)
+    }
+
+    /* LOADING */
+    #loading {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 80px 20px;
+      color: var(--muted)
+    }
+
+    .spinner {
+      width: 36px;
+      height: 36px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin .8s linear infinite
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    /* GRID */
+    #grid {
+      padding: 16px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px
+    }
+
+    @media(min-width:500px) {
+      #grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 14px
+      }
+    }
+
+    @media(min-width:900px) {
+      #grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 16px
+      }
+    }
+
+    /* CARD */
+    .card {
+      background: var(--surface);
+      border-radius: var(--r);
+      border: 1.5px solid var(--border);
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      transition: transform .2s, border-color .2s, box-shadow .2s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .card:active {
+      transform: scale(.97)
+    }
+
+    @media(hover:hover) {
+      .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .4)
+      }
+
+      .card.s-in:hover {
+        border-color: var(--green);
+        box-shadow: 0 10px 30px rgba(34, 197, 94, .12)
+      }
+
+      .card.s-low:hover {
+        border-color: var(--amber);
+        box-shadow: 0 10px 30px rgba(245, 158, 11, .12)
+      }
+
+      .card.s-out:hover {
+        border-color: var(--red);
+        box-shadow: 0 10px 30px rgba(239, 68, 68, .12)
+      }
+
+      .card.s-over:hover {
+        border-color: var(--blue);
+        box-shadow: 0 10px 30px rgba(59, 130, 246, .12)
+      }
+    }
+
+    .card.s-in {
+      border-color: rgba(34, 197, 94, .35)
+    }
+
+    .card.s-low {
+      border-color: rgba(245, 158, 11, .35)
+    }
+
+    .card.s-out {
+      border-color: rgba(239, 68, 68, .35)
+    }
+
+    .card.s-over {
+      border-color: rgba(59, 130, 246, .35)
+    }
+
+    .card.no-img-card {
+      border-style: dashed
+    }
+
+    .card.has-order {
+      border-color: var(--green);
+      box-shadow: 0 0 0 1px var(--green), 0 4px 12px rgba(34, 197, 94, 0.2);
+    }
+
+    .cimg {
+      position: relative;
+      width: 100%;
+      padding-top: 100%;
+      background: var(--surface2);
+      overflow: hidden
+    }
+
+    .cimg img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 10px;
+      display: block
+    }
+
+    .cimg .ph {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      color: var(--muted)
+    }
+
+    .cimg .ph .ico {
+      font-size: 32px;
+      opacity: .3
+    }
+
+    .cimg .ph .lbl {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: .5px;
+      text-align: center;
+      padding: 0 8px
+    }
+
+    .badges {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px
+    }
+
+    .badge {
+      font-size: 9px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      line-height: 1.4
+    }
+
+    .b-hot {
+      background: var(--purple);
+      color: #fff
+    }
+
+    .b-new {
+      background: var(--pink);
+      color: #fff
+    }
+
+    .b-lim {
+      background: var(--blue);
+      color: #fff
+    }
+
+    .b-noi {
+      background: rgba(255, 107, 53, .9);
+      color: #fff
+    }
+
+    .cbody {
+      padding: 10px 12px 12px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px
+    }
+
+    .cbrand {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--accent)
+    }
+
+    .cname {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--text);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden
+    }
+
+    .cart {
+      font-size: 10px;
+      color: var(--muted)
+    }
+
+    .cmeta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: auto;
+      padding-top: 6px
+    }
+
+    .cmrp {
+      font-size: 14px;
+      font-weight: 700
+    }
+
+    .csp {
+      font-size: 10px;
+      color: var(--green)
+    }
+
+    .pill {
+      font-size: 9px;
+      font-weight: 700;
+      padding: 3px 7px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      white-space: nowrap
+    }
+
+    .p-in {
+      background: var(--green-bg);
+      color: var(--green)
+    }
+
+    .p-low {
+      background: var(--amber-bg);
+      color: var(--amber)
+    }
+
+    .p-out {
+      background: var(--red-bg);
+      color: var(--red)
+    }
+
+    .p-over {
+      background: var(--blue-bg);
+      color: var(--blue)
+    }
+
+    .p-unk {
+      background: rgba(112, 112, 160, .12);
+      color: var(--muted)
+    }
+
+    /* EMPTY */
+    #empty {
+      display: none;
+      padding: 60px 20px;
+      text-align: center;
+      color: var(--muted)
+    }
+
+    #empty h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      color: var(--text);
+      margin-bottom: 8px
+    }
+
+    /* MODAL */
+    #moverlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 200;
+      background: rgba(0, 0, 0, .8);
+      padding: 16px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    #moverlay.open {
+      display: flex;
+      -webkit-align-items: flex-start;
+      align-items: flex-start;
+      -webkit-justify-content: center;
+      justify-content: center
+    }
+
+    #mbox {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      max-width: 680px;
+      width: 100%;
+      margin: auto;
+      overflow: hidden;
+      animation: mIn .2s ease;
+    }
+
+    @keyframes mIn {
+      from {
+        opacity: 0;
+        transform: scale(.95) translateY(8px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    .mgrid {
+      display: flex;
+      flex-direction: column
+    }
+
+    @media(min-width:540px) {
+      .mgrid {
+        flex-direction: row
+      }
+    }
+
+    .mimg {
+      background: var(--surface2);
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      flex-shrink: 0;
+    }
+
+    @media(min-width:540px) {
+      .mimg {
+        width: 220px;
+        min-height: 260px
+      }
+    }
+
+    .mimg img {
+      max-width: 100%;
+      max-height: 220px;
+      object-fit: contain;
+      display: block
+    }
+
+    .minfo {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 0
+    }
+
+    .mbrand {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent)
+    }
+
+    .mname {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.3
+    }
+
+    .mmrp {
+      font-size: 22px;
+      font-weight: 800
+    }
+
+    .mbadges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px
+    }
+
+    .mclose {
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background .15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .mclose:hover,
+    .mclose:active {
+      background: var(--red)
+    }
+
+    .mhdr {
+      position: relative;
+      padding-right: 36px
+    }
+
+    .mtable {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px
+    }
+
+    .mtable td {
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top
+    }
+
+    .mtable tr:last-child td {
+      border-bottom: none
+    }
+
+    .mtable td:first-child {
+      color: var(--muted);
+      width: 42%;
+      padding-right: 10px
+    }
+
+    .mtable td:last-child {
+      font-weight: 500
+    }
+
+    /* TOAST */
+    #toast {
+      position: fixed;
+      bottom: 20px;
+      right: 16px;
+      z-index: 300;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-size: 12px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, .4);
+      transform: translateY(20px);
+      opacity: 0;
+      pointer-events: none;
+      transition: all .3s;
+      max-width: 280px;
+    }
+
+    #toast.show {
+      transform: none;
+      opacity: 1
+    }
+
+    #toast.ok {
+      border-color: var(--green)
+    }
+
+    #toast.err {
+      border-color: var(--red)
+    }
+
+    /* DEALER MODAL */
+    #dealer-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 300;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    #dealer-modal.open {
+      display: flex;
+    }
+
+    .dealer-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      width: 100%;
+      max-width: 420px;
+      padding: 28px 24px;
+      animation: mIn .2s ease;
+    }
+
+    .dealer-box h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .dealer-box p {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .dfield {
+      margin-bottom: 14px;
+    }
+
+    .dfield label {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .dfield input {
+      width: 100%;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+      transition: border-color .15s;
+    }
+
+    .dfield input:focus {
+      border-color: var(--accent);
+    }
+
+    .dfield input.err-field {
+      border-color: var(--red);
+    }
+
+    .derr {
+      font-size: 11px;
+      color: var(--red);
+      margin-top: 4px;
+      display: none;
+    }
+
+    .dealer-btns {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .btn-dealer-cancel {
+      flex: 1;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-dealer-confirm {
+      flex: 2;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background: var(--green);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .btn-dealer-confirm:disabled {
+      opacity: .6;
+      cursor: not-allowed;
+    }
+
+    /* PRINT STYLES */
+    @media print {
+      @page {
+        margin: 0;
+        size: auto;
+      }
+
+      header,
+      #filter-bar,
+      #stats-bar,
+      #err-panel,
+      #loading,
+      #empty,
+      #moverlay,
+      #toast,
+      #fab-cart,
+      #cart-modal,
+      .c-actions {
+        display: none !important;
+      }
+
+      body {
+        background: #fff !important;
+        color: #000 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      #grid {
+        display: none !important;
+      }
+
+      #print-container {
+        display: block !important;
+        width: 100%;
+      }
+
+      .print-page {
+        page-break-after: always;
+        page-break-inside: avoid;
+        box-sizing: border-box;
+        padding: 10mm;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .print-page:last-child {
+        page-break-after: auto;
+      }
+
+      .print-logo {
+        display: block;
+        height: 40px;
+        object-fit: contain;
+        margin: 0 auto 10px auto;
+        flex-shrink: 0;
+      }
+
+      .print-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+        gap: 12px !important;
+        flex: 1;
+        min-height: 0;
+      }
+
+      .print-grid .card {
+        border-color: #ccc !important;
+        background: #fff !important;
+        box-shadow: none !important;
+        transform: none !important;
+        border: 1.5px solid #ccc !important;
+        border-radius: 8px !important;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden !important;
+      }
+
+      .print-grid .cbody {
+        padding: 8px 10px !important;
+        gap: 2px !important;
+      }
+
+      .cname,
+      .cmrp,
+      .cart,
+      .cbrand,
+      .cmeta {
+        color: #000 !important;
+      }
+
+      .pill,
+      .badge {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .cimg {
+        background: #f8f8f8 !important;
+      }
+      
+      .cimg img {
+        padding: 6px !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
   <header>
     <a class="logo" href="#">
-      <img src="images/logo.png" alt="Rowan Toys" style="height: 52px; display: block; margin-top: 4px;">
+      <img src="https://res.cloudinary.com/dqt0ehxeb/image/upload/v1777106286/Rowan-Logo.png" alt="Rowan Toys"
+        style="height: 36px; display: block; margin-top: 4px;">
     </a>
     <div class="hdr-right">
       <span class="sku-badge" id="sku-ct"></span>
       <div class="search-wrap">
-        <span class="search-icon"><i class="fa fa-search"></i></span>
-        <input type="text" id="q" placeholder="Search..." autocomplete="off" autocorrect="off" spellcheck="false">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="q" placeholder="Search…" autocomplete="off" autocorrect="off" spellcheck="false">
       </div>
     </div>
   </header>
 
   <div id="err-panel">
-    <h3><i class="fa fa-exclamation-triangle"></i> Could Not Load Data</h3>
-    <p id="err-txt">Checking...</p>
-    <button class="btn-retry" onclick="location.reload()"><i class="fa fa-refresh"></i> Retry</button>
+    <h3>⚠ Could Not Load Data</h3>
+    <p id="err-txt">Checking…</p>
+    <button class="btn-retry" onclick="location.reload()">↺ Retry</button>
     <button class="btn-demo" onclick="loadDemo()">Preview Demo</button>
   </div>
 
   <div id="filter-bar" style="display:none; flex-direction:column; align-items:flex-start;">
     <div style="display:flex; width:100%; align-items:center; gap:8px; flex-wrap:wrap;">
       <button class="chip" onclick="toggleAdvFilters()" id="btn-adv-filters"
-        style="background:var(--surface2); color:var(--text); font-weight:600;"><i class="fa fa-cog"></i> Filters <i
-          class="fa fa-chevron-down"></i></button>
+        style="background:var(--surface2); color:var(--text); font-weight:600;">⚙️ Filters 🔽</button>
       <div class="fdiv"></div>
       <span class="fl">Category</span>
       <select class="fsel" id="cat-sel" onchange="applyFilters()">
         <option value="">All</option>
       </select>
       <div class="fdiv"></div>
-      <button class="chip s-hot" id="chip-hot" onclick="toggleHot()"><i class="fa fa-fire"></i> Hot</button>
-      <button class="chip s-new" id="chip-new" onclick="toggleNew()"><i class="fa fa-star"></i> New Inward</button>
-      <button class="chip s-lim" id="chip-lim" onclick="toggleLim()"><i class="fa fa-hourglass-half"></i> Limited
-        Stock</button>
+      <button class="chip s-hot" id="chip-hot" onclick="toggleHot()">🔥 Hot</button>
+      <button class="chip s-new" id="chip-new" onclick="toggleNew()">✨ New Inward</button>
+      <button class="chip s-lim" id="chip-lim" onclick="toggleLim()">⏳ Limited Stock</button>
       <div class="fdiv" style="margin-left:auto;"></div>
-      <button class="chip" onclick="clearFilters()" style="border-color:var(--red);color:var(--red)"><i
-          class="fa fa-times"></i> Clear</button>
+      <button class="chip" onclick="clearFilters()" style="border-color:var(--red);color:var(--red)">✕ Clear</button>
     </div>
     <div id="adv-filters"
       style="display:none; flex-wrap:wrap; gap:8px; align-items:center; margin-top:12px; padding-top:12px; border-top:1px dashed var(--border); width: 100%;">
@@ -59,35 +1291,32 @@
       <div id="brand-chips" style="display:flex;flex-wrap:wrap;gap:6px"></div>
       <div class="fdiv"></div>
       <span class="fl">Stock</span>
-      <button class="chip s-in" onclick="toggleStatus('In Stock',this)"><i class="fa fa-circle"></i> In Stock</button>
-      <button class="chip s-low" onclick="toggleStatus('Low Stock',this)"><i class="fa fa-circle"></i> Low
-        Stock</button>
-      <button class="chip s-out" onclick="toggleStatus('Out of Stock',this)"><i class="fa fa-circle"></i> Out of
-        Stock</button>
-      <button class="chip s-over" onclick="toggleStatus('Overstock',this)"><i class="fa fa-circle"></i>
-        Overstock</button>
+      <button class="chip s-in" onclick="toggleStatus('In Stock',this)">● In Stock</button>
+      <button class="chip s-low" onclick="toggleStatus('Low Stock',this)">● Low Stock</button>
+      <button class="chip s-out" onclick="toggleStatus('Out of Stock',this)">● Out of Stock</button>
+      <button class="chip s-over" onclick="toggleStatus('Overstock',this)">● Overstock</button>
     </div>
   </div>
 
   <div id="stats-bar" style="display:none">
     Showing <strong id="st-shown">0</strong> &nbsp;|&nbsp;
-    <i class="fa fa-circle" style="color:var(--green)"></i> <strong id="st-in">0</strong> &nbsp;
-    <i class="fa fa-circle" style="color:var(--amber)"></i> <strong id="st-low">0</strong> &nbsp;
-    <i class="fa fa-circle" style="color:var(--red)"></i> <strong id="st-out">0</strong> &nbsp;
-    <i class="fa fa-circle" style="color:var(--blue)"></i> <strong id="st-over">0</strong>
+    🟢 <strong id="st-in">0</strong> &nbsp;
+    🟡 <strong id="st-low">0</strong> &nbsp;
+    🔴 <strong id="st-out">0</strong> &nbsp;
+    🔵 <strong id="st-over">0</strong>
     <span id="st-date" style="margin-left:auto; margin-right: 12px;"></span>
     <div class="export-btns">
-      <button class="btn-exp" id="btn-print" onclick="prepareAndPrint()"><i class="fa fa-print"></i> PDF</button>
-      <button class="btn-exp" onclick="downloadStockCSV()"><i class="fa fa-bar-chart"></i> Stock</button>
+      <button class="btn-exp" id="btn-print" onclick="prepareAndPrint()">🖨️ PDF</button>
+      <button class="btn-exp" onclick="downloadStockCSV()">📊 Stock</button>
       <button class="btn-exp" id="btn-admin-exp"
         style="display:none; background:var(--pink); color:#fff; border-color:var(--pink);"
-        onclick="downloadAdminCSV()"><i class="fa fa-lock"></i> Admin Links</button>
+        onclick="downloadAdminCSV()">🔐 Admin Links</button>
     </div>
   </div>
 
   <div id="loading" style="display:flex">
     <div class="spinner"></div>
-    <span>Loading catalogue...</span>
+    <span>Loading catalogue…</span>
   </div>
 
   <div id="grid"></div>
@@ -109,8 +1338,7 @@
     style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:300; align-items:center; justify-content:center; padding:16px;">
     <div class="dealer-box" onclick="event.stopPropagation()"
       style="display:flex; flex-direction:column; max-height:85vh; padding: 24px 20px;">
-      <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1px; margin-bottom: 6px;"><i
-          class="fa fa-print"></i>
+      <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1px; margin-bottom: 6px;">🖨️
         Export Preview</h2>
       <p style="font-size: 12px; color: var(--muted); margin-bottom: 12px;">Uncheck products to EXCLUDE them from the
         final PDF.</p>
@@ -137,7 +1365,7 @@
   <!-- DEALER DETAILS MODAL -->
   <div id="dealer-modal">
     <div class="dealer-box" onclick="event.stopPropagation()">
-      <h2><i class="fa fa-clipboard"></i> Order Details</h2>
+      <h2>📋 Order Details</h2>
       <p>Please fill in the dealer details before downloading the order.</p>
       <div class="dfield">
         <label>Dealer Name *</label>
@@ -156,14 +1384,13 @@
       </div>
       <div class="dealer-btns">
         <button class="btn-dealer-cancel" onclick="closeDealerModal()">Cancel</button>
-        <button class="btn-dealer-confirm" onclick="confirmAndDownload()"><i class="fa fa-download"></i> Download
-          Order</button>
+        <button class="btn-dealer-confirm" onclick="confirmAndDownload()">📥 Download Order</button>
       </div>
     </div>
   </div>
 
   <div id="fab-cart" style="display:none" onclick="openCart()">
-    <i class="fa fa-shopping-cart"></i>
+    🛒
     <div id="fab-badge">0</div>
   </div>
 
@@ -171,7 +1398,7 @@
     <div class="cart-content" onclick="event.stopPropagation()">
       <div class="cart-hdr">
         <h2>Review Order</h2>
-        <button class="mclose" onclick="closeCart()"><i class="fa fa-times"></i></button>
+        <button class="mclose" onclick="closeCart()">✕</button>
       </div>
       <div class="cart-body" id="cart-list"></div>
       <div class="cart-ftr">
@@ -179,8 +1406,7 @@
           <span>Total Qty:</span>
           <span id="cart-total-qty">0</span>
         </div>
-        <button class="btn-dl-order" onclick="openDealerModal()"><i class="fa fa-download"></i> Download Order
-          (Excel)</button>
+        <button class="btn-dl-order" onclick="openDealerModal()">📥 Download Order (Excel)</button>
       </div>
     </div>
   </div>
@@ -193,7 +1419,6 @@
     const SH1_GID = '1366558918';
     const SH2_GID = '1852033330';
     const FOLDER = '1ENz88IXOkVEcnVu59TtT2WVWkbKh0KZ6';
-    const STOCK_SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vStCgiAjmXO2wpSoTArtiliGsjpG_8JJgjaV2raZ5hEhYZ65-rsrOBi2HaLEn74ixX01-qqWos80MXC/pub?gid=1983665464&single=true&output=csv';
     /* ─────────────────────────────────────────────── */
 
     let ALL = [], filtered = [];
@@ -207,10 +1432,10 @@
       const btn = document.getElementById('btn-adv-filters');
       if (el.style.display === 'none') {
         el.style.display = 'flex';
-        btn.innerHTML = '<i class="fa fa-cog"></i> Filters <i class="fa fa-chevron-up"></i>';
+        btn.innerHTML = '⚙️ Filters 🔼';
       } else {
         el.style.display = 'none';
-        btn.innerHTML = '<i class="fa fa-cog"></i> Filters <i class="fa fa-chevron-down"></i>';
+        btn.innerHTML = '⚙️ Filters 🔽';
       }
     }
     const imgCache = {};
@@ -285,9 +1510,9 @@
 
         ALL = data.map(m => {
           return {
-            articleNo: (m.Article_No || m.articleNo || m.ArticleNo || '').toString().trim(),
-            name: (m.Product_Name || m.ProductName || m.productName || m.name || '').toString().trim(),
-            brand: (m.Brand || m.brand || '').toString().trim(),
+            articleNo: (m.Article_No || m.articleNo || '').toString().trim(),
+            name: m.Product_Name || m.name || '',
+            brand: m.Brand || m.brand || '',
             category: m.Category || m.category || '',
             subCat: m['Sub-Category'] || m.subCat || '',
             age: m.Age_Group || m.age || '',
@@ -300,7 +1525,7 @@
             inQty: m.Inward_Qty_Planned || m.inQty || '',
             hasImg: (m['Image_Available?'] || m.image || 'yes').toString().toLowerCase() !== 'no',
             notes: m['Notes_/_Remarks'] || m.notes || '',
-            stock: m['Current_Stock_(Qty)'] || m.stock || '&mdash;',
+            stock: m['Current_Stock_(Qty)'] || m.stock || '—',
             status: m.Stock_Status || m.status || '',
             isHot: parseFloat(m['Sales_Qty_–_30_Days'] || m.sales30 || '0') >= 20,
             active: (m.Active || m.active || 'YES').toString().toUpperCase()
@@ -317,105 +1542,11 @@
         document.getElementById('stats-bar').style.display = 'flex';
         document.getElementById('sku-ct').textContent = ALL.length + ' SKUs';
         hide('loading');
-        toast('<i class="fa fa-check"></i> Loaded ' + ALL.length + ' products', 'ok');
-
-        fetchLiveStock(); // Sync live stock data asynchronously
+        toast('✓ Loaded ' + ALL.length + ' products', 'ok');
       } catch (e) {
         hide('loading');
         showErr(e.message);
       }
-    }
-
-    /* ── LIVE STOCK SYNC ── */
-    async function fetchLiveStock() {
-      try {
-        const cb = '?t=' + Date.now();
-        const res = await fetch(STOCK_SHEET_URL + (STOCK_SHEET_URL.includes('?') ? '&' : '?') + 't=' + Date.now());
-        if (!res.ok) throw new Error('Live stock fetch failed: ' + res.status);
-        const csvText = await res.text();
-        const data = parseCSV(csvText);
-
-        if (!data || !data.length) {
-          console.warn('No data parsed from live stock CSV');
-          return;
-        }
-
-        const stockMap = {};
-        data.forEach(row => {
-          // Normalize keys to remove potential hidden characters or spaces
-          const cleanRow = {};
-          for (let key in row) { cleanRow[key.trim()] = row[key]; }
-
-          const art = (cleanRow['Article_No'] || cleanRow['articleNo'] || '').toString().trim();
-          if (art) stockMap[art] = cleanRow;
-        });
-
-        let updatedCount = 0;
-        ALL.forEach(p => {
-          const live = stockMap[p.articleNo];
-          if (live) {
-            // Update stock with robustness
-            const liveStock = live['Current_Stock_(Qty)'] || live['Stock'];
-            if (liveStock !== undefined && liveStock !== '') {
-              p.stock = liveStock;
-              updatedCount++;
-
-              const q = parseInt(p.stock.toString().replace(/,/g, '')) || 0;
-              const liveStatus = (live['Stock_Status'] || live['Status'] || '').trim();
-
-              if (q <= 0) {
-                p.status = 'Out of Stock';
-              } else if (q < 20) {
-                p.status = 'Low Stock';
-              } else {
-                p.status = liveStatus || 'In Stock';
-              }
-
-              p.isLimited = p.status.toLowerCase().includes('limited') || p.status === 'Low Stock';
-            }
-
-            if (live['Is_New_Inward?']) p.isNew = live['Is_New_Inward?'].toString().toLowerCase() === 'yes';
-            if (live['Expected_Inward_Date']) p.inDate = live['Expected_Inward_Date'];
-            if (live['Inward_Qty_Planned']) p.inQty = live['Inward_Qty_Planned'];
-            if (live['Notes_/_Remarks']) p.notes = live['Notes_/_Remarks'];
-
-            // Update Hot Seller status
-            const s30 = live['Sales_Qty_–_30_Days'] || live['Sales_Qty_-_30_Days'];
-            if (s30 !== undefined) p.isHot = parseFloat(s30) >= 20;
-
-            if (live['Active']) p.active = live['Active'].toString().toUpperCase();
-          }
-        });
-
-        // Refresh the UI
-        ALL = ALL.filter(p => p.active !== 'NO');
-        initGrid();
-        toast('<i class="fa fa-sync"></i> Stock data synced (' + updatedCount + ')', 'ok');
-      } catch (err) {
-        console.warn('Stock sync error:', err);
-      }
-    }
-
-    function parseCSV(str) {
-      const rows = [];
-      const lines = str.split(/\r?\n/);
-      if (lines.length < 2) return [];
-      const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
-      for (let i = 1; i < lines.length; i++) {
-        if (!lines[i].trim()) continue;
-        const values = [];
-        let cur = '', inQuote = false;
-        for (let char of lines[i]) {
-          if (char === '"') inQuote = !inQuote;
-          else if (char === ',' && !inQuote) { values.push(cur.trim().replace(/^"|"$/g, '')); cur = ''; }
-          else cur += char;
-        }
-        values.push(cur.trim().replace(/^"|"$/g, ''));
-        const obj = {};
-        headers.forEach((h, idx) => obj[h] = values[idx]);
-        rows.push(obj);
-      }
-      return rows;
     }
 
     /* ── FILTERS ── */
@@ -539,7 +1670,7 @@
       const cimg = document.createElement('div');
       cimg.className = 'cimg';
 
-      cimg.innerHTML = '<div class="ph"><span class="ico"><i class="fa fa-image"></i></span></div>';
+      cimg.innerHTML = '<div class="ph"><span class="ico">◌</span></div>';
 
       // Store articleNo on the element so observer can read it
       cimg.dataset.article = p.articleNo;
@@ -554,10 +1685,10 @@
       /* badges */
       const bdg = document.createElement('div');
       bdg.className = 'badges';
-      if (p.isHot) bdg.innerHTML += '<span class="badge b-hot"><i class="fa fa-fire"></i> Hot</span>';
-      if (p.isNew) bdg.innerHTML += '<span class="badge b-new"><i class="fa fa-star"></i> New</span>';
-      if (p.isLimited) bdg.innerHTML += '<span class="badge b-lim"><i class="fa fa-hourglass-half"></i> Limited</span>';
-      if (isNoImg) bdg.innerHTML += '<span class="badge b-noi"><i class="fa fa-camera"></i> Needed</span>';
+      if (p.isHot) bdg.innerHTML += '<span class="badge b-hot">🔥 Hot</span>';
+      if (p.isNew) bdg.innerHTML += '<span class="badge b-new">✨ New</span>';
+      if (p.isLimited) bdg.innerHTML += '<span class="badge b-lim">⏳ Limited</span>';
+      if (isNoImg) bdg.innerHTML += '<span class="badge b-noi">📷 Needed</span>';
       cimg.appendChild(bdg);
       div.appendChild(cimg);
 
@@ -568,10 +1699,10 @@
       body.innerHTML =
         '<div class="cbrand">' + esc(p.brand) + '</div>' +
         '<div class="cname">' + esc(p.name) + '</div>' +
-        '<div class="cart">' + esc(p.articleNo) + (p.age ? '<span class="age-sep"> &middot; </span><span class="age-val">' + esc(p.age) + '</span>' : '') + '</div>' +
+        '<div class="cart">' + esc(p.articleNo) + (p.age ? '<span class="p-age"> · ' + esc(p.age) + '</span>' : '') + '</div>' +
         '<div class="cmeta">' +
-        '<div><div class="cmrp">' + (p.mrp ? '&#8377;' + fmt(p.mrp) : '&mdash;') + '</div>' + (p.sp ? '<div class="csp">SP &#8377;' + fmt(p.sp) + '</div>' : '') + '</div>' +
-        '<span class="pill ' + pillCls(p.status) + '">' + esc(p.status || '&mdash;') + '</span>' +
+        '<div><div class="cmrp">' + (p.mrp ? '₹' + fmt(p.mrp) : '—') + '</div>' + (p.sp ? '<div class="csp">SP ₹' + fmt(p.sp) + '</div>' : '') + '</div>' +
+        '<span class="pill p-status ' + pillCls(p.status) + '">' + esc(p.status || '—') + '</span>' +
         '</div>' +
         '<div class="c-actions">' +
         '<div style="font-size:11px;color:var(--muted);font-weight:600">ORDER QTY</div>' +
@@ -592,7 +1723,7 @@
       if (imgCache[articleNo]) {
         if (imgCache[articleNo] === 'NONE') {
           const ph = wrap.querySelector('.ph');
-          if (ph) ph.innerHTML = '<span class="ico"><i class="fa fa-camera"></i></span><span class="lbl">No Image</span>';
+          if (ph) ph.innerHTML = '<span class="ico">📷</span><span class="lbl">No Image</span>';
           return;
         }
         applyImg(wrap, imgCache[articleNo]);
@@ -625,7 +1756,7 @@
       img.onerror = () => {
         imgCache[articleNo] = 'NONE';
         const ph = wrap.querySelector('.ph');
-        if (ph) ph.innerHTML = '<span class="ico"><i class="fa fa-camera"></i></span><span class="lbl">No Image</span>';
+        if (ph) ph.innerHTML = '<span class="ico">📷</span><span class="lbl">No Image</span>';
 
         const pObj = ALL.find(x => x.articleNo === articleNo);
         if (pObj) {
@@ -633,9 +1764,9 @@
           try {
             const safeId = CSS.escape(articleNo);
             const cBdgs = document.querySelector('#card-' + safeId + ' .badges');
-            if (cBdgs && !cBdgs.querySelector('.b-noi')) cBdgs.insertAdjacentHTML('beforeend', '<span class="badge b-noi"><i class="fa fa-camera"></i> Needed</span>');
+            if (cBdgs && !cBdgs.querySelector('.b-noi')) cBdgs.insertAdjacentHTML('beforeend', '<span class="badge b-noi">📷 Needed</span>');
             const mBdgs = document.querySelector('#moverlay[data-article="' + safeId + '"] .mbadges');
-            if (mBdgs && !mBdgs.querySelector('.b-noi')) mBdgs.insertAdjacentHTML('beforeend', '<span class="badge b-noi"><i class="fa fa-camera"></i> Image Needed</span>');
+            if (mBdgs && !mBdgs.querySelector('.b-noi')) mBdgs.insertAdjacentHTML('beforeend', '<span class="badge b-noi">📷 Image Needed</span>');
             const cCard = document.querySelector('#card-' + safeId);
             if (cCard) cCard.classList.add('no-img-card');
           } catch (e) { }
@@ -660,7 +1791,7 @@
       img.onerror = () => {
         const ph = wrap.querySelector('.ph');
         if (ph) {
-          ph.innerHTML = '<span class="ico"><i class="fa fa-exclamation-triangle"></i></span><span class="lbl">Image Error</span>';
+          ph.innerHTML = '<span class="ico">📷</span><span class="lbl">Image Error</span>';
         }
       };
 
@@ -671,9 +1802,9 @@
       const c = document.getElementById('mcontent');
       let imgH;
       if (p.hasImg) {
-        imgH = '<div id="mimg-wrap" style="width:100%;min-height:180px;display:flex;align-items:center;justify-content:center"><div class="ph"><span class="ico" style="font-size:28px"><i class="fa fa-image"></i></span></div></div>';
+        imgH = '<div id="mimg-wrap" style="width:100%;min-height:180px;display:flex;align-items:center;justify-content:center"><div class="ph"><span class="ico" style="font-size:28px">◌</span></div></div>';
       } else {
-        imgH = '<div class="ph" style="min-height:180px"><span class="ico"><i class="fa fa-camera"></i></span><span class="lbl">Image Needed</span></div>';
+        imgH = '<div class="ph" style="min-height:180px"><span class="ico">📷</span><span class="lbl">Image Needed</span></div>';
       }
 
       const isNoImg = imgCache[p.articleNo] === 'NONE' || (!imgCache[p.articleNo] && p.hasImg === false);
@@ -685,28 +1816,28 @@
         '<div class="minfo">' +
         '<div class="mhdr">' +
         '<div class="mbrand">' + esc(p.brand) + '</div>' +
-        '<button class="mclose" onclick="closeModal()"><i class="fa fa-times"></i></button>' +
+        '<button class="mclose" onclick="closeModal()">✕</button>' +
         '</div>' +
         '<div class="mname">' + esc(p.name) + '</div>' +
         '<div class="mbadges">' +
-        '<span class="pill ' + pillCls(p.status) + '">' + esc(p.status || '&mdash;') + '</span>' +
-        (p.isHot ? '<span class="badge b-hot"><i class="fa fa-fire"></i> Hot Seller</span>' : '') +
-        (p.isNew ? '<span class="badge b-new"><i class="fa fa-star"></i> New Inward</span>' : '') +
-        (p.isLimited ? '<span class="badge b-lim"><i class="fa fa-hourglass-half"></i> Limited Stock</span>' : '') +
-        (isNoImg ? '<span class="badge b-noi"><i class="fa fa-camera"></i> Image Needed</span>' : '') +
+        '<span class="pill ' + pillCls(p.status) + '">' + esc(p.status || '—') + '</span>' +
+        (p.isHot ? '<span class="badge b-hot">🔥 Hot Seller</span>' : '') +
+        (p.isNew ? '<span class="badge b-new">✨ New Inward</span>' : '') +
+        (p.isLimited ? '<span class="badge b-lim">⏳ Limited Stock</span>' : '') +
+        (isNoImg ? '<span class="badge b-noi">📷 Image Needed</span>' : '') +
         '</div>' +
-        '<div class="mmrp">' + (p.mrp ? '&#8377;' + fmt(p.mrp) : '&mdash;') + '</div>' +
+        '<div class="mmrp">' + (p.mrp ? '₹' + fmt(p.mrp) : '—') + '</div>' +
         '<table class="mtable">' +
         '<tr><td>Article #</td><td>' + esc(p.articleNo) + '</td></tr>' +
         '<tr><td>Brand</td><td>' + esc(p.brand) + '</td></tr>' +
         '<tr><td>Category</td><td>' + esc(p.category) + (p.subCat ? ' › ' + esc(p.subCat) : '') + '</td></tr>' +
-        '<tr><td>Age Group</td><td>' + (esc(p.age) || '&mdash;') + '</td></tr>' +
-        '<tr><td>MRP</td><td>' + (p.mrp ? '&#8377;' + fmt(p.mrp) : '&mdash;') + '</td></tr>' +
-        '<tr><td>Selling Price</td><td>' + (p.sp ? '&#8377;' + fmt(p.sp) : '&mdash;') + '</td></tr>' +
-        '<tr><td>GST %</td><td>' + (esc(p.gst) || '&mdash;') + '</td></tr>' +
-        '<tr><td>EAN Code</td><td>' + (esc(p.ean) || '&mdash;') + '</td></tr>' +
+        '<tr><td>Age Group</td><td>' + (esc(p.age) || '—') + '</td></tr>' +
+        '<tr><td>MRP</td><td>' + (p.mrp ? '₹' + fmt(p.mrp) : '—') + '</td></tr>' +
+        '<tr><td>Selling Price</td><td>' + (p.sp ? '₹' + fmt(p.sp) : '—') + '</td></tr>' +
+        '<tr><td>GST %</td><td>' + (esc(p.gst) || '—') + '</td></tr>' +
+        '<tr><td>EAN Code</td><td>' + (esc(p.ean) || '—') + '</td></tr>' +
         '<tr><td>Stock</td><td>' + esc(p.stock) + '</td></tr>' +
-        (p.isNew ? '<tr><td>New Inward</td><td>' + esc(p.inDate) + (p.inQty ? ' &middot; Qty ' + esc(p.inQty) : '') + '</td></tr>' : '') +
+        (p.isNew ? '<tr><td>New Inward</td><td>' + esc(p.inDate) + (p.inQty ? ' · Qty ' + esc(p.inQty) : '') + '</td></tr>' : '') +
         (p.notes ? '<tr><td>Notes</td><td>' + esc(p.notes) + '</td></tr>' : '') +
         '</table>' +
         '<div class="c-actions" style="margin-top:20px; padding-top:16px">' +
@@ -769,7 +1900,7 @@
       document.getElementById('filter-bar').style.display = 'flex';
       document.getElementById('stats-bar').style.display = 'flex';
       document.getElementById('sku-ct').textContent = ALL.length + ' SKUs';
-      toast('Demo mode &mdash; sample data only', 'ok');
+      toast('Demo mode — sample data only', 'ok');
     }
 
     /* ── HELPERS ── */
@@ -817,7 +1948,7 @@
       if (delta > 0) {
         const pObj = ALL.find(x => x.articleNo === articleNo);
         if (pObj && pObj.status === 'Out of Stock') {
-          toast('<i class="fa fa-exclamation-triangle"></i> Article is out of stock', 'err');
+          toast('⚠ Article is out of stock', 'err');
         }
       }
 
@@ -928,7 +2059,7 @@
       const city = document.getElementById('d-city').value.trim();
       const salesman = document.getElementById('d-salesman').value.trim();
 
-      // Validate &mdash; show inline errors
+      // Validate — show inline errors
       let valid = true;
       [['d-dealer', 'derr-dealer', dealer],
       ['d-city', 'derr-city', city],
@@ -992,33 +2123,21 @@
           mode: 'no-cors',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
-        }).catch(() => { }); // silent &mdash; never alert user
+        }).catch(() => { }); // silent — never alert user
       } catch (e) { }
 
       // ── 3. CLOSE & CONFIRM ──
       closeDealerModal();
       closeCart();
-      toast('<i class="fa fa-check"></i> Order downloaded!', 'ok');
+      toast('✓ Order downloaded!', 'ok');
     }
 
     /* ── EXPORTS ── */
     function prepareAndPrint() {
-      applyFilters(); // Ensure filtered array and grid state are absolute latest
-
-      const q = document.getElementById('q').value.trim();
-      const cat = document.getElementById('cat-sel').value;
-      const hasFilter = selStatuses.size > 0 || selBrands.size > 0 || showHot || showNew || showLim || q !== '' || cat !== '';
-
-      if (!hasFilter) {
-        toast('<i class="fa fa-filter"></i> Please apply at least one filter to generate a PDF.', 'err');
-        return;
-      }
-
       if (filtered.length > 200) {
-        toast('<i class="fa fa-exclamation-triangle"></i> Unable to generate PDF of more than 200 products.', 'err');
+        toast('⚠️ Please filter down to 200 items or fewer to download a PDF without crashing your device.', 'err');
         return;
       }
-
       if (!filtered.length) return toast('No items to print', 'err');
 
       const list = document.getElementById('pdf-exclude-list');
@@ -1051,59 +2170,65 @@
         if (!c.checked) excluded.add(c.value);
       });
 
-      const cards = document.getElementById('grid').children;
-      const hiddenBackup = [];
-      for (let i = 0; i < cards.length; i++) {
-        const id = cards[i].id.replace('card-', '');
-        if (excluded.has(id) && cards[i].style.display !== 'none') {
-          hiddenBackup.push(cards[i]);
-          cards[i].style.display = 'none';
-        }
-      }
-
       const btn = document.getElementById('btn-print');
       const ogText = btn.innerHTML;
-      btn.innerHTML = '<i class="fa fa-hourglass-half"></i> Prep...';
+      btn.innerHTML = '⏳ Prep...';
 
       // Force load all visible images before printing
       const visCards = document.querySelectorAll('#grid .card .cimg');
       visCards.forEach(cimg => {
-        if (cimg.parentElement.style.display !== 'none' && cimg.dataset.article) {
+        if (cimg.parentElement.style.display !== 'none' && !excluded.has(cimg.parentElement.id.replace('card-', '')) && cimg.dataset.article) {
           loadImg(cimg, cimg.dataset.article);
           cimg.removeAttribute('data-article');
           if (window.imgObserver) window.imgObserver.unobserve(cimg);
         }
       });
 
+      // Preload the logo so it's ready for print
+      const logoUrl = 'https://res.cloudinary.com/dqt0ehxeb/image/upload/v1778554295/Rowan-Logo_90c4db.png';
+      const preloadLogo = new Image();
+      preloadLogo.src = logoUrl;
+
       setTimeout(() => {
-        // Inject page breaks
-        let vIdx = 0;
-        const grid = document.getElementById('grid');
-        grid.querySelectorAll('.page-break').forEach(b => b.remove());
+        const printContainer = document.createElement('div');
+        printContainer.id = 'print-container';
+        
+        const cards = Array.from(document.getElementById('grid').children);
+        const printCards = cards.filter(c => c.style.display !== 'none' && !excluded.has(c.id.replace('card-', '')));
 
-        Array.from(grid.children).forEach(card => {
-          if (card.style.display !== 'none') {
-            vIdx++;
-            if (vIdx === 6 || (vIdx > 6 && (vIdx - 6) % 9 === 0)) {
-              const b = document.createElement('div');
-              b.className = 'page-break';
-              // Subsequent page breaks don't need the logo
-              card.after(b);
-            }
-          }
-        });
+        for (let i = 0; i < printCards.length; i += 9) {
+          const page = document.createElement('div');
+          page.className = 'print-page';
+          
+          const logo = document.createElement('img');
+          logo.src = logoUrl;
+          logo.className = 'print-logo';
+          page.appendChild(logo);
 
-        // Also add one at the very top for page 1
-        const topLogo = document.createElement('div');
-        topLogo.className = 'pdf-header';
-        topLogo.innerHTML = '<img src="images/logo.png" alt="Logo" style="display:block; margin:0 auto 20px auto; height:80px;">';
-        grid.prepend(topLogo);
+          const pageGrid = document.createElement('div');
+          pageGrid.className = 'print-grid';
+          
+          const chunk = printCards.slice(i, i + 9);
+          chunk.forEach(card => {
+            const clone = card.cloneNode(true);
+            const age = clone.querySelector('.p-age');
+            if (age) age.remove();
+            const pill = clone.querySelector('.p-status');
+            if (pill) pill.remove();
+            
+            pageGrid.appendChild(clone);
+          });
+
+          page.appendChild(pageGrid);
+          printContainer.appendChild(page);
+        }
+
+        document.body.appendChild(printContainer);
 
         btn.innerHTML = ogText;
         window.print();
 
-        hiddenBackup.forEach(c => c.style.display = '');
-        grid.querySelectorAll('.page-break').forEach(b => b.remove());
+        document.body.removeChild(printContainer);
       }, 1500);
     }
 
