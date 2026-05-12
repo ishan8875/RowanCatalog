@@ -2237,20 +2237,27 @@
         setProgress(2, 'Loading logo...');
         const logoData = await loadImageAsPngDataURL(logoUrl);
 
-        // ── Phase 1: Pre-load ALL product images before drawing any page ──
-        // Build a map: articleNo -> { data, w, h }
+        // ── Phase 1: Eagerly pre-load ALL product images in parallel ──
+        setProgress(5, `Fetching all ${products.length} images in parallel...`);
+
+        let loadedCount = 0;
         const allImgData = {};
-        for (let i = 0; i < products.length; i++) {
-          const prod = products[i];
-          setProgress(
-            Math.round(5 + (i / products.length) * 60),
-            `Loading image ${i + 1} of ${products.length}...`
-          );
+
+        await Promise.all(products.map(prod => {
           const src = prod.imgCached && prod.imgCached !== 'NONE' ? prod.imgCached : prod.imgSrc;
-          if (src) {
-            allImgData[prod.articleNo] = await loadImageAsDataURL(src);
+          if (!src) {
+            loadedCount++;
+            return Promise.resolve();
           }
-        }
+          return loadImageAsDataURL(src).then(result => {
+            allImgData[prod.articleNo] = result;
+            loadedCount++;
+            setProgress(
+              Math.round(5 + (loadedCount / products.length) * 60),
+              `Loading images... ${loadedCount} / ${products.length}`
+            );
+          });
+        }));
 
         // ── Phase 2: Draw all PDF pages using pre-loaded images ──
         const totalPages = Math.ceil(products.length / cardsPerPage);
