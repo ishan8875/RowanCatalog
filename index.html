@@ -1170,10 +1170,12 @@
     #print-container {
       position: absolute;
       top: 0;
-      left: -9999px;
+      left: 0;
       width: 210mm; /* Fixed A4 width for rendering */
+      z-index: -1000; /* Hide behind everything */
       background: #fff;
       color: #000;
+      pointer-events: none;
     }
 
     .print-page {
@@ -1185,7 +1187,6 @@
       display: flex;
       flex-direction: column;
       background: #fff;
-      overflow: hidden;
     }
 
     .print-logo {
@@ -2242,7 +2243,14 @@
             margin:       0,
             filename:     'Rowan-Catalog.pdf',
             image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2, useCORS: true, logging: false },
+            html2canvas:  { 
+              scale: 2, 
+              useCORS: true, 
+              logging: false,
+              scrollX: 0,
+              scrollY: 0,
+              windowWidth: 1200
+            },
             jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
           };
 
